@@ -1,49 +1,36 @@
-#### CFPB Open Source Project Template Instructions
+# cf-layout
 
-1. Create a new project.
-2. Copy these files into the new project.
-3. Update the README, replacing the contents below as prescribed.
-4. Add any libraries, assets, or hard dependencies whose source code will be included
-   in the project's repository to the _Exceptions_ section in the [TERMS](TERMS.md).
-  - If no exceptions are needed, remove that section from TERMS.
-5. Delete these instructions and everything up to the _Project Title_ from the README.
-6. Write some great software and tell people about it.
+[![Dependency Status](https://gemnasium.com/cfpb/cf-layout.svg)](https://gemnasium.com/cfpb/cf-layout)
 
-> Keep the README fresh! It's the first thing people see and will make the initial impression.
+A set of HTML & CSS layout helpers.
+This component can be used by itself, but it was made for Capital Framework,
+a new front end framework developed at the
+[Consumer Financial Protection Bureau](https://cfpb.github.io/).
 
-----
+- [View the docs](https://cfpb.github.io/cf-layout/docs/)
+- [See the raw demo](https://cfpb.github.io/cf-layout/demo/)
 
-# Project Title
+The current version number can be found in [bower.json](bower.json#L3)
+and follows [Semantic Versioning 2.0](http://semver.org/).
+Release notes are recorded on the
+[Releases page](https://github.com/cfpb/cf-layout/releases/).
 
-**Description**:  Put a meaningful, short, plain-language description of what
-this project is trying to accomplish and why it matters.
-
-Other things to include:
-
-  - **Status**:  Alpha, Beta, 1.1, etc. It's OK to write a sentence, too. The goal is to let interested people know where this project is at. This is also a good place to link to the [CHANGELOG](CHANGELOG.md).
-  - **Links to production or demo instances**
-  - Describe what sets this apart from related-projects. Linking to another doc or page is OK if this can't be expressed in a sentence or two.
+If you would like to take advantage of more components or if you're new to
+Capital Framework, we encourage you to [start here](https://cfpb.github.io/capital-framework/).
 
 
-**Screenshot**: If the software has visual components, place a screenshot after the description; e.g.,
+## How to use this component
 
-![](https://raw.githubusercontent.com/cfpb/open-source-project-template/master/screenshot.png)
-
-
-## How to get this running or how to use it
-
-Detailed instructions on how to install, configure, and get the project running.
-This should be frequently tested to ensure reliability. Alternatively, a link to
-another page is fine, but it's important that this works.
+Detailed instructions can be found in the Capital Framework
+[documentation site](https://cfpb.github.io/capital-framework/components/).
 
 
 ## Getting involved
 
-This section should detail why people should get involved and describe key areas you are
-currently focusing on; e.g., trying to get feedback on features, fixing certain bugs, building
-important pieces, etc.
+We welcome your feedback and contributions.
 
-General instructions on _how_ to contribute should be stated with a link to [CONTRIBUTING](CONTRIBUTING.md).
+- [Find out about contributing](CONTRIBUTING.md)
+- File a bug using this [handy template](https://github.com/cfpb/cf-layout/issues/new?body=%23%23%20URL%0D%0D%0D%23%23%20Actual%20Behavior%0D%0D%0D%23%23%20Expected%20Behavior%0D%0D%0D%23%23%20Steps%20to%20Reproduce%0D%0D%0D%23%23%20Screenshot&labels=bug)
 
 
 ----
@@ -58,6 +45,4 @@ General instructions on _how_ to contribute should be stated with a link to [CON
 
 ## Credits and references
 
-1. Projects that inspired you
-2. Related projects
-3. Books, papers, talks, or other sources that have meaniginful impact or influence on this project 
+Docs and demo built with the excellent [Topdoc](https://github.com/topcoat/topdoc/).
