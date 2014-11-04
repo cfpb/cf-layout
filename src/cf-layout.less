@@ -25,9 +25,9 @@
         </div>
         <br>
         <main class="content" id="main" role="main">
-            <div class="wrapper content_wrapper">
+            <div class="content_wrapper">
                 <section class="content_main">
-                    <code>.wrapper.wrapper_content .content_main</code>
+                    <code>.content_wrapper .content_main</code>
                     <img src="http://placekitten.com/800/40" style="max-width: 100%;">
                 </section>
             </div>
@@ -68,6 +68,10 @@
     & body {
         min-width: 800px;
     }
+}
+
+.content_wrapper {
+    &:extend(.wrapper all);
 }
 
 
@@ -481,7 +485,7 @@
                 Content hero
             </section>
             <div class="content_bar"></div>
-            <div class="wrapper content_wrapper">
+            <div class="content_wrapper">
                 <section class="content_main">
                     Main content area
                 </section>
@@ -513,7 +517,7 @@
       markup: |
         <main class="content content__1-3" id="main" role="main">
             <div class="content_bar"></div>
-            <div class="wrapper content_wrapper">
+            <div class="content_wrapper">
                 <aside class="content_sidebar">
                     Section navigation
                 </aside>
@@ -547,7 +551,7 @@
       markup: |
         <main class="content content__2-1" id="main" role="main">
             <div class="content_bar"></div>
-            <div class="wrapper content_wrapper">
+            <div class="content_wrapper">
                 <section class="content_main">
                     <h2>Main content area</h2>
                     <p>
@@ -583,7 +587,7 @@
       markup: |
         <main class="content content__2-1" id="main" role="main">
             <div class="content_bar"></div>
-            <div class="wrapper content_wrapper">
+            <div class="content_wrapper">
                 <section class="content_main content_main__narrow">
                     <h2>Main content area</h2>
                     <p>
@@ -614,7 +618,7 @@
       markup: |
         <main class="content content__1-3" id="main" role="main">
             <div class="content_bar"></div>
-            <div class="wrapper content_wrapper">
+            <div class="content_wrapper">
                 <aside class="content_sidebar content__flush-bottom">
                     Side with no bottom padding...
                 </aside>
@@ -645,7 +649,7 @@
       markup: |
         <main class="content content__1-3" id="main" role="main">
             <div class="content_bar"></div>
-            <div class="wrapper content_wrapper">
+            <div class="content_wrapper">
                 <aside class="content_sidebar content__flush-top-on-small">
                     Side with no top padding on small screens...
                 </aside>
@@ -670,7 +674,7 @@
       markup: |
         <main class="content content__1-3" id="main" role="main">
             <div class="content_bar"></div>
-            <div class="wrapper content_wrapper">
+            <div class="content_wrapper">
                 <aside class="content_sidebar content__flush-all-on-small">
                     Side with no padding or border-based gutters on small screens...
                 </aside>
@@ -839,7 +843,7 @@
     - name: Flush-sides modifier
       markup: |
         <main class="content content__1-3" id="main" role="main">
-            <div class="wrapper content_wrapper">
+            <div class="content_wrapper">
                 <aside class="content_sidebar">
                     Section navigation
                 </aside>
@@ -914,7 +918,7 @@
     - name: Background and flush-sides modifier combo example
       markup: |
         <main class="content content__1-3" id="main" role="main">
-            <div class="wrapper content_wrapper">
+            <div class="content_wrapper">
                 <aside class="content_sidebar">
                     Section navigation
                 </aside>
@@ -1050,31 +1054,6 @@
 
 
 /* topdoc
-  name: Sidebar items
-  family: cf-layout
-  patterns:
-    - name: Sidebar item spacing
-      markup: |
-        <section class="content_sidebar-item related-posts" style="background: #F1F2F2">
-            Related posts
-        </section>
-        <section class="content_sidebar-item related-news" style="background: #F1F2F2">
-            Related news
-        </section>
-      notes:
-        - "Gives some vertical margin between sidebar items."
-        - "Inline styling is for demonstration purposes only; do not include it
-           in your markup."
-  tags:
-    - cf-layout
-*/
-
-.content_sidebar-item + .content_sidebar-item {
-    margin-top: unit(60px / @base-font-size-px, em);
-}
-
-
-/* topdoc
   name: Bleedbar sidebar styling
   family: cf-layout
   patterns:
@@ -1085,7 +1064,7 @@
                 Content hero
             </section>
             <div class="content_bar"></div>
-            <div class="wrapper content_wrapper">
+            <div class="content_wrapper">
                 <section class="content_main">
                     Main content area
                 </section>
@@ -1169,22 +1148,8 @@
 
 
 /* topdoc
-    name: EOF
-    eof: true
-*/
-
-
-/* ==========================================================================
-   Capital Framework
-   cf-grid Enhancements
-
-   The following styles are necessary in this file until such time as they
-   are added to cf-grid.
-   ========================================================================== */
-
-/* topdoc
   name: cf-grid column dividers
-  family: cfgov-cf-enhancements
+  family: cf-grid-helpers
   notes:
     - "cf-grid columns use left and right borders for fixed margins which means
        it's not possible to set visual left and right borders directly on them.
@@ -1218,7 +1183,7 @@
 
           }
   tags:
-    - cfgov-cf-enhancements
+    - cf-grid-helpers
 */
 
 .grid_column__top-divider {
@@ -1246,3 +1211,9 @@
         margin-left: -@grid_gutter-width;
     }
 }
+
+
+/* topdoc
+    name: EOF
+    eof: true
+*/

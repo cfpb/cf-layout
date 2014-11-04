@@ -60,9 +60,9 @@
 </div>
 <br>
 <main class="content" id="main" role="main">
-    <div class="wrapper content_wrapper">
+    <div class="content_wrapper">
         <section class="content_main">
-            <code>.wrapper.wrapper_content .content_main</code>
+            <code>.content_wrapper .content_main</code>
             <img src="http://placekitten.com/800/40" style="max-width: 100%;">
         </section>
     </div>
@@ -76,15 +76,15 @@
 &lt;/div&gt;
 &lt;br&gt;
 &lt;main class=&quot;content&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
-    &lt;div class=&quot;wrapper content_wrapper&quot;&gt;
+    &lt;div class=&quot;content_wrapper&quot;&gt;
         &lt;section class=&quot;content_main&quot;&gt;
-            &lt;code&gt;.wrapper.wrapper_content .content_main&lt;/code&gt;
+            &lt;code&gt;.content_wrapper .content_main&lt;/code&gt;
             &lt;img src=&quot;http://placekitten.com/800/40&quot; style=&quot;max-width: 100%;&quot;&gt;
         &lt;/section&gt;
     &lt;/div&gt;
 &lt;/main&gt;</code></pre>
             <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;wrapper wrapper__match-content\&amp;quot;&gt;\n    &lt;code&gt;.wrapper.wrapper__match-content&lt;/code&gt;\n    &lt;img src=\&amp;quot;http://placekitten.com/800/40\&amp;quot; style=\&amp;quot;max-width: 100%;\&amp;quot;&gt;\n&lt;/div&gt;\n&lt;br&gt;\n&lt;main class=\&amp;quot;content\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            &lt;code&gt;.wrapper.wrapper_content .content_main&lt;/code&gt;\n            &lt;img src=\&amp;quot;http://placekitten.com/800/40\&amp;quot; style=\&amp;quot;max-width: 100%;\&amp;quot;&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;wrapper wrapper__match-content\&amp;quot;&gt;\n    &lt;code&gt;.wrapper.wrapper__match-content&lt;/code&gt;\n    &lt;img src=\&amp;quot;http://placekitten.com/800/40\&amp;quot; style=\&amp;quot;max-width: 100%;\&amp;quot;&gt;\n&lt;/div&gt;\n&lt;br&gt;\n&lt;main class=\&amp;quot;content\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            &lt;code&gt;.content_wrapper .content_main&lt;/code&gt;\n            &lt;img src=\&amp;quot;http://placekitten.com/800/40\&amp;quot; style=\&amp;quot;max-width: 100%;\&amp;quot;&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
               <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
             </form>
             <ul class="docs-notes">
@@ -96,7 +96,8 @@
       </div>
       <div class="docs-css">
         <pre class="docs-code"><code data-language="css">@media only all and (min-width: 50.0625em) {
-  .wrapper {
+  .wrapper,
+  .content_wrapper {
     max-width: 1170px;
     padding: 0 15px;
     margin: 0 auto;
@@ -104,18 +105,21 @@
     clear: both;
   }
 }
-.wrapper__match-content {
+.wrapper__match-content,
+.content_wrapper__match-content {
   padding-left: 15px;
   padding-right: 15px;
 }
 @media only all and (min-width: 37.5em) {
-  .wrapper__match-content {
+  .wrapper__match-content,
+  .content_wrapper__match-content {
     padding-left: 30px;
     padding-right: 30px;
     max-width: 1140px;
   }
 }
-.lt-ie9 .wrapper {
+.lt-ie9 .wrapper,
+.lt-ie9 .content_wrapper {
   max-width: 960px;
 }
 .lt-ie9 body {
@@ -974,7 +978,7 @@
         Content hero
     </section>
     <div class="content_bar"></div>
-    <div class="wrapper content_wrapper">
+    <div class="content_wrapper">
         <section class="content_main">
             Main content area
         </section>
@@ -991,7 +995,7 @@
         Content hero
     &lt;/section&gt;
     &lt;div class=&quot;content_bar&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;wrapper content_wrapper&quot;&gt;
+    &lt;div class=&quot;content_wrapper&quot;&gt;
         &lt;section class=&quot;content_main&quot;&gt;
             Main content area
         &lt;/section&gt;
@@ -1001,7 +1005,7 @@
     &lt;/div&gt;
 &lt;/main&gt;</code></pre>
             <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;section class=\&amp;quot;content_hero\&amp;quot; style=\&amp;quot;background: #E3E4E5\&amp;quot;&gt;\n        Content hero\n    &lt;/section&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;wrapper content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content area\n        &lt;/section&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot; style=\&amp;quot;background: #F1F2F2\&amp;quot;&gt;\n            Sidebar\n        &lt;/aside&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;section class=\&amp;quot;content_hero\&amp;quot; style=\&amp;quot;background: #E3E4E5\&amp;quot;&gt;\n        Content hero\n    &lt;/section&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content area\n        &lt;/section&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot; style=\&amp;quot;background: #F1F2F2\&amp;quot;&gt;\n            Sidebar\n        &lt;/aside&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
               <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
             </form>
             <ul class="docs-codenotes">
@@ -1028,7 +1032,7 @@ main.content
           <section class="docs-pattern_pattern">
 <main class="content content__1-3" id="main" role="main">
     <div class="content_bar"></div>
-    <div class="wrapper content_wrapper">
+    <div class="content_wrapper">
         <aside class="content_sidebar">
             Section navigation
         </aside>
@@ -1053,7 +1057,7 @@ main.content
           <footer class="docs-pattern_footer">
             <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__1-3&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
     &lt;div class=&quot;content_bar&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;wrapper content_wrapper&quot;&gt;
+    &lt;div class=&quot;content_wrapper&quot;&gt;
         &lt;aside class=&quot;content_sidebar&quot;&gt;
             Section navigation
         &lt;/aside&gt;
@@ -1074,7 +1078,7 @@ main.content
     &lt;/div&gt;
 &lt;/footer&gt;</code></pre>
             <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;wrapper content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot;&gt;\n            Section navigation\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            &lt;h2&gt;Main content area&lt;/h2&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                Cum corrupti tempora nam nihil qui mollitia consectetur\n                corporis nemo culpa dolorum! Laborum at eos deleniti\n                consequatur itaque officiis debitis quisquam! Provident!\n            &lt;/p&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot;&gt;\n            Section navigation\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            &lt;h2&gt;Main content area&lt;/h2&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                Cum corrupti tempora nam nihil qui mollitia consectetur\n                corporis nemo culpa dolorum! Laborum at eos deleniti\n                consequatur itaque officiis debitis quisquam! Provident!\n            &lt;/p&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
               <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
             </form>
             <ul class="docs-codenotes">
@@ -1092,7 +1096,7 @@ main.content
           <section class="docs-pattern_pattern">
 <main class="content content__2-1" id="main" role="main">
     <div class="content_bar"></div>
-    <div class="wrapper content_wrapper">
+    <div class="content_wrapper">
         <section class="content_main">
             <h2>Main content area</h2>
             <p>
@@ -1117,7 +1121,7 @@ main.content
           <footer class="docs-pattern_footer">
             <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__2-1&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
     &lt;div class=&quot;content_bar&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;wrapper content_wrapper&quot;&gt;
+    &lt;div class=&quot;content_wrapper&quot;&gt;
         &lt;section class=&quot;content_main&quot;&gt;
             &lt;h2&gt;Main content area&lt;/h2&gt;
             &lt;p&gt;
@@ -1138,7 +1142,7 @@ main.content
     &lt;/div&gt;
 &lt;/footer&gt;</code></pre>
             <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__2-1\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;wrapper content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            &lt;h2&gt;Main content area&lt;/h2&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                Cum corrupti tempora nam nihil qui mollitia consectetur\n                corporis nemo culpa dolorum! Laborum at eos deleniti\n                consequatur itaque officiis debitis quisquam! Provident!\n            &lt;/p&gt;\n        &lt;/section&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot; style=\&amp;quot;background: #F1F2F2\&amp;quot;&gt;\n            Sidebar\n        &lt;/aside&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__2-1\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            &lt;h2&gt;Main content area&lt;/h2&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                Cum corrupti tempora nam nihil qui mollitia consectetur\n                corporis nemo culpa dolorum! Laborum at eos deleniti\n                consequatur itaque officiis debitis quisquam! Provident!\n            &lt;/p&gt;\n        &lt;/section&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot; style=\&amp;quot;background: #F1F2F2\&amp;quot;&gt;\n            Sidebar\n        &lt;/aside&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
               <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
             </form>
             <ul class="docs-codenotes">
@@ -1157,7 +1161,7 @@ main.content
           <section class="docs-pattern_pattern">
 <main class="content content__2-1" id="main" role="main">
     <div class="content_bar"></div>
-    <div class="wrapper content_wrapper">
+    <div class="content_wrapper">
         <section class="content_main content_main__narrow">
             <h2>Main content area</h2>
             <p>
@@ -1182,7 +1186,7 @@ main.content
           <footer class="docs-pattern_footer">
             <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__2-1&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
     &lt;div class=&quot;content_bar&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;wrapper content_wrapper&quot;&gt;
+    &lt;div class=&quot;content_wrapper&quot;&gt;
         &lt;section class=&quot;content_main content_main__narrow&quot;&gt;
             &lt;h2&gt;Main content area&lt;/h2&gt;
             &lt;p&gt;
@@ -1203,7 +1207,7 @@ main.content
     &lt;/div&gt;
 &lt;/footer&gt;</code></pre>
             <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__2-1\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;wrapper content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main content_main__narrow\&amp;quot;&gt;\n            &lt;h2&gt;Main content area&lt;/h2&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                Cum corrupti tempora nam nihil qui mollitia consectetur\n                corporis nemo culpa dolorum! Laborum at eos deleniti\n                consequatur itaque officiis debitis quisquam! Provident!\n            &lt;/p&gt;\n        &lt;/section&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot; style=\&amp;quot;background: #F1F2F2\&amp;quot;&gt;\n            Sidebar\n        &lt;/aside&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__2-1\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main content_main__narrow\&amp;quot;&gt;\n            &lt;h2&gt;Main content area&lt;/h2&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                Cum corrupti tempora nam nihil qui mollitia consectetur\n                corporis nemo culpa dolorum! Laborum at eos deleniti\n                consequatur itaque officiis debitis quisquam! Provident!\n            &lt;/p&gt;\n        &lt;/section&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot; style=\&amp;quot;background: #F1F2F2\&amp;quot;&gt;\n            Sidebar\n        &lt;/aside&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
               <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
             </form>
             <ul class="docs-codenotes">
@@ -1222,7 +1226,7 @@ main.content
           <section class="docs-pattern_pattern">
 <main class="content content__1-3" id="main" role="main">
     <div class="content_bar"></div>
-    <div class="wrapper content_wrapper">
+    <div class="content_wrapper">
         <aside class="content_sidebar content__flush-bottom">
             Side with no bottom padding...
         </aside>
@@ -1249,7 +1253,7 @@ main.content
           <footer class="docs-pattern_footer">
             <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__1-3&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
     &lt;div class=&quot;content_bar&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;wrapper content_wrapper&quot;&gt;
+    &lt;div class=&quot;content_wrapper&quot;&gt;
         &lt;aside class=&quot;content_sidebar content__flush-bottom&quot;&gt;
             Side with no bottom padding...
         &lt;/aside&gt;
@@ -1272,7 +1276,7 @@ main.content
     &lt;/div&gt;
 &lt;/footer&gt;</code></pre>
             <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;wrapper content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar content__flush-bottom\&amp;quot;&gt;\n            Side with no bottom padding...\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main content__flush-bottom\&amp;quot;&gt;\n            Main content with no bottom padding...\n            &lt;div class=\&amp;quot;block\n                        block__flush-bottom\n                        block__flush-sides\n                        block__bg\&amp;quot;&gt;\n                .content__flush-bottom is very useful when you have a\n                content block inside of .content_main with a background\n                and flush sides.\n            &lt;/div&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar content__flush-bottom\&amp;quot;&gt;\n            Side with no bottom padding...\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main content__flush-bottom\&amp;quot;&gt;\n            Main content with no bottom padding...\n            &lt;div class=\&amp;quot;block\n                        block__flush-bottom\n                        block__flush-sides\n                        block__bg\&amp;quot;&gt;\n                .content__flush-bottom is very useful when you have a\n                content block inside of .content_main with a background\n                and flush sides.\n            &lt;/div&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
               <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
             </form>
             <ul class="docs-codenotes">
@@ -1290,7 +1294,7 @@ main.content
           <section class="docs-pattern_pattern">
 <main class="content content__1-3" id="main" role="main">
     <div class="content_bar"></div>
-    <div class="wrapper content_wrapper">
+    <div class="content_wrapper">
         <aside class="content_sidebar content__flush-top-on-small">
             Side with no top padding on small screens...
         </aside>
@@ -1309,7 +1313,7 @@ main.content
           <footer class="docs-pattern_footer">
             <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__1-3&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
     &lt;div class=&quot;content_bar&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;wrapper content_wrapper&quot;&gt;
+    &lt;div class=&quot;content_wrapper&quot;&gt;
         &lt;aside class=&quot;content_sidebar content__flush-top-on-small&quot;&gt;
             Side with no top padding on small screens...
         &lt;/aside&gt;
@@ -1324,7 +1328,7 @@ main.content
     &lt;/div&gt;
 &lt;/footer&gt;</code></pre>
             <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;wrapper content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar content__flush-top-on-small\&amp;quot;&gt;\n            Side with no top padding on small screens...\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar content__flush-top-on-small\&amp;quot;&gt;\n            Side with no top padding on small screens...\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
               <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
             </form>
             <ul class="docs-codenotes">
@@ -1342,7 +1346,7 @@ main.content
           <section class="docs-pattern_pattern">
 <main class="content content__1-3" id="main" role="main">
     <div class="content_bar"></div>
-    <div class="wrapper content_wrapper">
+    <div class="content_wrapper">
         <aside class="content_sidebar content__flush-all-on-small">
             Side with no padding or border-based gutters on small screens...
         </aside>
@@ -1361,7 +1365,7 @@ main.content
           <footer class="docs-pattern_footer">
             <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__1-3&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
     &lt;div class=&quot;content_bar&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;wrapper content_wrapper&quot;&gt;
+    &lt;div class=&quot;content_wrapper&quot;&gt;
         &lt;aside class=&quot;content_sidebar content__flush-all-on-small&quot;&gt;
             Side with no padding or border-based gutters on small screens...
         &lt;/aside&gt;
@@ -1376,7 +1380,7 @@ main.content
     &lt;/div&gt;
 &lt;/footer&gt;</code></pre>
             <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;wrapper content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar content__flush-all-on-small\&amp;quot;&gt;\n            Side with no padding or border-based gutters on small screens...\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar content__flush-all-on-small\&amp;quot;&gt;\n            Side with no padding or border-based gutters on small screens...\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
               <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
             </form>
             <ul class="docs-codenotes">
@@ -1712,7 +1716,7 @@ Main content...
           <h3 class="docs-pattern_header">Flush-sides modifier</h3>
           <section class="docs-pattern_pattern">
 <main class="content content__1-3" id="main" role="main">
-    <div class="wrapper content_wrapper">
+    <div class="content_wrapper">
         <aside class="content_sidebar">
             Section navigation
         </aside>
@@ -1728,7 +1732,7 @@ Main content...
           </section>
           <footer class="docs-pattern_footer">
             <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__1-3&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
-    &lt;div class=&quot;wrapper content_wrapper&quot;&gt;
+    &lt;div class=&quot;content_wrapper&quot;&gt;
         &lt;aside class=&quot;content_sidebar&quot;&gt;
             Section navigation
         &lt;/aside&gt;
@@ -1741,7 +1745,7 @@ Main content...
     &lt;/div&gt;
 &lt;/main&gt;</code></pre>
             <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot;&gt;\n            Section navigation\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content...\n            &lt;aside class=\&amp;quot;block block__flush-sides\&amp;quot;&gt;\n                Content block with no side margins.\n            &lt;/aside&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot;&gt;\n            Section navigation\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content...\n            &lt;aside class=\&amp;quot;block block__flush-sides\&amp;quot;&gt;\n                Content block with no side margins.\n            &lt;/aside&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
               <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
             </form>
             <ul class="docs-codenotes">
@@ -1903,7 +1907,7 @@ Main content...
           <h3 class="docs-pattern_header">Background and flush-sides modifier combo example</h3>
           <section class="docs-pattern_pattern">
 <main class="content content__1-3" id="main" role="main">
-    <div class="wrapper content_wrapper">
+    <div class="content_wrapper">
         <aside class="content_sidebar">
             Section navigation
         </aside>
@@ -1919,7 +1923,7 @@ Main content...
           </section>
           <footer class="docs-pattern_footer">
             <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__1-3&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
-    &lt;div class=&quot;wrapper content_wrapper&quot;&gt;
+    &lt;div class=&quot;content_wrapper&quot;&gt;
         &lt;aside class=&quot;content_sidebar&quot;&gt;
             Section navigation
         &lt;/aside&gt;
@@ -1932,7 +1936,7 @@ Main content...
     &lt;/div&gt;
 &lt;/main&gt;</code></pre>
             <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot;&gt;\n            Section navigation\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main content__flush-bottom\&amp;quot;&gt;\n            Main content...\n            &lt;div class=\&amp;quot;block block__flush-sides block__bg\&amp;quot;&gt;\n                Content block with a background and flush sides\n            &lt;/div&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot;&gt;\n            Section navigation\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main content__flush-bottom\&amp;quot;&gt;\n            Main content...\n            &lt;div class=\&amp;quot;block block__flush-sides block__bg\&amp;quot;&gt;\n                Content block with a background and flush sides\n            &lt;/div&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
               <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
             </form>
             <ul class="docs-codenotes">
@@ -2106,44 +2110,6 @@ Main content...
 }</code></pre>
       </div>
     </div>
-    <div id="sidebar-items" class="docs-component">
-      <h2 class="docs-component_header"><span>Sidebar items</span></h2>
-      <div class="docs-patterns">
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">Sidebar item spacing</h3>
-          <section class="docs-pattern_pattern">
-<section class="content_sidebar-item related-posts" style="background: #F1F2F2">
-    Related posts
-</section>
-<section class="content_sidebar-item related-news" style="background: #F1F2F2">
-    Related news
-</section>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;section class=&quot;content_sidebar-item related-posts&quot; style=&quot;background: #F1F2F2&quot;&gt;
-    Related posts
-&lt;/section&gt;
-&lt;section class=&quot;content_sidebar-item related-news&quot; style=&quot;background: #F1F2F2&quot;&gt;
-    Related news
-&lt;/section&gt;</code></pre>
-            <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;section class=\&amp;quot;content_sidebar-item related-posts\&amp;quot; style=\&amp;quot;background: #F1F2F2\&amp;quot;&gt;\n    Related posts\n&lt;/section&gt;\n&lt;section class=\&amp;quot;content_sidebar-item related-news\&amp;quot; style=\&amp;quot;background: #F1F2F2\&amp;quot;&gt;\n    Related news\n&lt;/section&gt;\n&amp;quot;}">
-              <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
-            </form>
-            <ul class="docs-notes">
-              <li>Gives some vertical margin between sidebar items.</li>
-              <li>Inline styling is for demonstration purposes only; do not include it in your markup.</li>
-            </ul>
-          </footer>
-        </div>
-      </div>
-      <div class="docs-css">
-        <pre class="docs-code"><code data-language="css">.content_sidebar-item + .content_sidebar-item {
-  margin-top: 3.75em;
-}</code></pre>
-      </div>
-    </div>
     <div id="bleedbar-sidebar-styling" class="docs-component">
       <h2 class="docs-component_header"><span>Bleedbar sidebar styling</span></h2>
       <div class="docs-patterns">
@@ -2155,7 +2121,7 @@ Main content...
         Content hero
     </section>
     <div class="content_bar"></div>
-    <div class="wrapper content_wrapper">
+    <div class="content_wrapper">
         <section class="content_main">
             Main content area
         </section>
@@ -2172,7 +2138,7 @@ Main content...
         Content hero
     &lt;/section&gt;
     &lt;div class=&quot;content_bar&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;wrapper content_wrapper&quot;&gt;
+    &lt;div class=&quot;content_wrapper&quot;&gt;
         &lt;section class=&quot;content_main&quot;&gt;
             Main content area
         &lt;/section&gt;
@@ -2182,7 +2148,7 @@ Main content...
     &lt;/div&gt;
 &lt;/main&gt;</code></pre>
             <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__2-1 content__bleedbar\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;section class=\&amp;quot;content_hero\&amp;quot; style=\&amp;quot;background: #E3E4E5\&amp;quot;&gt;\n        Content hero\n    &lt;/section&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;wrapper content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content area\n        &lt;/section&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot;&gt;\n            Bleeding sidebar\n        &lt;/aside&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__2-1 content__bleedbar\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;section class=\&amp;quot;content_hero\&amp;quot; style=\&amp;quot;background: #E3E4E5\&amp;quot;&gt;\n        Content hero\n    &lt;/section&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content area\n        &lt;/section&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot;&gt;\n            Bleeding sidebar\n        &lt;/aside&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
               <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
             </form>
             <ul class="docs-codenotes">
