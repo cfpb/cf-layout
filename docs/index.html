@@ -26,106 +26,6 @@
       <h1 class="docs-title"><span class="docs-icon">&lt;/&gt;</span> cf-layout docs
       </h1><a href="https://github.com/cfpb/cf-layout" class="docs-repo">view the repository</a>
     </div>
-    <div id="base-layout" class="docs-component">
-      <h2 class="docs-component_header"><span>Base layout</span></h2>
-      <div class="docs-patterns">
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">.wrapper (base)</h3>
-          <section class="docs-pattern_pattern">
-<div class="wrapper">
-    Wrapper
-</div>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;wrapper&quot;&gt;
-    Wrapper
-&lt;/div&gt;</code></pre>
-            <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n    Wrapper\n&lt;/div&gt;\n&amp;quot;}">
-              <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
-            </form>
-            <ul class="docs-notes">
-              <li>Turns an element into a cf-grid wrapper at 801px and above.</li>
-              <li>Includes some explicit declarations for IE8 due to the fact that it doesn't support media queries.</li>
-            </ul>
-          </footer>
-        </div>
-        <div class="docs-pattern">
-          <h3 class="docs-pattern_header">.wrapper__match-content (modifier)</h3>
-          <section class="docs-pattern_pattern">
-<div class="wrapper wrapper__match-content">
-    <code>.wrapper.wrapper__match-content</code>
-    <img src="http://placekitten.com/800/40">
-</div>
-<br>
-<main class="content" id="main" role="main">
-    <div class="content_wrapper">
-        <section class="content_main">
-            <code>.content_wrapper .content_main</code>
-            <img src="http://placekitten.com/800/40">
-        </section>
-    </div>
-</main>
-
-          </section>
-          <footer class="docs-pattern_footer">
-            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;wrapper wrapper__match-content&quot;&gt;
-    &lt;code&gt;.wrapper.wrapper__match-content&lt;/code&gt;
-    &lt;img src=&quot;http://placekitten.com/800/40&quot;&gt;
-&lt;/div&gt;
-&lt;br&gt;
-&lt;main class=&quot;content&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
-    &lt;div class=&quot;content_wrapper&quot;&gt;
-        &lt;section class=&quot;content_main&quot;&gt;
-            &lt;code&gt;.content_wrapper .content_main&lt;/code&gt;
-            &lt;img src=&quot;http://placekitten.com/800/40&quot;&gt;
-        &lt;/section&gt;
-    &lt;/div&gt;
-&lt;/main&gt;</code></pre>
-            <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;wrapper wrapper__match-content\&amp;quot;&gt;\n    &lt;code&gt;.wrapper.wrapper__match-content&lt;/code&gt;\n    &lt;img src=\&amp;quot;http://placekitten.com/800/40\&amp;quot;&gt;\n&lt;/div&gt;\n&lt;br&gt;\n&lt;main class=\&amp;quot;content\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            &lt;code&gt;.content_wrapper .content_main&lt;/code&gt;\n            &lt;img src=\&amp;quot;http://placekitten.com/800/40\&amp;quot;&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
-              <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
-            </form>
-            <ul class="docs-notes">
-              <li>The .content area has a visual gutter twice the size of a normal wrapper because the gutters from the sidebar and main content divs add to the gutters of the wrapper. This modifier gives you a wrapper with wider gutters to match the visual gutters of the .content area.</li>
-            </ul>
-          </footer>
-        </div>
-      </div>
-      <div class="docs-css">
-        <pre class="docs-code"><code data-language="css">@media only all and (min-width: 50.0625em) {
-  .wrapper,
-  .content_wrapper {
-    max-width: 1170px;
-    padding: 0 15px;
-    margin: 0 auto;
-    position: relative;
-    clear: both;
-  }
-}
-.wrapper__match-content,
-.content_wrapper__match-content {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media only all and (min-width: 37.5em) {
-  .wrapper__match-content,
-  .content_wrapper__match-content {
-    padding-left: 30px;
-    padding-right: 30px;
-    max-width: 1140px;
-  }
-}
-.lt-ie9 .wrapper,
-.lt-ie9 .content_wrapper {
-  max-width: 960px;
-}
-.lt-ie9 body {
-  min-width: 800px;
-}</code></pre>
-      </div>
-    </div>
     <div id="content-layouts" class="docs-component">
       <h2 class="docs-component_header"><span>Content layouts</span></h2>
       <div class="docs-patterns">
@@ -2201,6 +2101,163 @@ Main content...
   .content__bleedbar.content__3-1 .content_wrapper:after {
     left: 75%;
   }
+}</code></pre>
+      </div>
+    </div>
+    <div id="cf-grid-helpers" class="docs-component">
+      <h2 class="docs-component_header"><span>cf-grid helpers</span></h2>
+      <div class="docs-patterns">
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">.wrapper (base)</h3>
+          <section class="docs-pattern_pattern">
+<div class="wrapper">
+    Wrapper
+</div>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;wrapper&quot;&gt;
+    Wrapper
+&lt;/div&gt;</code></pre>
+            <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n    Wrapper\n&lt;/div&gt;\n&amp;quot;}">
+              <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+            </form>
+            <ul class="docs-notes">
+              <li>Turns an element into a cf-grid wrapper at 801px and above.</li>
+              <li>Includes some explicit declarations for IE8 due to the fact that it doesn't support media queries.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">.wrapper__match-content (modifier)</h3>
+          <section class="docs-pattern_pattern">
+<div class="wrapper wrapper__match-content">
+    <code>.wrapper.wrapper__match-content</code>
+    <img src="http://placekitten.com/800/40">
+</div>
+<br>
+<main class="content" id="main" role="main">
+    <div class="content_wrapper">
+        <section class="content_main">
+            <code>.content_wrapper .content_main</code>
+            <img src="http://placekitten.com/800/40">
+        </section>
+    </div>
+</main>
+
+          </section>
+          <footer class="docs-pattern_footer">
+            <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;wrapper wrapper__match-content&quot;&gt;
+    &lt;code&gt;.wrapper.wrapper__match-content&lt;/code&gt;
+    &lt;img src=&quot;http://placekitten.com/800/40&quot;&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;main class=&quot;content&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
+    &lt;div class=&quot;content_wrapper&quot;&gt;
+        &lt;section class=&quot;content_main&quot;&gt;
+            &lt;code&gt;.content_wrapper .content_main&lt;/code&gt;
+            &lt;img src=&quot;http://placekitten.com/800/40&quot;&gt;
+        &lt;/section&gt;
+    &lt;/div&gt;
+&lt;/main&gt;</code></pre>
+            <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+              <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;wrapper wrapper__match-content\&amp;quot;&gt;\n    &lt;code&gt;.wrapper.wrapper__match-content&lt;/code&gt;\n    &lt;img src=\&amp;quot;http://placekitten.com/800/40\&amp;quot;&gt;\n&lt;/div&gt;\n&lt;br&gt;\n&lt;main class=\&amp;quot;content\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            &lt;code&gt;.content_wrapper .content_main&lt;/code&gt;\n            &lt;img src=\&amp;quot;http://placekitten.com/800/40\&amp;quot;&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
+              <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+            </form>
+            <ul class="docs-notes">
+              <li>The .content area has a visual gutter twice the size of a normal wrapper because the gutters from the sidebar and main content divs add to the gutters of the wrapper. This modifier gives you a wrapper with wider gutters to match the visual gutters of the .content area.</li>
+            </ul>
+          </footer>
+        </div>
+        <div class="docs-pattern">
+          <h3 class="docs-pattern_header">Column divider modifiers</h3>
+          <footer class="docs-pattern_footer">
+            <ul class="docs-codenotes">
+              <li>
+                <pre class="docs-code"><code>.grid_column__top-divider</code></pre>
+              </li>
+              <li>
+                <pre class="docs-code"><code>.grid_column__left-divider</code></pre>
+              </li>
+              <li>
+                <pre class="docs-code"><code>.my-column-1-2 {
+
+    // Creates a column that spans 6 out of 12 columns.
+    .grid_column(6, 12);
+
+    // Add a top divider only at screen 599px and smaller.
+    .respond-to-max(599px {
+        .grid_column__top-divider();
+    });
+
+    // Add a left divider only at screen 600px and larger.
+    .respond-to-min(600px, {
+        .grid_column__left-divider();
+    });
+
+}</code></pre>
+              </li>
+            </ul>
+            <ul class="docs-notes">
+              <li>cf-grid columns use left and right borders for fixed margins which means it's not possible to set visual left and right borders directly on them. Instead we can use the :before pseudo element and position it absolutely. The added benefit of doing it this way is that the border spans the entire height of the next parent using `position: relative;`. This means that the border will always match the height of the tallest column in the row.</li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+      <div class="docs-css">
+        <pre class="docs-code"><code data-language="css">@media only all and (min-width: 50.0625em) {
+  .wrapper,
+  .content_wrapper {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+    position: relative;
+    clear: both;
+  }
+}
+.wrapper__match-content,
+.content_wrapper__match-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media only all and (min-width: 37.5em) {
+  .wrapper__match-content,
+  .content_wrapper__match-content {
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 1140px;
+  }
+}
+.lt-ie9 .wrapper,
+.lt-ie9 .content_wrapper {
+  max-width: 960px;
+}
+.lt-ie9 body {
+  min-width: 800px;
+}
+.grid_column__top-divider {
+  margin-top: 3.75em;
+}
+.grid_column__top-divider:before {
+  content: &quot;&quot;;
+  display: block;
+  height: 1px;
+  margin-bottom: 1.875em;
+  background-color: #babbbd;
+}
+.grid_column__left-divider {
+  border-left-width: 30px;
+}
+.grid_column__left-divider:before {
+  content: &quot;&quot;;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  display: block;
+  background-color: #babbbd;
+  margin-left: -30px;
 }</code></pre>
       </div>
     </div>

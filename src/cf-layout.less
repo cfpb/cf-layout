@@ -5,75 +5,6 @@
 
 
 /* topdoc
-  name: Base layout
-  family: cf-layout
-  patterns:
-    - name: .wrapper (base)
-      markup: |
-        <div class="wrapper">
-            Wrapper
-        </div>
-      notes:
-        - "Turns an element into a cf-grid wrapper at 801px and above."
-        - "Includes some explicit declarations for IE8 due to the fact that it
-           doesn't support media queries."
-    - name: .wrapper__match-content (modifier)
-      markup: |
-        <div class="wrapper wrapper__match-content">
-            <code>.wrapper.wrapper__match-content</code>
-            <img src="http://placekitten.com/800/40">
-        </div>
-        <br>
-        <main class="content" id="main" role="main">
-            <div class="content_wrapper">
-                <section class="content_main">
-                    <code>.content_wrapper .content_main</code>
-                    <img src="http://placekitten.com/800/40">
-                </section>
-            </div>
-        </main>
-      notes:
-        - "The .content area has a visual gutter twice the size of a normal
-           wrapper because the gutters from the sidebar and main content divs
-           add to the gutters of the wrapper. This modifier gives you a wrapper
-           with wider gutters to match the visual gutters of the .content area."
-  tags:
-    - cf-layout
-*/
-
-.wrapper {
-    .respond-to-min(801px, {
-        .grid_wrapper();
-    });
-
-    &__match-content {
-        padding-left: @grid_gutter-width / 2;
-        padding-right: @grid_gutter-width / 2;
-
-        .respond-to-min(600px, {
-            padding-left: @grid_gutter-width;
-            padding-right: @grid_gutter-width;
-            max-width: 1140px;
-        });
-    }
-}
-
-.lt-ie9 {
-    & .wrapper {
-        max-width: 960px;
-    }
-
-    & body {
-        min-width: 800px;
-    }
-}
-
-.content_wrapper {
-    &:extend(.wrapper all);
-}
-
-
-/* topdoc
   name: Content layouts
   family: cf-layout
   patterns:
@@ -694,6 +625,10 @@
     - cf-layout
 */
 
+.content_wrapper {
+    &:extend(.wrapper all);
+}
+
 .content_intro,
 .content_main,
 .content_sidebar {
@@ -1143,23 +1078,50 @@
 
 
 /* topdoc
-  name: cf-grid column dividers
-  family: cf-grid-helpers
-  notes:
-    - "cf-grid columns use left and right borders for fixed margins which means
-       it's not possible to set visual left and right borders directly on them.
-       Instead we can use the :before pseudo element and position it absolutely.
-       The added benefit of doing it this way is that the border spans the
-       entire height of the next parent using `position: relative;`. This means
-       that the border will always match the height of the tallest column in the
-       row."
+  name: cf-grid helpers
+  family: cf-layout
   patterns:
-    - name: Classes
+    - name: .wrapper (base)
+      markup: |
+        <div class="wrapper">
+            Wrapper
+        </div>
+      notes:
+        - "Turns an element into a cf-grid wrapper at 801px and above."
+        - "Includes some explicit declarations for IE8 due to the fact that it
+           doesn't support media queries."
+    - name: .wrapper__match-content (modifier)
+      markup: |
+        <div class="wrapper wrapper__match-content">
+            <code>.wrapper.wrapper__match-content</code>
+            <img src="http://placekitten.com/800/40">
+        </div>
+        <br>
+        <main class="content" id="main" role="main">
+            <div class="content_wrapper">
+                <section class="content_main">
+                    <code>.content_wrapper .content_main</code>
+                    <img src="http://placekitten.com/800/40">
+                </section>
+            </div>
+        </main>
+      notes:
+        - "The .content area has a visual gutter twice the size of a normal
+           wrapper because the gutters from the sidebar and main content divs
+           add to the gutters of the wrapper. This modifier gives you a wrapper
+           with wider gutters to match the visual gutters of the .content area."
+    - name: Column divider modifiers
+      notes:
+        - "cf-grid columns use left and right borders for fixed margins which
+           means it's not possible to set visual left and right borders directly
+           on them. Instead we can use the :before pseudo element and position
+           it absolutely. The added benefit of doing it this way is that the
+           border spans the entire height of the next parent using `position:
+           relative;`. This means that the border will always match the height
+           of the tallest column in the row."
       codenotes:
         - .grid_column__top-divider
         - .grid_column__left-divider
-    - name: Usage
-      codenotes:
         - |
           .my-column-1-2 {
 
@@ -1178,8 +1140,35 @@
 
           }
   tags:
-    - cf-grid-helpers
+    - cf-layout
 */
+
+.wrapper {
+    .respond-to-min(801px, {
+        .grid_wrapper();
+    });
+
+    &__match-content {
+        padding-left: @grid_gutter-width / 2;
+        padding-right: @grid_gutter-width / 2;
+
+        .respond-to-min(600px, {
+            padding-left: @grid_gutter-width;
+            padding-right: @grid_gutter-width;
+            max-width: 1140px;
+        });
+    }
+}
+
+.lt-ie9 {
+    & .wrapper {
+        max-width: 960px;
+    }
+
+    & body {
+        min-width: 800px;
+    }
+}
 
 .grid_column__top-divider {
     margin-top: unit((@grid_gutter-width * 2) / @base-font-size-px, em);
