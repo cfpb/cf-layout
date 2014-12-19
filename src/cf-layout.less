@@ -405,49 +405,41 @@
     .respond-to-min(@tablet-min, {
         &.content-l_col-1-2 + &.content-l_col-1-2,
         &.content-l_col-1-3 + &.content-l_col-1-3,
+        &.content-l_col-1-3 + &.content-l_col-2-3,
+        &.content-l_col-2-3 + &.content-l_col-1-3,
         &.content-l_col-3-8 + &.content-l_col-3-8,
         &.content-l_col-3-8 + &.content-l_col-5-8,
         &.content-l_col-5-8 + &.content-l_col-3-8 {
             margin-top: 0;
         }
+        
     });
 }
-
-.content-l_col-1 {
-    .respond-to-min(@tablet-min, {
+.respond-to-min(@tablet-min, {
+    .content-l_col-1 {
         .grid_column(12);
-    });
-}
-
-.content-l_col-1-2 {
-    .respond-to-min(@tablet-min, {
+    }
+    
+    .content-l_col-1-2 {
         .grid_column(6);
-    });
-}
-
-.content-l_col-1-3 {
-    .respond-to-min(@tablet-min, {
+    }
+    
+    .content-l_col-1-3 {
         .grid_column(4);
-    });
-}
+    }
 
-.content-l_col-2-3 {
-    .respond-to-min(@tablet-min, {
+    .content-l_col-2-3 {
         .grid_column(8);
-    });
-}
+    }
 
-.content-l_col-3-8 {
-    .respond-to-min(@tablet-min, {
+    .content-l_col-3-8 {
         .grid_column(3, 8);
-    });
-}
+    }
 
-.content-l_col-5-8 {
-    .respond-to-min(@tablet-min, {
+    .content-l_col-5-8 {
         .grid_column(5, 8);
-    });
-}
+    }
+});
 
 
 /* topdoc
