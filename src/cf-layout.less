@@ -369,7 +369,7 @@
             .stack-col(content-l_col-1-2);
         });
 
-        .respond-to-max(899px, {
+        .respond-to-range(@tablet-min, 899px, {
             .stack-col-thirds();
             .stack-col-eighths();        
         });
@@ -379,13 +379,13 @@
         .stack-col-thirds();
         .stack-col-eighths();        
 
-        .respond-to-min(801px, {
+        .respond-to-range(@tablet-min, 801px, {
             .stack-col(content-l_col-1-2);
         });
     }
 
     &__large-gutters {
-        .respond-to-min(600px, {
+        .respond-to-min(@tablet-min, {
             margin-left: -@grid_gutter-width;
             margin-right: -@grid_gutter-width;
 
