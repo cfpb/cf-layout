@@ -22,8 +22,8 @@
   "license": "https://github.com/cfpb/cf-layout/blob/gh-pages/TERMS.md",
   "main": "src/cf-layout.less",
   "dependencies": {
-    "cf-core": "git://github.com/cfpb/cf-core.git",
-    "cf-grid": "git://github.com/cfpb/cf-grid.git"
+    "cf-core": "latest",
+    "cf-grid": "latest"
   },
   "exportsOverride": {
     "cf-*": {
