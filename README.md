@@ -1,4 +1,3 @@
-
 # cf-layout
 
 [![Dependency Status](https://gemnasium.com/cfpb/cf-layout.svg)](https://gemnasium.com/cfpb/cf-layout)
