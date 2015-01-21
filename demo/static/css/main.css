@@ -4,28 +4,28 @@
    Layout Helpers
    ========================================================================== */
 /* topdoc
-    name: Theme variables
-    family: cf-layout
-    notes:
-      - "The following color and sizing variables are exposed, allowing you to
-         easily override them before compiling."
-    patterns:
-    - name: Colors
-      codenotes:
-        - |
-          @block__border-top
-          @block__border-bottom
-          @block__bg
-          @content_main-border
-          @content_sidebar-bg
-          @content_sidebar-border
-          @content_bar
-          @content_line
-          @grid_column__top-divider
-          @grid_column__left-divider
-    tags:
-    - cf-layout
-    - less
+  name: Theme variables
+  family: cf-layout
+  notes:
+    - "The following color and sizing variables are exposed, allowing you to
+       easily override them before compiling."
+  patterns:
+  - name: Colors
+    codenotes:
+      - |
+        @block__border-top
+        @block__border-bottom
+        @block__bg
+        @content_main-border
+        @content_sidebar-bg
+        @content_sidebar-border
+        @content_bar
+        @content_line
+        @grid_column__top-divider
+        @grid_column__left-divider
+  tags:
+  - cf-layout
+  - less
 */
 /* topdoc
   name: Content layouts
@@ -1877,8 +1877,8 @@
   margin-left: -30px;
 }
 /* topdoc
-    name: EOF
-    eof: true
+  name: EOF
+  eof: true
 */
 /* ==========================================================================
    Capital Framework
