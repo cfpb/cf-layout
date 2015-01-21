@@ -5,6 +5,58 @@
 
 
 /* topdoc
+    name: Theme variables
+    family: cf-layout
+    notes:
+      - "The following color and sizing variables are exposed, allowing you to
+         easily override them before compiling."
+    patterns:
+    - name: Colors
+      codenotes:
+        - |
+          @block__border-top
+          @block__border-bottom
+          @block__bg
+          @content_main-border
+          @content_sidebar-bg
+          @content_sidebar-border
+          @content_bar
+          @content_line
+          @grid_column__top-divider
+          @grid_column__left-divider
+    tags:
+    - cf-layout
+    - less
+*/
+
+// Color variables
+
+// .block
+@block__border-top:             #3a8899;
+@block__border-bottom:          #3a8899;
+@block__bg:                     lighten(#3a8899, 55%);
+
+// .content_main
+@content_main-border:           #3a8899;
+
+// .content_sidebar
+@content_sidebar-bg:            lighten(#3a8899, 55%);
+@content_sidebar-border:        #3a8899;
+
+// .content_bar
+@content_bar:                   #3a8899;
+
+// .content_line
+@content_line:                  #3a8899;
+
+// .grid_column__top-divider
+@grid_column__top-divider:      #3a8899;
+
+// .grid_column__top-divider
+@grid_column__left-divider:     #3a8899;
+
+
+/* topdoc
   name: Content layouts
   family: cf-layout
   patterns:
@@ -582,7 +634,7 @@
 
 .content_bar {
     height: 10px;
-    background: @green;
+    background: @content_bar;
 }
 
 
@@ -599,7 +651,7 @@
 
 .content_line {
     height: 1px;
-    background: @gray-50;
+    background: @content_line;
 }
 
 
@@ -872,7 +924,7 @@
 
                 &:after {
                     content: '';
-                    border-left: 1px solid @gray-50;
+                    border-left: 1px solid @content_main-border;
                     position: absolute;
                     top: unit((@grid_gutter-width * 2) / @base-font-size-px, em);
                     bottom: 0;
@@ -1127,11 +1179,11 @@
     margin-bottom: unit((@grid_gutter-width * 2) / @base-font-size-px, em);
     
     &__border-top {
-        border-top: 1px solid @gray-50;
+        border-top: 1px solid @block__border-top;
     }
     
     &__border-bottom {
-        border-bottom: 1px solid @gray-50;
+        border-bottom: 1px solid @block__border-bottom;
     }
 
     &__flush-top {
@@ -1154,7 +1206,7 @@
     &__bg {
         padding: unit(@grid_gutter-width / @base-font-size-px, em)
                  unit((@grid_gutter-width / 2) / @base-font-size-px, em);
-        background: @gray-10;
+        background: @block__bg;
         .respond-to-min(600px, {
             padding: unit(45 / @base-font-size-px, em)
                      unit(@grid_gutter-width / @base-font-size-px, em);
@@ -1226,7 +1278,7 @@
     .content_sidebar {
         padding: unit(@grid_gutter-width / @base-font-size-px, em)
                  unit((@grid_gutter-width / 2) / @base-font-size-px, em);
-        background: @gray-10;
+        background: @content_sidebar-bg;
     }
 
     .respond-to-min(801px, {
@@ -1249,7 +1301,7 @@
             .lt-ie8 & {
                 // Make sure the sidebar still has a background in IE7.
                 padding-right: @grid_gutter-width;
-                background: @gray-10;
+                background: @content_sidebar-bg;
             }
         }
 
@@ -1258,7 +1310,7 @@
             content: '';
             display: block;
             width: 9999px;
-            border-left: 1px solid @gray-50;
+            border-left: 1px solid @content_sidebar-border;
             height: 100%;
             position: absolute;
             top: 0;
@@ -1266,7 +1318,7 @@
             // The three in the below calculation is a magic number.
             // Not entirely sure what to do about it right now.
             margin-left: (@grid_gutter-width / 3);
-            background: @gray-10;
+            background: @content_sidebar-bg;
         }
 
         &.content__2-1 .content_wrapper:after {
@@ -1382,7 +1434,7 @@
         display: block;
         height: 1px;
         margin-bottom: unit(@grid_gutter-width / @base-font-size-px, em);
-        background-color: @gray-50;
+        background-color: @grid_column__top-divider;
         position: static;
         width: 100%;
         margin-left: auto !important;
@@ -1399,7 +1451,7 @@
         bottom: 0;
         width: 1px;
         display: block;
-        background-color: @gray-50;
+        background-color: @grid_column__left-divider;
         margin-left: -@grid_gutter-width;
     }
 }

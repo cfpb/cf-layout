@@ -1,16 +1,34 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+
+## 0.3.0 - 2015-01-16
+
+### Changed
+- Replaces all CFPB color variables with non-CFPB colors. To add the CFPB theme
+  to your project you will need to include the CFPB color palette and the
+  Capital Framework theme overrides file. Both files can be found in the
+  generator-cf repo here:
+  <https://github.com/cfpb/generator-cf/tree/master/app/templates/src/static/css>
+  Background info on the new Capital Framework color variables can be found at
+  <https://github.com/cfpb/capital-framework/issues/115>.
+
+### Updated
+- NPM dependencies.
+
+
 ## 0.2.2 - 2015-01-06
 
 ### Fixed
 - Updates `.stack-col` to use `display: block` on full-width columns. This puts it back into margin-collapsing
   mode. Without this, full-width inline-block columns will have double margins.
 
+
 ## 0.2.1 - 2014-12-29
 
 ### Fixed
 - Left border width override for stacked columns.
+
 
 ## 0.2.0 - 2014-12-19
 
@@ -22,10 +40,12 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 ### Removed
 - `.content-l__stack-on-cols` modifier class -- use `.content-l__sidebar` instead.
 
+
 ## 0.1.1 - 2014-12-05
 
 ### Added
 - Update cf-component-demo dev dependency to 0.9.0
+
 
 ## 0.1.0 - 2014-10-31
 

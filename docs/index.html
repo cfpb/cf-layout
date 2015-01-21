@@ -15,11 +15,6 @@
     <link rel="stylesheet" type="text/css" href="static/docs/brackets.css">
     <link rel="stylesheet" type="text/css" href="static/docs/docs.css">
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
-    <script>
-      // Confirm availability of JS and remove no-js class from html
-      var docElement = document.documentElement;
-      docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
-    </script>
   </head>
   <body>
     <div class="docs-sidebar-wrapper">
@@ -27,6 +22,35 @@
         <div class="docs-masthead">
           <h1 class="docs-title"><span class="docs-icon">&lt;/&gt;</span> cf-layout docs
           </h1><a href="https://github.com/cfpb/cf-layout" class="docs-repo">view the repository</a>
+        </div>
+        <div id="theme-variables" class="docs-component">
+          <h2 class="docs-component_header"><span>Theme variables</span></h2>
+          <div class="docs-component_intro">
+            <ul class="docs-notes">
+              <li>The following color and sizing variables are exposed, allowing you to easily override them before compiling.</li>
+            </ul>
+          </div>
+          <div class="docs-patterns">
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">Colors</h3>
+              <footer class="docs-pattern_footer">
+                <ul class="docs-codenotes">
+                  <li>
+                    <pre class="docs-code"><code>@block__border-top
+@block__border-bottom
+@block__bg
+@content_main-border
+@content_sidebar-bg
+@content_sidebar-border
+@content_bar
+@content_line
+@grid_column__top-divider
+@grid_column__left-divider</code></pre>
+                  </li>
+                </ul>
+              </footer>
+            </div>
+          </div>
         </div>
         <div id="content-layouts" class="docs-component">
           <h2 class="docs-component_header"><span>Content layouts</span></h2>
@@ -730,7 +754,7 @@
     display: block;
     height: 1px;
     margin-bottom: 1.875em;
-    background-color: #babbbd;
+    background-color: #3a8899;
     position: static;
     width: 100%;
     margin-left: auto !important;
@@ -754,7 +778,7 @@
     display: block;
     height: 1px;
     margin-bottom: 1.875em;
-    background-color: #babbbd;
+    background-color: #3a8899;
     position: static;
     width: 100%;
     margin-left: auto !important;
@@ -782,7 +806,7 @@
     display: block;
     height: 1px;
     margin-bottom: 1.875em;
-    background-color: #babbbd;
+    background-color: #3a8899;
     position: static;
     width: 100%;
     margin-left: auto !important;
@@ -806,7 +830,7 @@
     display: block;
     height: 1px;
     margin-bottom: 1.875em;
-    background-color: #babbbd;
+    background-color: #3a8899;
     position: static;
     width: 100%;
     margin-left: auto !important;
@@ -836,7 +860,7 @@
     display: block;
     height: 1px;
     margin-bottom: 1.875em;
-    background-color: #babbbd;
+    background-color: #3a8899;
     position: static;
     width: 100%;
     margin-left: auto !important;
@@ -862,7 +886,7 @@
     display: block;
     height: 1px;
     margin-bottom: 1.875em;
-    background-color: #babbbd;
+    background-color: #3a8899;
     position: static;
     width: 100%;
     margin-left: auto !important;
@@ -886,7 +910,7 @@
     display: block;
     height: 1px;
     margin-bottom: 1.875em;
-    background-color: #babbbd;
+    background-color: #3a8899;
     position: static;
     width: 100%;
     margin-left: auto !important;
@@ -914,7 +938,7 @@
     display: block;
     height: 1px;
     margin-bottom: 1.875em;
-    background-color: #babbbd;
+    background-color: #3a8899;
     position: static;
     width: 100%;
     margin-left: auto !important;
@@ -938,7 +962,7 @@
     display: block;
     height: 1px;
     margin-bottom: 1.875em;
-    background-color: #babbbd;
+    background-color: #3a8899;
     position: static;
     width: 100%;
     margin-left: auto !important;
@@ -967,7 +991,7 @@
   display: block;
   height: 1px;
   margin-bottom: 1.875em;
-  background-color: #babbbd;
+  background-color: #3a8899;
   position: static;
   width: 100%;
   margin-left: auto !important;
@@ -991,7 +1015,7 @@
   display: block;
   height: 1px;
   margin-bottom: 1.875em;
-  background-color: #babbbd;
+  background-color: #3a8899;
   position: static;
   width: 100%;
   margin-left: auto !important;
@@ -1019,7 +1043,7 @@
   display: block;
   height: 1px;
   margin-bottom: 1.875em;
-  background-color: #babbbd;
+  background-color: #3a8899;
   position: static;
   width: 100%;
   margin-left: auto !important;
@@ -1043,7 +1067,7 @@
   display: block;
   height: 1px;
   margin-bottom: 1.875em;
-  background-color: #babbbd;
+  background-color: #3a8899;
   position: static;
   width: 100%;
   margin-left: auto !important;
@@ -1072,7 +1096,7 @@
     display: block;
     height: 1px;
     margin-bottom: 1.875em;
-    background-color: #babbbd;
+    background-color: #3a8899;
     position: static;
     width: 100%;
     margin-left: auto !important;
@@ -1315,7 +1339,7 @@
     display: block;
     height: 1px;
     margin-bottom: 1.875em;
-    background-color: #babbbd;
+    background-color: #3a8899;
     position: static;
     width: 100%;
     margin-left: auto !important;
@@ -1332,7 +1356,7 @@
     bottom: 0;
     width: 1px;
     display: block;
-    background-color: #babbbd;
+    background-color: #3a8899;
     margin-left: -30px;
   }
 }
@@ -1346,7 +1370,7 @@
     display: block;
     height: 1px;
     margin-bottom: 1.875em;
-    background-color: #babbbd;
+    background-color: #3a8899;
     position: static;
     width: 100%;
     margin-left: auto !important;
@@ -1363,7 +1387,7 @@
     bottom: 0;
     width: 1px;
     display: block;
-    background-color: #babbbd;
+    background-color: #3a8899;
     margin-left: -30px;
   }
 }</code></pre>
@@ -1394,7 +1418,7 @@
           <div class="docs-css">
             <pre class="docs-code"><code data-language="css">.content_bar {
   height: 10px;
-  background: #2cb34a;
+  background: #3a8899;
 }</code></pre>
           </div>
         </div>
@@ -1419,7 +1443,7 @@
           <div class="docs-css">
             <pre class="docs-code"><code data-language="css">.content_line {
   height: 1px;
-  background: #babbbd;
+  background: #3a8899;
 }</code></pre>
           </div>
         </div>
@@ -1945,7 +1969,7 @@ main.content
   }
   .content__1-3 .content_main:after {
     content: '';
-    border-left: 1px solid #babbbd;
+    border-left: 1px solid #3a8899;
     position: absolute;
     top: 3.75em;
     bottom: 0;
@@ -2493,10 +2517,10 @@ Main content...
   margin-bottom: 3.75em;
 }
 .block__border-top {
-  border-top: 1px solid #babbbd;
+  border-top: 1px solid #3a8899;
 }
 .block__border-bottom {
-  border-bottom: 1px solid #babbbd;
+  border-bottom: 1px solid #3a8899;
 }
 .block__flush-top {
   margin-top: 0 !important;
@@ -2516,7 +2540,7 @@ Main content...
 }
 .block__bg {
   padding: 1.875em 0.9375em;
-  background: #f1f2f2;
+  background: #f2f8fa;
 }
 @media only all and (min-width: 37.5em) {
   .block__bg {
@@ -2603,7 +2627,7 @@ Main content...
 }
 .content__bleedbar .content_sidebar {
   padding: 1.875em 0.9375em;
-  background: #f1f2f2;
+  background: #f2f8fa;
 }
 @media only all and (min-width: 50.0625em) {
   .content__bleedbar {
@@ -2618,19 +2642,19 @@ Main content...
   }
   .lt-ie8 .content__bleedbar .content_sidebar {
     padding-right: 30px;
-    background: #f1f2f2;
+    background: #f2f8fa;
   }
   .content__bleedbar .content_wrapper:after {
     content: '';
     display: block;
     width: 9999px;
-    border-left: 1px solid #babbbd;
+    border-left: 1px solid #3a8899;
     height: 100%;
     position: absolute;
     top: 0;
     z-index: 0;
     margin-left: 10px;
-    background: #f1f2f2;
+    background: #f2f8fa;
   }
   .content__bleedbar.content__2-1 .content_wrapper:after {
     left: 66.666666667%;
@@ -2782,7 +2806,7 @@ Main content...
   display: block;
   height: 1px;
   margin-bottom: 1.875em;
-  background-color: #babbbd;
+  background-color: #3a8899;
   position: static;
   width: 100%;
   margin-left: auto !important;
@@ -2797,7 +2821,7 @@ Main content...
   bottom: 0;
   width: 1px;
   display: block;
-  background-color: #babbbd;
+  background-color: #3a8899;
   margin-left: -30px;
 }</code></pre>
           </div>
