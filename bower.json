@@ -1,6 +1,6 @@
 {
   "name": "cf-layout",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Layout helpers for Capital Framework.",
   "keywords": [
     "capital-framework",
@@ -22,8 +22,8 @@
   "license": "https://github.com/cfpb/cf-layout/blob/gh-pages/TERMS.md",
   "main": "src/cf-layout.less",
   "dependencies": {
-    "cf-core": "latest",
-    "cf-grid": "latest"
+    "cf-core": "^1.0.0",
+    "cf-grid": "^1.0.0"
   },
   "exportsOverride": {
     "cf-*": {
