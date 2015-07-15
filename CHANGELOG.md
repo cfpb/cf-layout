@@ -1,6 +1,46 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 1.1.0 - 2015-07-16
+
+## Additions
+
+- Added new `col-1-4` and `col-3-4` options
+
+## Removals
+
+- Extra mediaqueries
+- Lots'o extra whitespace
+- Lots'o mixed indentation
+
+## Changes
+
+- Updated the margin top to be mobile only to avoid resetting the property on larger displays
+- Updated stacked columns margin top to not care what column size comes before it, as long as it's another column. This is far simpler than manually updating combinations, which is impossible to keep up with mixed grids.
+
+
+## 1.0.1 - 2015-06-05
+
+### Changed
+
+- Moved @import rules to top of source file to make compilation cleaner.
+
+
+## 1.0.0 - 2015-06-01
+
+## Additions
+
+- `@import` rules to pull in dependencies.
+
+## Removals
+
+- Grunt bower and concat tasks
+
+## Changes
+
+- `bowerrc` points to `src/vendor` (the now defunct Grunt task used to do this).
+- Bumped to `1.0.0`.
+
 
 ## 0.3.0 - 2015-01-16
 
