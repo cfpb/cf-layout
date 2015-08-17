@@ -1367,20 +1367,24 @@
             }
         }
 
-        .content_wrapper:after {
-            // Create faux sidebar background.
-            content: '';
-            display: block;
-            width: 9999px;
-            border-left: 1px solid @content_sidebar-border;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            z-index: 0;
-            // The three in the below calculation is a magic number.
-            // Not entirely sure what to do about it right now.
-            margin-left: (@grid_gutter-width / 3);
-            background: @content_sidebar-bg;
+        .content_wrapper {
+            posiiton: relative;
+
+            &:after {
+                // Create faux sidebar background.
+                content: '';
+                display: block;
+                width: 9999px;
+                border-left: 1px solid @content_sidebar-border;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                z-index: 0;
+                // The three in the below calculation is a magic number.
+                // Not entirely sure what to do about it right now.
+                margin-left: (@grid_gutter-width / 3);
+                background: @content_sidebar-bg;
+            }
         }
 
         &.content__2-1 .content_wrapper:after {
