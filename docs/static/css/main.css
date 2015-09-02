@@ -4375,7 +4375,7 @@ figure img {
     background: #f2f8fa;
   }
   .content__bleedbar .content_wrapper {
-    posiiton: relative;
+    position: relative;
   }
   .content__bleedbar .content_wrapper:after {
     content: '';
