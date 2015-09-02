@@ -1,6 +1,11 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 1.1.1 - 2015-08-02
+
+## Additions
+- Added position: relative to content_wrapper only when necessary to avoid globally setting position on elements that don't need it.
+
 ## 1.1.0 - 2015-07-16
 
 ## Additions
