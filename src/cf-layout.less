@@ -1403,6 +1403,199 @@
     }
 }
 
+/* topdoc
+  name: Featured content module
+  family: cf-layout
+  patterns:
+    - name: .fcm 
+      markup: |
+        <style>
+        </style>
+        <main class="content content__1-3" id="main" role="main">
+            <div class="content_wrapper">
+                <aside class="content_sidebar">
+                    Section navigation
+                </aside>
+                <section class="content_main">
+                    <section class="fcm">
+                      <div class="fcm_text">
+                        <h2 class="fcm_tag">
+                          <span class="fcm_icon cf-icon cf-icon-date"></span>
+                          Featured event
+                        </h2>
+                        <h1 class="fcm_headline">Consumer Advisory Board meeting</h1>
+                        <p class="fcm_body">Oct 22, 2015 @ 10:00AM EDT <br/>Washington, DC</p>
+                        <a class="fcm_cta jump-link">Read more about the event</a>
+                      </div>
+                      <div class="fcm_visual">
+                        <div class="fcm_wrapper">
+                        <img class="fcm_img" src="http://placekitten.com/g/540/270">
+                        </div>
+                      </div>
+                    </section>
+                </section>
+            </div>
+        </main>
+      notes:
+        - "Featured content module, like a hero, consists of headline/text/optional call to action
+           along with a visual. It is intended to be used in a main content column next to a   
+           sidebar."
+        - "Text is full width & displayed above the visual in the default/mobile view. At larger
+           screen sizes, the text occupies a fixed portion of the screen (equal to the width of 
+           5 of 12 columns at 799px for tablets & 3 of 12 columns at 1140px for desktop). The
+           visual occupies the remaining space. The visual also has a fixed width on larger screens   
+           (defaults to 540 so it has 16x9 ratio on desktop where the height of the module is 
+           270px), and is center-cropped when it becomes too wide for the available space."
+        - "Add the .fcm__left modifier when the sidebar column is on the right side. The background
+           color will bleed off the left edge of the screen at desktop sizes."
+      codenotes:
+        - .fcm
+        - .fcm__left
+  tags:
+    - cf-layout
+*/
+
+
+.fcm {
+  background-color: @gray-5;
+  border-top: 1px solid @gray-50;
+  border-bottom: 1px solid @gray-50;
+  position: relative;
+  
+  .respond-to-max(@mobile-max, {    
+    margin-right: unit((-@grid_gutter-width / 2) / @base-font-size-px, em);
+    margin-left: unit((-@grid_gutter-width / 2) / @base-font-size-px, em);
+  });
+  
+  .respond-to-min(@tablet-min, {    
+    margin-right: unit(-@grid_gutter-width / @base-font-size-px, em);
+    margin-left: unit(-@grid_gutter-width / @base-font-size-px, em);
+  });
+  
+  .respond-to-min(800px, {
+    box-sizing: border-box;
+    min-height: 270px;
+    margin-right: 0;
+    border-right: 1px solid @gray-50;
+    padding-left: unit(@grid_gutter-width / @base-font-size-px, em);
+  });
+  
+  &__left {
+    .respond-to-min(800px, {
+      margin-right: unit(-@grid_gutter-width / @base-font-size-px, em);
+      margin-left: 0;
+      padding-left: 0;
+      border-right-width: 0;
+      
+      // bleed background off left edge of page
+      &:before {
+        left: -200%;
+        background-color: @gray-5;
+        content: '';
+        display: block;
+        position: absolute;
+        width: 200%;
+        border-top: 1px solid @gray-50;
+        border-bottom: 1px solid @gray-50;
+        top: -1px;
+        bottom: -1px;
+      }
+    });
+  }
+  
+  
+  &_text {
+    padding-top: unit(25px / @base-font-size-px, em); // approximates 30px visually
+    padding-bottom: unit(@grid_gutter-width / @base-font-size-px, em);
+    
+    .respond-to-max(@mobile-max, {    
+      padding-right: unit((@grid_gutter-width /2) / @base-font-size-px, em);
+      padding-left: unit((@grid_gutter-width /2) / @base-font-size-px, em);
+    });
+    
+    .respond-to-range(@tablet-min, 799px, {    
+      padding-left: unit(@grid_gutter-width / @base-font-size-px, em);
+    });
+    
+    .respond-to-min(@tablet-min, {
+      margin-right: unit((@grid_gutter-width /2) / @base-font-size-px, em);
+      width: 303px; // width of 5 of 12 cols at 799px - 30px padding
+      float: left;
+      border-width: 0;
+    });
+    
+    .respond-to-min(800px, {
+      width: 270px; // width of 3 of 12 cols at 1140px - 15px padding
+    });
+    
+  }
+  
+  &_tag {
+    .h4;
+    margin-bottom: unit(18px / @base-font-size-px, em); // approximates 30px visually
+    .respond-to-max(@mobile-max, {
+      .h5;
+    });
+  }
+  
+  &_icon {
+    .respond-to-max(@mobile-max, {
+      display: none;
+    });
+  }
+
+  &_headline {
+    .h2;
+  }
+
+  &_body {
+    margin-bottom: unit(20px / @base-font-size-px, em);
+    .webfont-regular();
+    .respond-to-max(@mobile-max, {
+      .h4;
+    });
+  }
+
+  &_cta {
+    .webfont-regular();
+  }
+
+  &_visual {
+    width: 100%;
+    line-height: 0;
+  }
+ 
+  // crops image to center
+  &_wrapper {
+    text-align: center; 
+    overflow: hidden; 
+  }
+
+  &_img {
+    .respond-to-min(@tablet-min, {
+      position: relative; 
+      left: 50%;
+      transform: translate(-50%,0); 
+      max-width: 540px;
+      width: 540px;
+    });
+  }
+  
+}
+
+.lt-ie9 {
+  
+  .fcm {
+    border-left: 1px solid @gray-50;
+  }
+  .respond-to-min(@tablet-min, {
+     // image crop for older browsers
+     .fcm_wrapper img {
+         left: 100%; 
+         margin-left: -200%;
+     }
+  });
+}
 
 /* topdoc
     name: EOF
