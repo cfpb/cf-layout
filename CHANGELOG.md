@@ -64,7 +64,6 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 - `bowerrc` points to `src/vendor` (the now defunct Grunt task used to do this).
 - Bumped to `1.0.0`.
->>>>>>> b4a4805f216a37d74f5083c91650f7806f8369b6
 
 
 ## 0.3.0 - 2015-01-16
