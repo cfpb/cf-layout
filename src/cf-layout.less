@@ -1272,13 +1272,14 @@
     }
 
     &__flush {
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-        margin-right: -(@grid_gutter-width / 2);
         margin-left: -(@grid_gutter-width / 2);
+        margin-top: 0 !important;
+        margin-right: -(@grid_gutter-width / 2);
+        margin-bottom: 0 !important;
+
         .respond-to-min(600px, {
-          margin-right: -@grid_gutter-width;
-          margin-left: -@grid_gutter-width;
+            margin-right: -@grid_gutter-width;
+            margin-left: -@grid_gutter-width;
         });
     }
 
