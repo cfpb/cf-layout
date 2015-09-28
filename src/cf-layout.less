@@ -19,9 +19,9 @@
     codenotes:
       - |
         @block__border-top
+        @block__border-right
         @block__border-bottom
         @block__border-left
-        @block__border-right
         @block__border
         @block__bg
         @content_main-border
@@ -40,9 +40,9 @@
 
 // .block
 @block__border-top:             #3a8899;
+@block__border-right:           #3a8899;
 @block__border-bottom:          #3a8899;
 @block__border-left:            #3a8899;
-@block__border-right:           #3a8899;
 @block__border:                 #3a8899;
 @block__bg:                     lighten(#3a8899, 55%);
 
@@ -1077,6 +1077,16 @@
         - .block.block__border-top
       notes:
         - "Adds top border to .block."
+    - name: Border-right modifier
+      markup: |
+        Main content...
+        <div class="block block__border-right">
+            Content block with right border.
+        </div>
+      codenotes:
+        - .block.block__border-right
+      notes:
+        - "Adds right border to .block."
     - name: Border-bottom modifier
       markup: |
         Main content...
@@ -1097,16 +1107,6 @@
         - .block.block__border-left
       notes:
         - "Adds left border to .block."
-    - name: Border-right modifier
-      markup: |
-        Main content...
-        <div class="block block__border-right">
-            Content block with right border.
-        </div>
-      codenotes:
-        - .block.block__border-right
-      notes:
-        - "Adds right border to .block."
     - name: Border modifier
       markup: |
         Main content...
@@ -1300,16 +1300,16 @@
         border-top: 1px solid @block__border-top;
     }
 
+    &__border-right {
+        border-right: 1px solid @block__border-right;
+    }
+
     &__border-bottom {
         border-bottom: 1px solid @block__border-bottom;
     }
 
     &__border-left {
         border-left: 1px solid @block__border-left;
-    }
-
-    &__border-right {
-        border-right: 1px solid @block__border-right;
     }
 
     &__border {
