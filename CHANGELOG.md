@@ -1,6 +1,17 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 1.2.0 - 2015-09-28
+- Added `.block__flush` modifier for removing margin
+  from all sides of a `.block`.
+  Equivalent to
+  `.block .block__flush-top .block__flush-bottom .block__flush-sides`.
+- Changed bottom-padding of `.block__bg` to be double its current amount.
+  Ems-equivalent of 30px on top and 60px on bottom.
+- Added `.block__border-left`, `.block__border-right`, and `.block__border`
+  modifiers to control all border settings.
+
+
 ## 1.1.2 - 2015-08-02
 
 ## Fixed
