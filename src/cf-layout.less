@@ -1327,6 +1327,7 @@
     &__flush-sides {
         margin-right: -(@grid_gutter-width / 2);
         margin-left: -(@grid_gutter-width / 2);
+
         .respond-to-min(600px, {
             margin-right: -@grid_gutter-width;
             margin-left: -@grid_gutter-width;
@@ -1350,6 +1351,7 @@
                  unit((@grid_gutter-width / 2) / @base-font-size-px, em);
         padding-bottom: unit((@grid_gutter-width * 2) / @base-font-size-px, em);
         background: @block__bg;
+
         .respond-to-min(600px, {
             padding: unit(45 / @base-font-size-px, em)
                      unit(@grid_gutter-width / @base-font-size-px, em);
