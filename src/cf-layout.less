@@ -1404,6 +1404,253 @@
 }
 
 
+
+/* topdoc
+  name: Hero
+  family: cf-layout
+  patterns:
+    - name: .hero 
+      markup: |
+        <style>
+          .hero {
+            background-color: #ccdfdf;
+          }
+          .hero_wrapper:after {
+            background-image: url("http://placekitten.com/g/400/195");
+            background-size: 350px;
+          }
+          .hero_wrapper {
+            padding-bottom: 225px;
+          }
+          @media only all and (min-width: 37.5em) {
+           .hero .hero_wrapper {
+              padding-right: 200px; 
+              padding-bottom: 30px;
+            }
+            .hero .hero_wrapper:after {           
+              background-size: 150px;
+              width: 195px;
+            }
+          }
+        </style>
+        <section class="content_hero hero">
+            <div class="hero_wrapper wrapper wrapper__match-content">
+                <div class="hero_text">
+                    <h1 class="hero_heading">Hero title</h1>
+                    <p class="hero_subhead">
+                        Hero text goes here
+                    </p>
+                    <p class="hero_cta">
+                        <a>Call to action</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+      notes:
+        - "Hero consists of a headline, a small amount of additional text, an optional call to  
+           action, and an illustration. Its background color is flush with 
+           the sides of the screen, and the content is centered with wrapper classes."
+        - "The illustration can be customized by setting the background-image property
+           on the .hero_wrapper's after pseudo element."
+        - "On small screens (or where media queries are not supported), the text spans the
+           full width of the .hero_wrapper and the illustration is displayed underneath. 
+           To customize, set a background size on the .hero_wrapper:after pseudo element,
+           and set a bottom padding value on the .hero_wrapper equal to the height of the
+           illustration + the desired top and bottom padding for the illustration. When 
+           customizing the bottom padding value, it must be reset on larger screen sizes."
+        - "For larger screen sizes, media queries are used to position the illustration
+           to the right of the text. A space equivalent to the width of 5 of 12 columns
+           is allotted to the image at each breakpoint (333px for tablet, 475px on desktop),        
+           and the image is centered vertically and horizontally within that space. 
+           To customize the image size, set a background-size for the .hero_wrapper:after pseudo 
+           element at each breakpoint."
+        - "On desktop, the hero should not exceed 300px in height. The image should be 195px in  
+           height to conform to this standard."
+      codenotes:
+        - .hero
+    - name: .hero__wide-image
+      markup: |
+        <style>
+          .hero {
+            background-color: #ccdfdf !important;
+          }
+          .hero_wrapper:after {
+            background-image: url("http://placekitten.com/g/400/195");
+            background-size: 350px;
+          }
+          .customized-hero .hero_wrapper {
+              padding-bottom: 225px;
+          }
+          @media only all and (min-width: 37.5em) {
+           .hero .hero_wrapper {
+              padding-right: 200px; 
+              padding-bottom: 30px;
+            }
+            .hero .hero_wrapper:after {           
+              background-size: 150px;
+              width: 195px;
+            }
+          }
+        </style>
+        <section class="content_hero hero hero__wide-image">
+            <div class="hero_wrapper wrapper wrapper__match-content">
+                <div class="hero_text">
+                    <h1 class="hero_heading">Hero title</h1>
+                    <p class="hero_subhead">
+                        Hero text goes here
+                    </p>
+                    <p class="hero_cta">
+                        <a>Call to action</a>
+                    </p>
+                </div>
+            </div>
+        </section>    
+      notes:
+        - "If the illustration is wide enough to take up the whole space allotted
+           for it, add the wide-image class to position the illustration at the top
+           right, rather than center of the image area."
+      codenotes:
+        - .hero__wide-image    
+    - name: .hero__small-content modifier
+      markup: |
+        <style>
+          .hero {
+            background-color: #ccdfdf !important;
+          }
+          .hero_wrapper:after {
+            background-image: url("http://placekitten.com/g/400/195");
+            background-size: 350px;
+          }
+          .customized-hero .hero_wrapper {
+              padding-bottom: 225px;
+          }
+          @media only all and (min-width: 37.5em) {
+           .hero .hero_wrapper {
+              padding-right: 200px; 
+              padding-bottom: 30px;
+            }
+            .hero .hero_wrapper:after {           
+              background-size: 150px;
+              width: 195px;
+            }
+          }
+        </style>
+        <section class="content_hero hero hero__small-content">
+            <div class="hero_wrapper wrapper wrapper__match-content">
+                <div class="hero_text">
+                    <h1 class="hero_heading">Hero title</h1>
+                    <p class="hero_subhead">
+                        Hero text goes here
+                    </p>
+                </div>
+            </div>
+        </section>    
+      notes:
+        - "If the hero text is short or doesn't include a call to action, adding
+           the small-content class will increase the top padding value so the
+           text is more vertically aligned with the image."
+      codenotes:
+        - .hero__small-content
+  tags:
+    - cf-layout
+*/
+
+.hero {
+  background-color: @gray-10;
+  
+  &_wrapper {
+    position: relative;
+    padding-top: unit(@grid_gutter-width / @base-font-size-px, em);
+    // bottom padding = image height at mobile + padding for top/bottom of image
+    padding-bottom: unit((195px + @grid_gutter-width * 2) / @base-font-size-px, em); 
+    
+    &:after {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top:0;
+      right: 0;
+      content: "";
+      background-position: center bottom unit(@grid_gutter-width / @base-font-size-px, em);
+      background-repeat: no-repeat;
+    }
+
+    .respond-to-min(@tablet-min, {
+      // right padding = width of 5 of 12 columns at 799px
+      padding-right: unit(333px / @base-font-size-px, em);
+      padding-bottom: unit(@grid_gutter-width / @base-font-size-px, em);
+      
+      &:after {
+        width: 333px;
+        background-position: center;
+      }
+    });
+
+    .respond-to-min(800px, {
+      box-sizing: border-box;
+      min-height: 300px;
+      padding-top: unit(40px / @base-font-size-px, em); // approximates 45px visually
+      // right padding = width of 5 of 12 columns at 1140px
+      padding-right: unit(475px / @base-font-size-px, em);
+      padding-bottom: unit(40px / @base-font-size-px, em); // approximates 45px visually
+      
+      &:after {
+        width: 475px;
+        background-position: center;
+      }
+    });
+    
+    .lt-ie9 & {
+      // Reduce min-height because IE8 apparently isn't honoring the border-box property,
+      // perhaps due to bug seen here: http://grab.by/JutE
+      min-height: 0;
+      // Fallback for four-value bg-pos syntax
+      &:before {
+        background-position: right center;
+      }
+    }
+  }
+  
+  &_heading {
+    .h2();
+    .respond-to-min(800px, {
+      .h1();
+    });
+  }
+  
+  &_subhead {
+    .h4();
+    .webfont-regular();
+    margin-bottom: 0;
+
+    .respond-to-min(800px, {
+      .h3();
+      margin-bottom: 0;
+    });
+  }
+
+  &_cta {
+    .webfont-regular();
+    margin-top: @grid_gutter-width;
+    margin-bottom: 0;
+  }
+  
+  // increase top padding to compensate for less text
+  &__small-content &_wrapper {
+    .respond-to-min(800px, {
+      padding-top: unit(55px / @base-font-size-px, em); // approximates 60px visually
+    });
+  }
+  
+  // if the image is wide, position at top and right
+  &__wide-image &_wrapper:after {
+    .respond-to-min(800px, {
+      background-position: top unit(40px / @base-font-size-px, em) right;
+    });
+  }
+}
+
 /* topdoc
     name: EOF
     eof: true
