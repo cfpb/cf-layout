@@ -1,7 +1,7 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
-## 0.4.0 - 2015-09-28
+## 1.2.0 - 2015-09-28
 - Added `.block__flush` modifier for removing margin
   from all sides of a `.block`.
   Equivalent to
