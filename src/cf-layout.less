@@ -1555,6 +1555,11 @@
     - cf-layout
 */
 
+@hero-desktop-height: 300px;
+@hero-image-height: 195px;
+@desktop-image-container-width: 475px; //width of 5 of 12 columns at 1140px
+@tablet-image-container-width: 333px; //width of 5 of 12 columns at 799px
+
 .hero {
   background-color: @gray-10;
   
@@ -1562,7 +1567,7 @@
     position: relative;
     padding-top: unit(@grid_gutter-width / @base-font-size-px, em);
     // bottom padding = image height at mobile + padding for top/bottom of image
-    padding-bottom: unit((195px + @grid_gutter-width * 2) / @base-font-size-px, em); 
+    padding-bottom: unit((@hero-image-height + @grid_gutter-width * 2) / @base-font-size-px, em); 
     
     &:after {
       display: block;
@@ -1577,26 +1582,24 @@
     }
 
     .respond-to-min(@tablet-min, {
-      // right padding = width of 5 of 12 columns at 799px
-      padding-right: unit(333px / @base-font-size-px, em);
+      padding-right: unit(@tablet-image-container-width / @base-font-size-px, em);
       padding-bottom: unit(@grid_gutter-width / @base-font-size-px, em);
       
       &:after {
-        width: 333px;
+        width: @tablet-image-container-width;
         background-position: center;
       }
     });
 
     .respond-to-min(800px, {
       box-sizing: border-box;
-      min-height: 300px;
+      min-height: @hero-desktop-height;
       padding-top: unit(40px / @base-font-size-px, em); // approximates 45px visually
-      // right padding = width of 5 of 12 columns at 1140px
-      padding-right: unit(475px / @base-font-size-px, em);
+      padding-right: unit(@desktop-image-container-width / @base-font-size-px, em);
       padding-bottom: unit(40px / @base-font-size-px, em); // approximates 45px visually
       
       &:after {
-        width: 475px;
+        width: @desktop-image-container-width;
         background-position: center;
       }
     });
@@ -1606,7 +1609,7 @@
       // perhaps due to bug seen here: http://grab.by/JutE
       min-height: 0;
       // Fallback for four-value bg-pos syntax
-      &:before {
+      &:after {
         background-position: right center;
       }
     }
@@ -1634,6 +1637,11 @@
     .webfont-regular();
     margin-top: @grid_gutter-width;
     margin-bottom: 0;
+    
+    a {
+      border-bottom-width: 1px;
+      cursor: pointer;
+    }
   }
   
   // increase top padding to compensate for less text
@@ -1648,6 +1656,34 @@
     .respond-to-min(800px, {
       background-position: top unit(40px / @base-font-size-px, em) right;
     });
+  }
+}
+
+// simplifies customizing a hero
+.setup-hero(@url: '', @width:0, @height:0, @tablet-width:@width, @desktop-width:@width) {
+  .hero_wrapper {    
+    &:after {
+      background-image: url(@url);
+      background-size: @width;
+      
+      .respond-to-min(@tablet-min, {
+        background-size: @tablet-width;
+      });
+      
+      .respond-to-min(800px, {
+        background-size: @desktop-width;
+      });
+    } 
+    // when a value has been passed in for height, run this to update padding
+    & when (@height > 0) {
+      padding-bottom: unit((@height + @grid_gutter-width * 2) / @base-font-size-px, em); 
+      .respond-to-min(@tablet-min, {
+        padding-bottom: unit(@grid_gutter-width / @base-font-size-px, em);
+      });
+      .respond-to-min(800px, {
+        padding-bottom: unit(40px / @base-font-size-px, em); // approximates 45px visually
+      });
+    }    
   }
 }
 
