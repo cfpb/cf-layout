@@ -1533,9 +1533,6 @@
   &_tag {
     .h4;
     margin-bottom: unit(18px / @base-font-size-px, em); // approximates 30px visually
-    .respond-to-max(@mobile-max, {
-      .h5;
-    });
   }
   
   &_icon {
@@ -1558,6 +1555,11 @@
 
   &_cta {
     .webfont-regular();
+    
+    a& {
+      border-bottom-width: 1px;
+      cursor: pointer;
+    }
   }
 
   &_visual {
