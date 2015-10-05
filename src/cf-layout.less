@@ -81,9 +81,9 @@
             .content-l_col
       notes:
         - "Simplifies use of grid structure inside content containers (like .content-main)."
-        - "Since .content-l_col's are nested within .content_main extra margins will occur. 
+        - "Since .content-l_col's are nested within .content_main extra margins will occur.
            The .content-l container uses the grid_nested-col-group mixin to counter this."
-        - ".content-l_col-RATIO classes default to stacking on mobile and displaying as columns 
+        - ".content-l_col-RATIO classes default to stacking on mobile and displaying as columns
            above mobile-max width (600px). This may not be the desired breakpoint for
            all use cases, so mixins are provided to simplify changing column display to
            stacked."
@@ -161,8 +161,8 @@
       notes:
         - "Designed for use within .content_full containers."
         - "Displays .content-l_col-1-2 as columns at tablet sizes & above (600px+)"
-        - "Displays other common .content-l_col modifiers (.content-l_col-1-3, 
-           .content-l_col-2-3, .content-l_col-3-8, .content-l_col-5-8) 
+        - "Displays other common .content-l_col modifiers (.content-l_col-1-3,
+           .content-l_col-2-3, .content-l_col-3-8, .content-l_col-5-8)
            as columns above 767px."
     - name: .content-l__main modifier
       markup: |
@@ -232,11 +232,11 @@
       codenotes:
         - .content-l.content-l__main
       notes:
-        - "Designed for use in .content_main containers, which have reduced (75%) width 
+        - "Designed for use in .content_main containers, which have reduced (75%) width
            above tablet sizes to accommodate adjacent sidebar column."
         - "Displays .content-l_col-1-2 as columns in the tablet range, 600-800px;
            stacked from 800-899, the start of sidebar range; and as columns again at 900px+"
-        - "Displays other common .content-l_col modifiers (.content-l_col-1-3, .content-l_col-2-3,    
+        - "Displays other common .content-l_col modifiers (.content-l_col-1-3, .content-l_col-2-3,
            .content-l_col-3-8, .content-l_col-5-8) as columns above 900px."
     - name: .content-l__sidebar modifier
       markup: |
@@ -306,9 +306,9 @@
       codenotes:
         - .content-l.content-l__sidebar
       notes:
-        - "For use in sidebar containers, which are full width only 
+        - "For use in sidebar containers, which are full width only
            on tablet widths (600-800px)."
-        - "Displays .content-l_col-1-2 as columns in the tablet range, 
+        - "Displays .content-l_col-1-2 as columns in the tablet range,
            600-800px, and stacked at all other widths."
     - name: Large gutters modifier
       markup: |
@@ -357,14 +357,14 @@
     .respond-to-min(@tablet-min, {
         .grid_nested-col-group();
     });
-    
+
     &__full {
         .respond-to-range(@tablet-min, 767px, {
             .stack-col-thirds();
-            .stack-col-eighths(); 
+            .stack-col-eighths();
         });
     }
-    
+
     &__main {
         .respond-to-range(801px, 899px, {
             .stack-col(content-l_col-1-2);
@@ -372,13 +372,13 @@
 
         .respond-to-range(@tablet-min, 899px, {
             .stack-col-thirds();
-            .stack-col-eighths();        
+            .stack-col-eighths();
         });
     }
-    
+
     &__sidebar {
         .stack-col-thirds();
-        .stack-col-eighths();        
+        .stack-col-eighths();
 
         .respond-to-min(801px, {
             .stack-col(content-l_col-1-2);
@@ -524,20 +524,20 @@
 
 
 .stack-col(@col) {
-    .content-l_col.@{col} { 
+    .content-l_col.@{col} {
         width: 100%;
-        
+
         &.content-l_col__before-divider {
             .grid_column__top-divider();
         }
     }
-    
+
     &.content-l__large-gutters {
         .content-l_col.@{col}.content-l_col__before-divider {
             border-left-width: @grid_gutter-width;
         }
     }
-    
+
     .content-l_col.@{col} + .content-l_col.@{col} {
         margin-top: unit(@grid_gutter-width / @base-font-size-px, em);
     }
@@ -546,7 +546,7 @@
 .stack-col-thirds() {
   .stack-col(content-l_col-1-3);
   .stack-col(content-l_col-2-3);
-  
+
   .content-l_col.content-l_col-1-3 + .content-l_col.content-l_col-2-3,
   .content-l_col.content-l_col-2-3 + .content-l_col.content-l_col-1-3 {
      margin-top: unit(@grid_gutter-width / @base-font-size-px, em);
@@ -1124,11 +1124,11 @@
 .block {
     margin-top: unit((@grid_gutter-width * 2) / @base-font-size-px, em);
     margin-bottom: unit((@grid_gutter-width * 2) / @base-font-size-px, em);
-    
+
     &__border-top {
         border-top: 1px solid @gray-50;
     }
-    
+
     &__border-bottom {
         border-bottom: 1px solid @gray-50;
     }
@@ -1159,7 +1159,7 @@
                      unit(@grid_gutter-width / @base-font-size-px, em);
         });
     }
-    
+
     &__padded-top {
         padding-top: unit(30px / @base-font-size-px, em);
         margin-top: unit(30px / @base-font-size-px, em);
@@ -1375,7 +1375,7 @@
 .grid_column__top-divider {
     margin-top: unit((@grid_gutter-width * 2) / @base-font-size-px, em);
     border-left-width: @grid_gutter-width / 2;
-    
+
     &:before {
         content: "";
         display: block;
@@ -1409,7 +1409,7 @@
   name: Hero
   family: cf-layout
   patterns:
-    - name: .hero 
+    - name: .hero
       markup: |
         <style>
           .hero {
@@ -1424,10 +1424,10 @@
           }
           @media only all and (min-width: 37.5em) {
            .hero .hero_wrapper {
-              padding-right: 200px; 
+              padding-right: 200px;
               padding-bottom: 30px;
             }
-            .hero .hero_wrapper:after {           
+            .hero .hero_wrapper:after {
               background-size: 150px;
               width: 195px;
             }
@@ -1447,24 +1447,24 @@
             </div>
         </section>
       notes:
-        - "Hero consists of a headline, a small amount of additional text, an optional call to  
-           action, and an illustration. Its background color is flush with 
+        - "Hero consists of a headline, a small amount of additional text, an optional call to
+           action, and an illustration. Its background color is flush with
            the sides of the screen, and the content is centered with wrapper classes."
         - "The illustration can be customized by setting the background-image property
            on the .hero_wrapper's after pseudo element."
         - "On small screens (or where media queries are not supported), the text spans the
-           full width of the .hero_wrapper and the illustration is displayed underneath. 
+           full width of the .hero_wrapper and the illustration is displayed underneath.
            To customize, set a background size on the .hero_wrapper:after pseudo element,
            and set a bottom padding value on the .hero_wrapper equal to the height of the
-           illustration + the desired top and bottom padding for the illustration. When 
+           illustration + the desired top and bottom padding for the illustration. When
            customizing the bottom padding value, it must be reset on larger screen sizes."
         - "For larger screen sizes, media queries are used to position the illustration
            to the right of the text. A space equivalent to the width of 5 of 12 columns
-           is allotted to the image at each breakpoint (333px for tablet, 475px on desktop),        
-           and the image is centered vertically and horizontally within that space. 
-           To customize the image size, set a background-size for the .hero_wrapper:after pseudo 
+           is allotted to the image at each breakpoint (333px for tablet, 475px on desktop),
+           and the image is centered vertically and horizontally within that space.
+           To customize the image size, set a background-size for the .hero_wrapper:after pseudo
            element at each breakpoint."
-        - "On desktop, the hero should not exceed 300px in height. The image should be 195px in  
+        - "On desktop, the hero should not exceed 300px in height. The image should be 195px in
            height to conform to this standard."
       codenotes:
         - .hero
@@ -1483,10 +1483,10 @@
           }
           @media only all and (min-width: 37.5em) {
            .hero .hero_wrapper {
-              padding-right: 200px; 
+              padding-right: 200px;
               padding-bottom: 30px;
             }
-            .hero .hero_wrapper:after {           
+            .hero .hero_wrapper:after {
               background-size: 150px;
               width: 195px;
             }
@@ -1504,13 +1504,13 @@
                     </p>
                 </div>
             </div>
-        </section>    
+        </section>
       notes:
         - "If the illustration is wide enough to take up the whole space allotted
            for it, add the wide-image class to position the illustration at the top
            right, rather than center of the image area."
       codenotes:
-        - .hero__wide-image    
+        - .hero__wide-image
     - name: .hero__small-content modifier
       markup: |
         <style>
@@ -1526,10 +1526,10 @@
           }
           @media only all and (min-width: 37.5em) {
            .hero .hero_wrapper {
-              padding-right: 200px; 
+              padding-right: 200px;
               padding-bottom: 30px;
             }
-            .hero .hero_wrapper:after {           
+            .hero .hero_wrapper:after {
               background-size: 150px;
               width: 195px;
             }
@@ -1544,7 +1544,7 @@
                     </p>
                 </div>
             </div>
-        </section>    
+        </section>
       notes:
         - "If the hero text is short or doesn't include a call to action, adding
            the small-content class will increase the top padding value so the
@@ -1555,136 +1555,140 @@
     - cf-layout
 */
 
-@hero-desktop-height: 300px;
+// 300px - 60px for top/bottom padding
+@hero-desktop-height: 240px;
 @hero-image-height: 195px;
-@desktop-image-container-width: 475px; //width of 5 of 12 columns at 1140px
-@tablet-image-container-width: 333px; //width of 5 of 12 columns at 799px
 
 .hero {
   background-color: @gray-10;
-  
+
   &_wrapper {
-    position: relative;
-    padding-top: unit(@grid_gutter-width / @base-font-size-px, em);
-    // bottom padding = image height at mobile + padding for top/bottom of image
-    padding-bottom: unit((@hero-image-height + @grid_gutter-width * 2) / @base-font-size-px, em); 
-    
-    &:after {
-      display: block;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top:0;
-      right: 0;
-      content: "";
-      background-position: center bottom unit(@grid_gutter-width / @base-font-size-px, em);
-      background-repeat: no-repeat;
-    }
+    padding: unit(@grid_gutter-width / @base-font-size-px, em)
+             unit(15px / @base-font-size-px, em);
 
     .respond-to-min(@tablet-min, {
-      padding-right: unit(@tablet-image-container-width / @base-font-size-px, em);
-      padding-bottom: unit(@grid_gutter-width / @base-font-size-px, em);
-      
-      &:after {
-        width: @tablet-image-container-width;
-        background-position: center;
-      }
+      display: table;
+      min-height: unit(@hero-desktop-height / @base-font-size-px, em);
     });
 
-    .respond-to-min(800px, {
-      box-sizing: border-box;
-      min-height: @hero-desktop-height;
-      padding-top: unit(40px / @base-font-size-px, em); // approximates 45px visually
-      padding-right: unit(@desktop-image-container-width / @base-font-size-px, em);
-      padding-bottom: unit(40px / @base-font-size-px, em); // approximates 45px visually
-      
-      &:after {
-        width: @desktop-image-container-width;
-        background-position: center;
-      }
+    .respond-to-min(@desktop-min, {
+      padding: unit(45px / @base-font-size-px, em);
     });
-    
+
+
     .lt-ie9 & {
       // Reduce min-height because IE8 apparently isn't honoring the border-box property,
       // perhaps due to bug seen here: http://grab.by/JutE
-      min-height: 0;
-      // Fallback for four-value bg-pos syntax
-      &:after {
-        background-position: right center;
-      }
+      min-height: initial;
     }
   }
-  
-  &_heading {
-    .h2();
-    .respond-to-min(800px, {
-      .h1();
+
+  &_text {
+    .respond-to-min(@tablet-min, {
+      .grid_column(1, 2);
+      display: table-cell;
+      vertical-align: middle;
+    });
+
+    .respond-to-min(801px, {
+      .grid_column(7,12);
+      display: table-cell;
+      vertical-align: middle;
     });
   }
-  
-  &_subhead {
-    .h4();
-    .webfont-regular();
-    margin-bottom: 0;
 
-    .respond-to-min(800px, {
-      .h3();
-      margin-bottom: 0;
+  &_heading {
+    .heading-1();
+
+    .respond-to-max(800px, {
+      .heading-2();
     });
+  }
+
+  &_subhead {
+    .heading-3();
+
+    margin-bottom: unit(@grid_gutter-width / 22px, em);
+
+    .respond-to-max(800px, {
+      .heading-4();
+    });
+
+    &:last-child {
+      margin-bottom: initial;
+    }
   }
 
   &_cta {
     .webfont-regular();
-    margin-top: @grid_gutter-width;
-    margin-bottom: 0;
-    
-    a {
-      border-bottom-width: 1px;
-      cursor: pointer;
-    }
+
+    margin-bottom: initial;
   }
-  
-  // increase top padding to compensate for less text
-  &__small-content &_wrapper {
-    .respond-to-min(800px, {
-      padding-top: unit(55px / @base-font-size-px, em); // approximates 60px visually
+
+  &_image {
+    position: relative;
+    min-height: unit(@hero-image-height / @base-font-size-px, em);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    .respond-to-min(@tablet-min, {
+      .grid_column(1, 2);
+      display: table-cell;
+      vertical-align: middle;
     });
-  }
-  
-  // if the image is wide, position at top and right
-  &__wide-image &_wrapper:after {
-    .respond-to-min(800px, {
-      background-position: top unit(40px / @base-font-size-px, em) right;
+
+    .respond-to-min(801px, {
+      .grid_column(5,12);
+      display: table-cell;
+      vertical-align: middle;
+    });
+
+    .respond-to-max(@mobile-max, {
+      margin-top: unit(@grid_gutter-width / @base-font-size-px, em);
     });
   }
 }
 
-// simplifies customizing a hero
-.setup-hero(@url: '', @width:0, @height:0, @tablet-width:@width, @desktop-width:@width) {
-  .hero_wrapper {    
-    &:after {
-      background-image: url(@url);
-      background-size: @width;
-      
-      .respond-to-min(@tablet-min, {
-        background-size: @tablet-width;
-      });
-      
-      .respond-to-min(800px, {
-        background-size: @desktop-width;
-      });
-    } 
-    // when a value has been passed in for height, run this to update padding
-    & when (@height > 0) {
-      padding-bottom: unit((@height + @grid_gutter-width * 2) / @base-font-size-px, em); 
-      .respond-to-min(@tablet-min, {
-        padding-bottom: unit(@grid_gutter-width / @base-font-size-px, em);
-      });
-      .respond-to-min(800px, {
-        padding-bottom: unit(40px / @base-font-size-px, em); // approximates 45px visually
-      });
-    }    
-  }
+
+/**
+ * TEMP FIX FOR HEADING RECURSION ISSUE, SEE OPEN PR AT CF-CORE.
+ * https://github.com/cfpb/cf-core/pull/48
+ */
+.heading-1( @font-size: 34px, @line-height: 44px ) {
+    .webfont-regular();
+    // Spacing in the design manual is based off of the baseline so this margin
+    // number has been eyeballed to be 30px.
+    margin-bottom: unit( 16px / @font-size, em );
+    font-size: unit( @font-size / @base-font-size-px, em );
+    line-height: unit( @line-height / @font-size );
+}
+
+.heading-2( @font-size: 26px, @line-height: 33px ) {
+    .webfont-regular();
+    // Spacing in the design manual is based off of the baseline so this margin
+    // number has been eyeballed to be 30px.
+    margin-bottom: unit( 19px / @font-size, em );
+    font-size: unit( @font-size / @base-font-size-px, em );
+    line-height: unit( @line-height / @font-size );
+}
+
+.heading-3( @font-size: 22px, @line-height: 28px )  {
+    .webfont-regular();
+    // Spacing in the design manual is based off of the baseline so this margin
+    // number has been eyeballed to be 30px.
+    margin-bottom: unit( 21px / @font-size, em );
+    font-size: unit( @font-size / @base-font-size-px, em );
+    line-height: unit( @line-height / @font-size );
+}
+
+.heading-4( @font-size: 18px, @line-height: @base-line-height-px )  {
+    .webfont-medium();
+    // Spacing in the design manual is based off of the baseline so this margin
+    // number has been eyeballed to be 30px.
+    margin-bottom: unit( 21px / @font-size, em );
+    font-size: unit( @font-size / @base-font-size-px, em );
+    line-height: unit( @line-height / @font-size );
 }
 
 /* topdoc
