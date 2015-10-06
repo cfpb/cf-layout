@@ -1585,12 +1585,6 @@
 
   &_text {
     .respond-to-min(@tablet-min, {
-      .grid_column(1, 2);
-      display: table-cell;
-      vertical-align: middle;
-    });
-
-    .respond-to-min(801px, {
       .grid_column(7,12);
       display: table-cell;
       vertical-align: middle;
@@ -1632,13 +1626,7 @@
     background-repeat: no-repeat;
     background-size: contain;
 
-    .respond-to-min(@tablet-min, {
-      .grid_column(1, 2);
-      display: table-cell;
-      vertical-align: middle;
-    });
-
-    .respond-to-min(801px, {
+    .respond-to-min(@tablet-min,, {
       .grid_column(5,12);
       display: table-cell;
       vertical-align: middle;
