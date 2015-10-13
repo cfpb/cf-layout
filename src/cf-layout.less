@@ -1606,7 +1606,6 @@
 }
 
 
-
 /* topdoc
   name: Hero
   family: cf-layout
@@ -1614,7 +1613,7 @@
     - name: .hero
       markup: |
         <section class="content_hero hero">
-            <div class="hero_wrapper">
+            <div class="hero_wrapper wrapper">
                 <div class="hero_text">
                     <h1 class="hero_heading">Hero title</h1>
                     <p class="hero_subhead">
@@ -1632,7 +1631,7 @@
            action, and an illustration. Its background color is flush with
            the sides of the screen, and the content is centered with wrapper classes."
         - "The illustration can be customized by setting the background-image property
-           on the .hero_wrapper_image element."
+           on the .hero_image element."
         - "On small screens (or where media queries are not supported), the text spans the
            full width of the .hero_wrapper and the illustration is displayed underneath."
         - "For larger screen sizes, media queries are used to position the illustration
@@ -1650,48 +1649,53 @@
 @desktop-min: 801px;
 
 .hero {
-      background-color: @block__bg;
+    background-color: @block__bg;
 
-      &_wrapper {
-            box-sizing: border-box;
-            padding: unit(@grid_gutter-width / @base-font-size-px, em)
-                     unit(15px / @base-font-size-px, em);
-            width: 100%;
-            
-            .respond-to-min(@tablet-min, {
-                display: table;
-            });
+    &_wrapper {
+        box-sizing: border-box;
+        padding: unit(@grid_gutter-width / @base-font-size-px, em)
+                 unit(15px / @base-font-size-px, em);
+        width: 100%;
+    
+        .respond-to-min(@tablet-min, {
+            display: table;
+        });
 
-            .respond-to-min(@desktop-min, {
-                padding: unit(45px / @base-font-size-px, em);
-                min-height: unit(@hero-desktop-height / @base-font-size-px, em);
-            });
+        .respond-to-min(@desktop-min, {
+            padding-top: unit(45px / @base-font-size-px, em);
+            padding-bottom: unit(45px / @base-font-size-px, em);
+            min-height: unit(@hero-desktop-height / @base-font-size-px, em);
+        });
+    
+        .respond-to-min(1230px, {
+            padding-right: 0;
+            padding-left: 0;
+        });
 
+        .lt-ie9 & {
+            // Reduce min-height because IE8 apparently isn't honoring the border-box property,
+            // perhaps due to bug seen here: http://grab.by/JutE
+            min-height: initial;
+        }
+    }
 
-            .lt-ie9 & {
-                // Reduce min-height because IE8 apparently isn't honoring the border-box property,
-                // perhaps due to bug seen here: http://grab.by/JutE
-                min-height: initial;
-            }
-      }
-
-      &_text {
+    &_text {
         .respond-to-min(@tablet-min, {
             .grid_column(7,12);
             display: table-cell;
             vertical-align: middle;
         });
-      }
+    }
 
-      &_heading {
-          .heading-1();
+    &_heading {
+        .heading-1();
 
         .respond-to-max(800px, {
             .heading-2();
         });
-      }
+    }
 
-      &_subhead {
+    &_subhead {
         .heading-3();
 
         margin-bottom: unit(@grid_gutter-width / 22px, em);
@@ -1703,31 +1707,30 @@
         &:last-child {
             margin-bottom: initial;
         }
-      }
+    }
 
-      &_cta {
-          .webfont-regular();
+    &_cta {
+        .webfont-regular();
 
-          margin-bottom: initial;
-      }
+        margin-bottom: initial;
+    }
 
-      &_image {
-            position: relative;
-            min-height: unit(@hero-image-height / @base-font-size-px, em);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
+    &_image {
+        min-height: unit(@hero-image-height / @base-font-size-px, em);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
 
-            .respond-to-min(@tablet-min, {
-                .grid_column(5,12);
-                display: table-cell;
-                vertical-align: middle;
-            });
+        .respond-to-min(@tablet-min, {
+            .grid_column(5,12);
+            display: table-cell;
+            vertical-align: middle;
+        });
 
-            .respond-to-max(@mobile-max, {
-                margin-top: unit(@grid_gutter-width / @base-font-size-px, em);
-            });
-      }
+        .respond-to-max(@mobile-max, {
+            margin-top: unit(@grid_gutter-width / @base-font-size-px, em);
+        });
+    }
 }
 
 /* topdoc
