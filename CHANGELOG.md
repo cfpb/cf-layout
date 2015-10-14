@@ -1,6 +1,25 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 2.0.0 - 2015-11-02
+- Updated to use breakpoint variables in cf-core v1.2.0
+
+This change _could_ break your existing projects if you have breakpoint values that do not match. Users should not attempt to automate the upgrade process due to the possibility of breaking the project layout. The best course of action is to:
+
+1. Update the project to use cf-layout v2.0.0
+2. Using Sublime Text or another editor with great search, CMD+Shift+F and search for `.respond-to`
+3. Replace old variables or px values with the appropriate new variables
+
+  Possible matches (test these yourself to be sure the change is what you expect):
+
+  - `@mobile-max` or `.respond-to-max` with a value around 600px - `@bp-xs-max`
+  - `@tablet-min` or `.respond-to-min` with a value around 600px - `@bp-sm-min`
+  - `@tablet-max` or `.respond-to-max` with a value around 800px - `@bp-sm-max`
+  - `@desktop-min` or `.respond-to-min` with a value around 800px - `@bp-med-min`
+  - `@desktop-max` or `.respond-to-max` with a value around 1230px - `@bp-lg-max`
+  - `@wall-min` or `.respond-to-min` with a value around 1230px - `@bp-xl-max`
+
+  There's an additional breakpoint at 1020px that you may find useful (`@bp-med-max` and `@bp-lg-min`)
 
 ## 1.3.0 - 2015-10-19
 
