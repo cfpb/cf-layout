@@ -1,6 +1,13 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+
+## 1.3.0 - 2015-10-19
+
+### Added
+- Added Hero pattern
+
+
 ## 1.2.0 - 2015-09-28
 - Added `.block__flush` modifier for removing margin
   from all sides of a `.block`.
@@ -16,7 +23,7 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 ## Fixed
 
-- typo in position delcaration
+- typo in position declaration
 
 
 ## 1.1.1 - 2015-08-02
@@ -24,6 +31,7 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 ## Additions
 
 - Added position: relative to content_wrapper only when necessary to avoid globally setting position on elements that don't need it.
+
 
 ## 1.1.0 - 2015-07-16
 
