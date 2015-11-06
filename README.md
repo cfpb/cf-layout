@@ -1,7 +1,6 @@
 # cf-layout
 
-[![Build Status](https://img.shields.io/travis/cfpb/cf-layout.svg)](https://travis-ci.org/cfpb/cf-layout) 
-[![Dependency Status](https://gemnasium.com/cfpb/cf-layout.svg)](https://gemnasium.com/cfpb/cf-layout)
+[![Build Status](https://img.shields.io/travis/cfpb/cf-layout.svg)](https://travis-ci.org/cfpb/cf-layout)
 
 A set of HTML & CSS layout helpers.
 This component can be used by itself, but it was made for Capital Framework,
