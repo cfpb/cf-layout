@@ -15,11 +15,6 @@
     <link rel="stylesheet" type="text/css" href="static/docs/brackets.css">
     <link rel="stylesheet" type="text/css" href="static/docs/docs.css">
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
-    <script>
-      // Confirm availability of JS and remove no-js class from html
-      var docElement = document.documentElement;
-      docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
-    </script>
   </head>
   <body>
     <div class="docs-sidebar-wrapper">
@@ -27,6 +22,38 @@
         <div class="docs-masthead">
           <h1 class="docs-title"><span class="docs-icon">&lt;/&gt;</span> cf-layout docs
           </h1><a href="https://github.com/cfpb/cf-layout" class="docs-repo">view the repository</a>
+        </div>
+        <div id="theme-variables" class="docs-component">
+          <h2 class="docs-component_header"><span>Theme variables</span></h2>
+          <div class="docs-component_intro">
+            <ul class="docs-notes">
+              <li>The following color and sizing variables are exposed, allowing you to easily override them before compiling.</li>
+            </ul>
+          </div>
+          <div class="docs-patterns">
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">Colors</h3>
+              <footer class="docs-pattern_footer">
+                <ul class="docs-codenotes">
+                  <li>
+                    <pre class="docs-code"><code>@block__border-top
+@block__border-right
+@block__border-bottom
+@block__border-left
+@block__border
+@block__bg
+@content_main-border
+@content_sidebar-bg
+@content_sidebar-border
+@content_bar
+@content_line
+@grid_column__top-divider
+@grid_column__left-divider</code></pre>
+                  </li>
+                </ul>
+              </footer>
+            </div>
+          </div>
         </div>
         <div id="content-layouts" class="docs-component">
           <h2 class="docs-component_header"><span>Content layouts</span></h2>
@@ -43,8 +70,6 @@
             Full-width column (spans 12 columns)
         </div>
     </div>
-</div>
-<div class="content-l">
     <div class="content-l_col content-l_col-1-2">
         <div style="background: #F1F2F2;
                     text-align: center;
@@ -61,8 +86,6 @@
             Half-width column (spans 6/12 columns)
         </div>
     </div>
-</div>
-<div class="content-l">
     <div class="content-l_col content-l_col-1-3">
         <div style="background: #F1F2F2;
                     text-align: center;
@@ -87,13 +110,34 @@
             Third-width column (spans 4/12 columns)
         </div>
     </div>
-</div>
-<div class="content-l">
     <div class="content-l_col content-l_col-2-3">
         <div style="background: #F1F2F2;
                     text-align: center;
-                    padding: 8px;">
+                    padding: 8px;
+                    margin-bottom: 4px;">
             Two thirds-width column (spans 8/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Third-width column (spans 4/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-4">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;">
+            Quarter width column (spans 3/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-3-4">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;">
+            Three-quarter width column (spans 9/12 columns)
         </div>
     </div>
 </div>
@@ -109,8 +153,6 @@
             Full-width column (spans 12 columns)
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;content-l&quot;&gt;
     &lt;div class=&quot;content-l_col content-l_col-1-2&quot;&gt;
         &lt;div style=&quot;background: #F1F2F2;
                     text-align: center;
@@ -127,8 +169,6 @@
             Half-width column (spans 6/12 columns)
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;content-l&quot;&gt;
     &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
         &lt;div style=&quot;background: #F1F2F2;
                     text-align: center;
@@ -153,18 +193,39 @@
             Third-width column (spans 4/12 columns)
         &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;content-l&quot;&gt;
     &lt;div class=&quot;content-l_col content-l_col-2-3&quot;&gt;
         &lt;div style=&quot;background: #F1F2F2;
                     text-align: center;
-                    padding: 8px;&quot;&gt;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
             Two thirds-width column (spans 8/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Third-width column (spans 4/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-4&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;&quot;&gt;
+            Quarter width column (spans 3/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-3-4&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;&quot;&gt;
+            Three-quarter width column (spans 9/12 columns)
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;content-l\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Full-width column (spans 12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\&amp;quot;content-l\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-2\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Half-width column (spans 6/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-2\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Half-width column (spans 6/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\&amp;quot;content-l\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Third-width column (spans 4/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Third-width column (spans 4/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Third-width column (spans 4/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\&amp;quot;content-l\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-2-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\&amp;quot;&gt;\n            Two thirds-width column (spans 8/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;content-l\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Full-width column (spans 12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-2\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Half-width column (spans 6/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-2\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Half-width column (spans 6/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Third-width column (spans 4/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Third-width column (spans 4/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Third-width column (spans 4/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-2-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Two thirds-width column (spans 8/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Third-width column (spans 4/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-4\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\&amp;quot;&gt;\n            Quarter width column (spans 3/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-3-4\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\&amp;quot;&gt;\n            Three-quarter width column (spans 9/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
@@ -177,8 +238,8 @@
                 </ul>
                 <ul class="docs-notes">
                   <li>Simplifies use of grid structure inside content containers (like .content-main).</li>
-                  <li>Since .content-l_col's are nested within .content_main extra margins will occur.  The .content-l container uses the grid_nested-col-group mixin to counter this.</li>
-                  <li>.content-l_col-RATIO classes default to stacking on mobile and displaying as columns  above mobile-max width (600px). This may not be the desired breakpoint for all use cases, so mixins are provided to simplify changing column display to stacked.</li>
+                  <li>Since .content-l_col's are nested within .content_main extra margins will occur. The .content-l container uses the grid_nested-col-group mixin to counter this.</li>
+                  <li>.content-l_col-RATIO classes default to stacking on mobile and displaying as columns above mobile-max width (600px). This may not be the desired breakpoint for all use cases, so mixins are provided to simplify changing column display to stacked.</li>
                   <li>Three .content-l modifiers handle the stacking overrides for use cases of .content_main, .content_full, and .content_sidebar containers.</li>
                   <li>Note that the divs with inline styles are for demonstration purposes only and should not be used in production.</li>
                 </ul>
@@ -188,136 +249,170 @@
               <h3 class="docs-pattern_header">.content-l__full modifier</h3>
               <section class="docs-pattern_pattern">
 <div class="content-l content-l__full">
-   <div class="content-l_col content-l_col-1">
-       <div style="background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;">
-           Full-width column (spans 12 columns)
-       </div>
-   </div>
-</div>
-<div class="content-l content-l__full">
-   <div class="content-l_col content-l_col-1-2">
-       <div style="background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;">
-           Half-width column (spans 6/12 columns)
-       </div>
-   </div>
-   <div class="content-l_col content-l_col-1-2">
-       <div style="background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;">
-           Half-width column (spans 6/12 columns)
-       </div>
-   </div>
-</div>
-<div class="content-l content-l__full">
-   <div class="content-l_col content-l_col-1-3">
-       <div style="background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;">
-           Third-width column (spans 4/12 columns)
-       </div>
-   </div>
-   <div class="content-l_col content-l_col-1-3">
-       <div style="background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;">
-           Third-width column (spans 4/12 columns)
-       </div>
-   </div>
-   <div class="content-l_col content-l_col-1-3">
-       <div style="background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;">
-           Third-width column (spans 4/12 columns)
-       </div>
-   </div>
-</div>
-<div class="content-l content-l__full">
-   <div class="content-l_col content-l_col-2-3">
-       <div style="background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;">
-           Two thirds-width column (spans 8/12 columns)
-       </div>
-   </div>
+    <div class="content-l_col content-l_col-1">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Full-width column (spans 12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-2">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Half-width column (spans 6/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-2">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Half-width column (spans 6/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Third-width column (spans 4/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Third-width column (spans 4/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Third-width column (spans 4/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-2-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Two thirds-width column (spans 8/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Third-width column (spans 4/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-4">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;">
+            Quarter width column (spans 3/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-3-4">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;">
+            Three-quarter width column (spans 9/12 columns)
+        </div>
+    </div>
 </div>
 
               </section>
               <footer class="docs-pattern_footer">
                 <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;content-l content-l__full&quot;&gt;
-   &lt;div class=&quot;content-l_col content-l_col-1&quot;&gt;
-       &lt;div style=&quot;background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;&quot;&gt;
-           Full-width column (spans 12 columns)
-       &lt;/div&gt;
-   &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;content-l content-l__full&quot;&gt;
-   &lt;div class=&quot;content-l_col content-l_col-1-2&quot;&gt;
-       &lt;div style=&quot;background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;&quot;&gt;
-           Half-width column (spans 6/12 columns)
-       &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div class=&quot;content-l_col content-l_col-1-2&quot;&gt;
-       &lt;div style=&quot;background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;&quot;&gt;
-           Half-width column (spans 6/12 columns)
-       &lt;/div&gt;
-   &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;content-l content-l__full&quot;&gt;
-   &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
-       &lt;div style=&quot;background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;&quot;&gt;
-           Third-width column (spans 4/12 columns)
-       &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
-       &lt;div style=&quot;background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;&quot;&gt;
-           Third-width column (spans 4/12 columns)
-       &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
-       &lt;div style=&quot;background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;&quot;&gt;
-           Third-width column (spans 4/12 columns)
-       &lt;/div&gt;
-   &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;content-l content-l__full&quot;&gt;
-   &lt;div class=&quot;content-l_col content-l_col-2-3&quot;&gt;
-       &lt;div style=&quot;background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;&quot;&gt;
-           Two thirds-width column (spans 8/12 columns)
-       &lt;/div&gt;
-   &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Full-width column (spans 12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-2&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Half-width column (spans 6/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-2&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Half-width column (spans 6/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Third-width column (spans 4/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Third-width column (spans 4/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Third-width column (spans 4/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-2-3&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Two thirds-width column (spans 8/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Third-width column (spans 4/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-4&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;&quot;&gt;
+            Quarter width column (spans 3/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-3-4&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;&quot;&gt;
+            Three-quarter width column (spans 9/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;content-l content-l__full\&amp;quot;&gt;\n   &lt;div class=\&amp;quot;content-l_col content-l_col-1\&amp;quot;&gt;\n       &lt;div style=\&amp;quot;background: #F1F2F2;\n                   text-align: center;\n                   padding: 8px;\n                   margin-bottom: 4px;\&amp;quot;&gt;\n           Full-width column (spans 12 columns)\n       &lt;/div&gt;\n   &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\&amp;quot;content-l content-l__full\&amp;quot;&gt;\n   &lt;div class=\&amp;quot;content-l_col content-l_col-1-2\&amp;quot;&gt;\n       &lt;div style=\&amp;quot;background: #F1F2F2;\n                   text-align: center;\n                   padding: 8px;\n                   margin-bottom: 4px;\&amp;quot;&gt;\n           Half-width column (spans 6/12 columns)\n       &lt;/div&gt;\n   &lt;/div&gt;\n   &lt;div class=\&amp;quot;content-l_col content-l_col-1-2\&amp;quot;&gt;\n       &lt;div style=\&amp;quot;background: #F1F2F2;\n                   text-align: center;\n                   padding: 8px;\n                   margin-bottom: 4px;\&amp;quot;&gt;\n           Half-width column (spans 6/12 columns)\n       &lt;/div&gt;\n   &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\&amp;quot;content-l content-l__full\&amp;quot;&gt;\n   &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n       &lt;div style=\&amp;quot;background: #F1F2F2;\n                   text-align: center;\n                   padding: 8px;\n                   margin-bottom: 4px;\&amp;quot;&gt;\n           Third-width column (spans 4/12 columns)\n       &lt;/div&gt;\n   &lt;/div&gt;\n   &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n       &lt;div style=\&amp;quot;background: #F1F2F2;\n                   text-align: center;\n                   padding: 8px;\n                   margin-bottom: 4px;\&amp;quot;&gt;\n           Third-width column (spans 4/12 columns)\n       &lt;/div&gt;\n   &lt;/div&gt;\n   &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n       &lt;div style=\&amp;quot;background: #F1F2F2;\n                   text-align: center;\n                   padding: 8px;\n                   margin-bottom: 4px;\&amp;quot;&gt;\n           Third-width column (spans 4/12 columns)\n       &lt;/div&gt;\n   &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\&amp;quot;content-l content-l__full\&amp;quot;&gt;\n   &lt;div class=\&amp;quot;content-l_col content-l_col-2-3\&amp;quot;&gt;\n       &lt;div style=\&amp;quot;background: #F1F2F2;\n                   text-align: center;\n                   padding: 8px;\&amp;quot;&gt;\n           Two thirds-width column (spans 8/12 columns)\n       &lt;/div&gt;\n   &lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;content-l content-l__full\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Full-width column (spans 12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-2\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Half-width column (spans 6/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-2\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Half-width column (spans 6/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Third-width column (spans 4/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Third-width column (spans 4/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Third-width column (spans 4/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-2-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Two thirds-width column (spans 8/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Third-width column (spans 4/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-4\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\&amp;quot;&gt;\n            Quarter width column (spans 3/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-3-4\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\&amp;quot;&gt;\n            Three-quarter width column (spans 9/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
@@ -328,7 +423,7 @@
                 <ul class="docs-notes">
                   <li>Designed for use within .content_full containers.</li>
                   <li>Displays .content-l_col-1-2 as columns at tablet sizes &amp; above (600px+)</li>
-                  <li>Displays other common .content-l_col modifiers (.content-l_col-1-3,  .content-l_col-2-3, .content-l_col-3-8, .content-l_col-5-8)  as columns above 767px.</li>
+                  <li>Displays other common .content-l_col modifiers (.content-l_col-1-3, .content-l_col-2-3, .content-l_col-3-8, .content-l_col-5-8) as columns above 767px.</li>
                 </ul>
               </footer>
             </div>
@@ -336,136 +431,170 @@
               <h3 class="docs-pattern_header">.content-l__main modifier</h3>
               <section class="docs-pattern_pattern">
 <div class="content-l content-l__main">
-     <div class="content-l_col content-l_col-1">
-         <div style="background: #F1F2F2;
-                     text-align: center;
-                     padding: 8px;
-                     margin-bottom: 4px;">
-             Full-width column (spans 12 columns)
-         </div>
-     </div>
- </div>
- <div class="content-l content-l__main">
-     <div class="content-l_col content-l_col-1-2">
-         <div style="background: #F1F2F2;
-                     text-align: center;
-                     padding: 8px;
-                     margin-bottom: 4px;">
-             Half-width column (spans 6/12 columns)
-         </div>
-     </div>
-     <div class="content-l_col content-l_col-1-2">
-         <div style="background: #F1F2F2;
-                     text-align: center;
-                     padding: 8px;
-                     margin-bottom: 4px;">
-             Half-width column (spans 6/12 columns)
-         </div>
-     </div>
- </div>
- <div class="content-l content-l__main">
-     <div class="content-l_col content-l_col-1-3">
-         <div style="background: #F1F2F2;
-                     text-align: center;
-                     padding: 8px;
-                     margin-bottom: 4px;">
-             Third-width column (spans 4/12 columns)
-         </div>
-     </div>
-     <div class="content-l_col content-l_col-1-3">
-         <div style="background: #F1F2F2;
-                     text-align: center;
-                     padding: 8px;
-                     margin-bottom: 4px;">
-             Third-width column (spans 4/12 columns)
-         </div>
-     </div>
-     <div class="content-l_col content-l_col-1-3">
-         <div style="background: #F1F2F2;
-                     text-align: center;
-                     padding: 8px;
-                     margin-bottom: 4px;">
-             Third-width column (spans 4/12 columns)
-         </div>
-     </div>
- </div>
- <div class="content-l content-l__main">
-     <div class="content-l_col content-l_col-2-3">
-         <div style="background: #F1F2F2;
-                     text-align: center;
-                     padding: 8px;">
-             Two thirds-width column (spans 8/12 columns)
-         </div>
-     </div>
- </div>
+    <div class="content-l_col content-l_col-1">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Full-width column (spans 12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-2">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Half-width column (spans 6/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-2">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Half-width column (spans 6/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Third-width column (spans 4/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Third-width column (spans 4/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Third-width column (spans 4/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-2-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Two thirds-width column (spans 8/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Third-width column (spans 4/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-4">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;">
+            Quarter width column (spans 3/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-3-4">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;">
+            Three-quarter width column (spans 9/12 columns)
+        </div>
+    </div>
+</div>
 
               </section>
               <footer class="docs-pattern_footer">
                 <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;content-l content-l__main&quot;&gt;
-     &lt;div class=&quot;content-l_col content-l_col-1&quot;&gt;
-         &lt;div style=&quot;background: #F1F2F2;
-                     text-align: center;
-                     padding: 8px;
-                     margin-bottom: 4px;&quot;&gt;
-             Full-width column (spans 12 columns)
-         &lt;/div&gt;
-     &lt;/div&gt;
- &lt;/div&gt;
- &lt;div class=&quot;content-l content-l__main&quot;&gt;
-     &lt;div class=&quot;content-l_col content-l_col-1-2&quot;&gt;
-         &lt;div style=&quot;background: #F1F2F2;
-                     text-align: center;
-                     padding: 8px;
-                     margin-bottom: 4px;&quot;&gt;
-             Half-width column (spans 6/12 columns)
-         &lt;/div&gt;
-     &lt;/div&gt;
-     &lt;div class=&quot;content-l_col content-l_col-1-2&quot;&gt;
-         &lt;div style=&quot;background: #F1F2F2;
-                     text-align: center;
-                     padding: 8px;
-                     margin-bottom: 4px;&quot;&gt;
-             Half-width column (spans 6/12 columns)
-         &lt;/div&gt;
-     &lt;/div&gt;
- &lt;/div&gt;
- &lt;div class=&quot;content-l content-l__main&quot;&gt;
-     &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
-         &lt;div style=&quot;background: #F1F2F2;
-                     text-align: center;
-                     padding: 8px;
-                     margin-bottom: 4px;&quot;&gt;
-             Third-width column (spans 4/12 columns)
-         &lt;/div&gt;
-     &lt;/div&gt;
-     &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
-         &lt;div style=&quot;background: #F1F2F2;
-                     text-align: center;
-                     padding: 8px;
-                     margin-bottom: 4px;&quot;&gt;
-             Third-width column (spans 4/12 columns)
-         &lt;/div&gt;
-     &lt;/div&gt;
-     &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
-         &lt;div style=&quot;background: #F1F2F2;
-                     text-align: center;
-                     padding: 8px;
-                     margin-bottom: 4px;&quot;&gt;
-             Third-width column (spans 4/12 columns)
-         &lt;/div&gt;
-     &lt;/div&gt;
- &lt;/div&gt;
- &lt;div class=&quot;content-l content-l__main&quot;&gt;
-     &lt;div class=&quot;content-l_col content-l_col-2-3&quot;&gt;
-         &lt;div style=&quot;background: #F1F2F2;
-                     text-align: center;
-                     padding: 8px;&quot;&gt;
-             Two thirds-width column (spans 8/12 columns)
-         &lt;/div&gt;
-     &lt;/div&gt;
- &lt;/div&gt;</code></pre>
+    &lt;div class=&quot;content-l_col content-l_col-1&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Full-width column (spans 12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-2&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Half-width column (spans 6/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-2&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Half-width column (spans 6/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Third-width column (spans 4/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Third-width column (spans 4/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Third-width column (spans 4/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-2-3&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Two thirds-width column (spans 8/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Third-width column (spans 4/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-4&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;&quot;&gt;
+            Quarter width column (spans 3/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-3-4&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;&quot;&gt;
+            Three-quarter width column (spans 9/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;content-l content-l__main\&amp;quot;&gt;\n     &lt;div class=\&amp;quot;content-l_col content-l_col-1\&amp;quot;&gt;\n         &lt;div style=\&amp;quot;background: #F1F2F2;\n                     text-align: center;\n                     padding: 8px;\n                     margin-bottom: 4px;\&amp;quot;&gt;\n             Full-width column (spans 12 columns)\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\&amp;quot;content-l content-l__main\&amp;quot;&gt;\n     &lt;div class=\&amp;quot;content-l_col content-l_col-1-2\&amp;quot;&gt;\n         &lt;div style=\&amp;quot;background: #F1F2F2;\n                     text-align: center;\n                     padding: 8px;\n                     margin-bottom: 4px;\&amp;quot;&gt;\n             Half-width column (spans 6/12 columns)\n         &lt;/div&gt;\n     &lt;/div&gt;\n     &lt;div class=\&amp;quot;content-l_col content-l_col-1-2\&amp;quot;&gt;\n         &lt;div style=\&amp;quot;background: #F1F2F2;\n                     text-align: center;\n                     padding: 8px;\n                     margin-bottom: 4px;\&amp;quot;&gt;\n             Half-width column (spans 6/12 columns)\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\&amp;quot;content-l content-l__main\&amp;quot;&gt;\n     &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n         &lt;div style=\&amp;quot;background: #F1F2F2;\n                     text-align: center;\n                     padding: 8px;\n                     margin-bottom: 4px;\&amp;quot;&gt;\n             Third-width column (spans 4/12 columns)\n         &lt;/div&gt;\n     &lt;/div&gt;\n     &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n         &lt;div style=\&amp;quot;background: #F1F2F2;\n                     text-align: center;\n                     padding: 8px;\n                     margin-bottom: 4px;\&amp;quot;&gt;\n             Third-width column (spans 4/12 columns)\n         &lt;/div&gt;\n     &lt;/div&gt;\n     &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n         &lt;div style=\&amp;quot;background: #F1F2F2;\n                     text-align: center;\n                     padding: 8px;\n                     margin-bottom: 4px;\&amp;quot;&gt;\n             Third-width column (spans 4/12 columns)\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n &lt;div class=\&amp;quot;content-l content-l__main\&amp;quot;&gt;\n     &lt;div class=\&amp;quot;content-l_col content-l_col-2-3\&amp;quot;&gt;\n         &lt;div style=\&amp;quot;background: #F1F2F2;\n                     text-align: center;\n                     padding: 8px;\&amp;quot;&gt;\n             Two thirds-width column (spans 8/12 columns)\n         &lt;/div&gt;\n     &lt;/div&gt;\n &lt;/div&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;content-l content-l__main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Full-width column (spans 12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-2\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Half-width column (spans 6/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-2\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Half-width column (spans 6/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Third-width column (spans 4/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Third-width column (spans 4/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Third-width column (spans 4/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-2-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Two thirds-width column (spans 8/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Third-width column (spans 4/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-4\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\&amp;quot;&gt;\n            Quarter width column (spans 3/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-3-4\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\&amp;quot;&gt;\n            Three-quarter width column (spans 9/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
@@ -474,9 +603,9 @@
                   </li>
                 </ul>
                 <ul class="docs-notes">
-                  <li>Designed for use in .content_main containers, which have reduced (75%) width  above tablet sizes to accommodate adjacent sidebar column.</li>
+                  <li>Designed for use in .content_main containers, which have reduced (75%) width above tablet sizes to accommodate adjacent sidebar column.</li>
                   <li>Displays .content-l_col-1-2 as columns in the tablet range, 600-800px; stacked from 800-899, the start of sidebar range; and as columns again at 900px+</li>
-                  <li>Displays other common .content-l_col modifiers (.content-l_col-1-3, .content-l_col-2-3,     .content-l_col-3-8, .content-l_col-5-8) as columns above 900px.</li>
+                  <li>Displays other common .content-l_col modifiers (.content-l_col-1-3, .content-l_col-2-3, .content-l_col-3-8, .content-l_col-5-8) as columns above 900px.</li>
                 </ul>
               </footer>
             </div>
@@ -484,136 +613,170 @@
               <h3 class="docs-pattern_header">.content-l__sidebar modifier</h3>
               <section class="docs-pattern_pattern">
 <div class="content-l content-l__sidebar">
-     <div class="content-l_col content-l_col-1">
-         <div style="background: #F1F2F2;
-                     text-align: center;
-                     padding: 8px;
-                     margin-bottom: 4px;">
-             Full-width column (spans 12 columns)
-         </div>
-     </div>
-</div>
-<div class="content-l content-l__sidebar">
-   <div class="content-l_col content-l_col-1-2">
-       <div style="background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;">
-           Half-width column (spans 6/12 columns)
-       </div>
-   </div>
-   <div class="content-l_col content-l_col-1-2">
-       <div style="background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;">
-           Half-width column (spans 6/12 columns)
-       </div>
-   </div>
-</div>
-<div class="content-l content-l__sidebar">
-   <div class="content-l_col content-l_col-1-3">
-       <div style="background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;">
-           Third-width column (spans 4/12 columns)
-       </div>
-   </div>
-   <div class="content-l_col content-l_col-1-3">
-       <div style="background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;">
-           Third-width column (spans 4/12 columns)
-       </div>
-   </div>
-   <div class="content-l_col content-l_col-1-3">
-       <div style="background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;">
-           Third-width column (spans 4/12 columns)
-       </div>
-   </div>
-</div>
-<div class="content-l content-l__sidebar">
-   <div class="content-l_col content-l_col-2-3">
-       <div style="background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;">
-           Two thirds-width column (spans 8/12 columns)
-       </div>
-   </div>
+    <div class="content-l_col content-l_col-1">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Full-width column (spans 12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-2">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Half-width column (spans 6/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-2">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Half-width column (spans 6/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Third-width column (spans 4/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Third-width column (spans 4/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Third-width column (spans 4/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-2-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Two thirds-width column (spans 8/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-3">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;">
+            Third-width column (spans 4/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-1-4">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;">
+            Quarter width column (spans 3/12 columns)
+        </div>
+    </div>
+    <div class="content-l_col content-l_col-3-4">
+        <div style="background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;">
+            Three-quarter width column (spans 9/12 columns)
+        </div>
+    </div>
 </div>
 
               </section>
               <footer class="docs-pattern_footer">
                 <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;content-l content-l__sidebar&quot;&gt;
-     &lt;div class=&quot;content-l_col content-l_col-1&quot;&gt;
-         &lt;div style=&quot;background: #F1F2F2;
-                     text-align: center;
-                     padding: 8px;
-                     margin-bottom: 4px;&quot;&gt;
-             Full-width column (spans 12 columns)
-         &lt;/div&gt;
-     &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;content-l content-l__sidebar&quot;&gt;
-   &lt;div class=&quot;content-l_col content-l_col-1-2&quot;&gt;
-       &lt;div style=&quot;background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;&quot;&gt;
-           Half-width column (spans 6/12 columns)
-       &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div class=&quot;content-l_col content-l_col-1-2&quot;&gt;
-       &lt;div style=&quot;background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;&quot;&gt;
-           Half-width column (spans 6/12 columns)
-       &lt;/div&gt;
-   &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;content-l content-l__sidebar&quot;&gt;
-   &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
-       &lt;div style=&quot;background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;&quot;&gt;
-           Third-width column (spans 4/12 columns)
-       &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
-       &lt;div style=&quot;background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;&quot;&gt;
-           Third-width column (spans 4/12 columns)
-       &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
-       &lt;div style=&quot;background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;
-                   margin-bottom: 4px;&quot;&gt;
-           Third-width column (spans 4/12 columns)
-       &lt;/div&gt;
-   &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;content-l content-l__sidebar&quot;&gt;
-   &lt;div class=&quot;content-l_col content-l_col-2-3&quot;&gt;
-       &lt;div style=&quot;background: #F1F2F2;
-                   text-align: center;
-                   padding: 8px;&quot;&gt;
-           Two thirds-width column (spans 8/12 columns)
-       &lt;/div&gt;
-   &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Full-width column (spans 12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-2&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Half-width column (spans 6/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-2&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Half-width column (spans 6/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Third-width column (spans 4/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Third-width column (spans 4/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Third-width column (spans 4/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-2-3&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Two thirds-width column (spans 8/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-3&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;
+                    margin-bottom: 4px;&quot;&gt;
+            Third-width column (spans 4/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-1-4&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;&quot;&gt;
+            Quarter width column (spans 3/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content-l_col content-l_col-3-4&quot;&gt;
+        &lt;div style=&quot;background: #F1F2F2;
+                    text-align: center;
+                    padding: 8px;&quot;&gt;
+            Three-quarter width column (spans 9/12 columns)
+        &lt;/div&gt;
+    &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;content-l content-l__sidebar\&amp;quot;&gt;\n     &lt;div class=\&amp;quot;content-l_col content-l_col-1\&amp;quot;&gt;\n         &lt;div style=\&amp;quot;background: #F1F2F2;\n                     text-align: center;\n                     padding: 8px;\n                     margin-bottom: 4px;\&amp;quot;&gt;\n             Full-width column (spans 12 columns)\n         &lt;/div&gt;\n     &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\&amp;quot;content-l content-l__sidebar\&amp;quot;&gt;\n   &lt;div class=\&amp;quot;content-l_col content-l_col-1-2\&amp;quot;&gt;\n       &lt;div style=\&amp;quot;background: #F1F2F2;\n                   text-align: center;\n                   padding: 8px;\n                   margin-bottom: 4px;\&amp;quot;&gt;\n           Half-width column (spans 6/12 columns)\n       &lt;/div&gt;\n   &lt;/div&gt;\n   &lt;div class=\&amp;quot;content-l_col content-l_col-1-2\&amp;quot;&gt;\n       &lt;div style=\&amp;quot;background: #F1F2F2;\n                   text-align: center;\n                   padding: 8px;\n                   margin-bottom: 4px;\&amp;quot;&gt;\n           Half-width column (spans 6/12 columns)\n       &lt;/div&gt;\n   &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\&amp;quot;content-l content-l__sidebar\&amp;quot;&gt;\n   &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n       &lt;div style=\&amp;quot;background: #F1F2F2;\n                   text-align: center;\n                   padding: 8px;\n                   margin-bottom: 4px;\&amp;quot;&gt;\n           Third-width column (spans 4/12 columns)\n       &lt;/div&gt;\n   &lt;/div&gt;\n   &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n       &lt;div style=\&amp;quot;background: #F1F2F2;\n                   text-align: center;\n                   padding: 8px;\n                   margin-bottom: 4px;\&amp;quot;&gt;\n           Third-width column (spans 4/12 columns)\n       &lt;/div&gt;\n   &lt;/div&gt;\n   &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n       &lt;div style=\&amp;quot;background: #F1F2F2;\n                   text-align: center;\n                   padding: 8px;\n                   margin-bottom: 4px;\&amp;quot;&gt;\n           Third-width column (spans 4/12 columns)\n       &lt;/div&gt;\n   &lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\&amp;quot;content-l content-l__sidebar\&amp;quot;&gt;\n   &lt;div class=\&amp;quot;content-l_col content-l_col-2-3\&amp;quot;&gt;\n       &lt;div style=\&amp;quot;background: #F1F2F2;\n                   text-align: center;\n                   padding: 8px;\&amp;quot;&gt;\n           Two thirds-width column (spans 8/12 columns)\n       &lt;/div&gt;\n   &lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;content-l content-l__sidebar\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Full-width column (spans 12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-2\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Half-width column (spans 6/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-2\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Half-width column (spans 6/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Third-width column (spans 4/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Third-width column (spans 4/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Third-width column (spans 4/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-2-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Two thirds-width column (spans 8/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\n                    margin-bottom: 4px;\&amp;quot;&gt;\n            Third-width column (spans 4/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-4\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\&amp;quot;&gt;\n            Quarter width column (spans 3/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-3-4\&amp;quot;&gt;\n        &lt;div style=\&amp;quot;background: #F1F2F2;\n                    text-align: center;\n                    padding: 8px;\&amp;quot;&gt;\n            Three-quarter width column (spans 9/12 columns)\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
@@ -622,8 +785,8 @@
                   </li>
                 </ul>
                 <ul class="docs-notes">
-                  <li>For use in sidebar containers, which are full width only  on tablet widths (600-800px).</li>
-                  <li>Displays .content-l_col-1-2 as columns in the tablet range,  600-800px, and stacked at all other widths.</li>
+                  <li>For use in sidebar containers, which are full width only on tablet widths (600-800px).</li>
+                  <li>Displays .content-l_col-1-2 as columns in the tablet range, 600-800px, and stacked at all other widths.</li>
                 </ul>
               </footer>
             </div>
@@ -704,509 +867,6 @@
               </footer>
             </div>
           </div>
-          <div class="docs-css">
-            <pre class="docs-code"><code data-language="css">.content-l {
-  position: relative;
-}
-@media only all and (min-width: 37.5em) {
-  .content-l {
-    display: block;
-    position: relative;
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-}
-@media only all and (min-width: 37.5em) and (max-width: 47.9375em) {
-  .content-l__full .content-l_col.content-l_col-1-3 {
-    width: 100%;
-  }
-  .content-l__full .content-l_col.content-l_col-1-3.content-l_col__before-divider {
-    margin-top: 3.75em;
-    border-left-width: 15px;
-  }
-  .content-l__full .content-l_col.content-l_col-1-3.content-l_col__before-divider:before {
-    content: &quot;&quot;;
-    display: block;
-    height: 1px;
-    margin-bottom: 1.875em;
-    background-color: #babbbd;
-    position: static;
-    width: 100%;
-    margin-left: auto !important;
-  }
-  .content-l__full.content-l__large-gutters .content-l_col.content-l_col-1-3.content-l_col__before-divider {
-    border-left-width: 30px;
-  }
-  .content-l__full .content-l_col.content-l_col-1-3 + .content-l_col.content-l_col-1-3 {
-    margin-top: 1.875em;
-  }
-  .content-l__full .content-l_col.content-l_col-2-3 {
-    width: 100%;
-  }
-  .content-l__full .content-l_col.content-l_col-2-3.content-l_col__before-divider {
-    margin-top: 3.75em;
-    border-left-width: 15px;
-  }
-  .content-l__full .content-l_col.content-l_col-2-3.content-l_col__before-divider:before {
-    content: &quot;&quot;;
-    display: block;
-    height: 1px;
-    margin-bottom: 1.875em;
-    background-color: #babbbd;
-    position: static;
-    width: 100%;
-    margin-left: auto !important;
-  }
-  .content-l__full.content-l__large-gutters .content-l_col.content-l_col-2-3.content-l_col__before-divider {
-    border-left-width: 30px;
-  }
-  .content-l__full .content-l_col.content-l_col-2-3 + .content-l_col.content-l_col-2-3 {
-    margin-top: 1.875em;
-  }
-  .content-l__full .content-l_col.content-l_col-1-3 + .content-l_col.content-l_col-2-3,
-  .content-l__full .content-l_col.content-l_col-2-3 + .content-l_col.content-l_col-1-3 {
-    margin-top: 1.875em;
-  }
-  .content-l__full .content-l_col.content-l_col-3-8 {
-    width: 100%;
-  }
-  .content-l__full .content-l_col.content-l_col-3-8.content-l_col__before-divider {
-    margin-top: 3.75em;
-    border-left-width: 15px;
-  }
-  .content-l__full .content-l_col.content-l_col-3-8.content-l_col__before-divider:before {
-    content: &quot;&quot;;
-    display: block;
-    height: 1px;
-    margin-bottom: 1.875em;
-    background-color: #babbbd;
-    position: static;
-    width: 100%;
-    margin-left: auto !important;
-  }
-  .content-l__full.content-l__large-gutters .content-l_col.content-l_col-3-8.content-l_col__before-divider {
-    border-left-width: 30px;
-  }
-  .content-l__full .content-l_col.content-l_col-3-8 + .content-l_col.content-l_col-3-8 {
-    margin-top: 1.875em;
-  }
-  .content-l__full .content-l_col.content-l_col-5-8 {
-    width: 100%;
-  }
-  .content-l__full .content-l_col.content-l_col-5-8.content-l_col__before-divider {
-    margin-top: 3.75em;
-    border-left-width: 15px;
-  }
-  .content-l__full .content-l_col.content-l_col-5-8.content-l_col__before-divider:before {
-    content: &quot;&quot;;
-    display: block;
-    height: 1px;
-    margin-bottom: 1.875em;
-    background-color: #babbbd;
-    position: static;
-    width: 100%;
-    margin-left: auto !important;
-  }
-  .content-l__full.content-l__large-gutters .content-l_col.content-l_col-5-8.content-l_col__before-divider {
-    border-left-width: 30px;
-  }
-  .content-l__full .content-l_col.content-l_col-5-8 + .content-l_col.content-l_col-5-8 {
-    margin-top: 1.875em;
-  }
-  .content-l__full .content-l_col.content-l_col-3-8 + .content-l_col.content-l_col-5-8,
-  .content-l__full .content-l_col.content-l_col-5-8 + .content-l_col.content-l_col-3-8 {
-    margin-top: 1.875em;
-  }
-}
-@media only all and (min-width: 50.0625em) and (max-width: 56.1875em) {
-  .content-l__main .content-l_col.content-l_col-1-2 {
-    width: 100%;
-  }
-  .content-l__main .content-l_col.content-l_col-1-2.content-l_col__before-divider {
-    margin-top: 3.75em;
-    border-left-width: 15px;
-  }
-  .content-l__main .content-l_col.content-l_col-1-2.content-l_col__before-divider:before {
-    content: &quot;&quot;;
-    display: block;
-    height: 1px;
-    margin-bottom: 1.875em;
-    background-color: #babbbd;
-    position: static;
-    width: 100%;
-    margin-left: auto !important;
-  }
-  .content-l__main.content-l__large-gutters .content-l_col.content-l_col-1-2.content-l_col__before-divider {
-    border-left-width: 30px;
-  }
-  .content-l__main .content-l_col.content-l_col-1-2 + .content-l_col.content-l_col-1-2 {
-    margin-top: 1.875em;
-  }
-}
-@media only all and (min-width: 37.5em) and (max-width: 56.1875em) {
-  .content-l__main .content-l_col.content-l_col-1-3 {
-    width: 100%;
-  }
-  .content-l__main .content-l_col.content-l_col-1-3.content-l_col__before-divider {
-    margin-top: 3.75em;
-    border-left-width: 15px;
-  }
-  .content-l__main .content-l_col.content-l_col-1-3.content-l_col__before-divider:before {
-    content: &quot;&quot;;
-    display: block;
-    height: 1px;
-    margin-bottom: 1.875em;
-    background-color: #babbbd;
-    position: static;
-    width: 100%;
-    margin-left: auto !important;
-  }
-  .content-l__main.content-l__large-gutters .content-l_col.content-l_col-1-3.content-l_col__before-divider {
-    border-left-width: 30px;
-  }
-  .content-l__main .content-l_col.content-l_col-1-3 + .content-l_col.content-l_col-1-3 {
-    margin-top: 1.875em;
-  }
-  .content-l__main .content-l_col.content-l_col-2-3 {
-    width: 100%;
-  }
-  .content-l__main .content-l_col.content-l_col-2-3.content-l_col__before-divider {
-    margin-top: 3.75em;
-    border-left-width: 15px;
-  }
-  .content-l__main .content-l_col.content-l_col-2-3.content-l_col__before-divider:before {
-    content: &quot;&quot;;
-    display: block;
-    height: 1px;
-    margin-bottom: 1.875em;
-    background-color: #babbbd;
-    position: static;
-    width: 100%;
-    margin-left: auto !important;
-  }
-  .content-l__main.content-l__large-gutters .content-l_col.content-l_col-2-3.content-l_col__before-divider {
-    border-left-width: 30px;
-  }
-  .content-l__main .content-l_col.content-l_col-2-3 + .content-l_col.content-l_col-2-3 {
-    margin-top: 1.875em;
-  }
-  .content-l__main .content-l_col.content-l_col-1-3 + .content-l_col.content-l_col-2-3,
-  .content-l__main .content-l_col.content-l_col-2-3 + .content-l_col.content-l_col-1-3 {
-    margin-top: 1.875em;
-  }
-  .content-l__main .content-l_col.content-l_col-3-8 {
-    width: 100%;
-  }
-  .content-l__main .content-l_col.content-l_col-3-8.content-l_col__before-divider {
-    margin-top: 3.75em;
-    border-left-width: 15px;
-  }
-  .content-l__main .content-l_col.content-l_col-3-8.content-l_col__before-divider:before {
-    content: &quot;&quot;;
-    display: block;
-    height: 1px;
-    margin-bottom: 1.875em;
-    background-color: #babbbd;
-    position: static;
-    width: 100%;
-    margin-left: auto !important;
-  }
-  .content-l__main.content-l__large-gutters .content-l_col.content-l_col-3-8.content-l_col__before-divider {
-    border-left-width: 30px;
-  }
-  .content-l__main .content-l_col.content-l_col-3-8 + .content-l_col.content-l_col-3-8 {
-    margin-top: 1.875em;
-  }
-  .content-l__main .content-l_col.content-l_col-5-8 {
-    width: 100%;
-  }
-  .content-l__main .content-l_col.content-l_col-5-8.content-l_col__before-divider {
-    margin-top: 3.75em;
-    border-left-width: 15px;
-  }
-  .content-l__main .content-l_col.content-l_col-5-8.content-l_col__before-divider:before {
-    content: &quot;&quot;;
-    display: block;
-    height: 1px;
-    margin-bottom: 1.875em;
-    background-color: #babbbd;
-    position: static;
-    width: 100%;
-    margin-left: auto !important;
-  }
-  .content-l__main.content-l__large-gutters .content-l_col.content-l_col-5-8.content-l_col__before-divider {
-    border-left-width: 30px;
-  }
-  .content-l__main .content-l_col.content-l_col-5-8 + .content-l_col.content-l_col-5-8 {
-    margin-top: 1.875em;
-  }
-  .content-l__main .content-l_col.content-l_col-3-8 + .content-l_col.content-l_col-5-8,
-  .content-l__main .content-l_col.content-l_col-5-8 + .content-l_col.content-l_col-3-8 {
-    margin-top: 1.875em;
-  }
-}
-.content-l__sidebar .content-l_col.content-l_col-1-3 {
-  width: 100%;
-}
-.content-l__sidebar .content-l_col.content-l_col-1-3.content-l_col__before-divider {
-  margin-top: 3.75em;
-  border-left-width: 15px;
-}
-.content-l__sidebar .content-l_col.content-l_col-1-3.content-l_col__before-divider:before {
-  content: &quot;&quot;;
-  display: block;
-  height: 1px;
-  margin-bottom: 1.875em;
-  background-color: #babbbd;
-  position: static;
-  width: 100%;
-  margin-left: auto !important;
-}
-.content-l__sidebar.content-l__large-gutters .content-l_col.content-l_col-1-3.content-l_col__before-divider {
-  border-left-width: 30px;
-}
-.content-l__sidebar .content-l_col.content-l_col-1-3 + .content-l_col.content-l_col-1-3 {
-  margin-top: 1.875em;
-}
-.content-l__sidebar .content-l_col.content-l_col-2-3 {
-  width: 100%;
-}
-.content-l__sidebar .content-l_col.content-l_col-2-3.content-l_col__before-divider {
-  margin-top: 3.75em;
-  border-left-width: 15px;
-}
-.content-l__sidebar .content-l_col.content-l_col-2-3.content-l_col__before-divider:before {
-  content: &quot;&quot;;
-  display: block;
-  height: 1px;
-  margin-bottom: 1.875em;
-  background-color: #babbbd;
-  position: static;
-  width: 100%;
-  margin-left: auto !important;
-}
-.content-l__sidebar.content-l__large-gutters .content-l_col.content-l_col-2-3.content-l_col__before-divider {
-  border-left-width: 30px;
-}
-.content-l__sidebar .content-l_col.content-l_col-2-3 + .content-l_col.content-l_col-2-3 {
-  margin-top: 1.875em;
-}
-.content-l__sidebar .content-l_col.content-l_col-1-3 + .content-l_col.content-l_col-2-3,
-.content-l__sidebar .content-l_col.content-l_col-2-3 + .content-l_col.content-l_col-1-3 {
-  margin-top: 1.875em;
-}
-.content-l__sidebar .content-l_col.content-l_col-3-8 {
-  width: 100%;
-}
-.content-l__sidebar .content-l_col.content-l_col-3-8.content-l_col__before-divider {
-  margin-top: 3.75em;
-  border-left-width: 15px;
-}
-.content-l__sidebar .content-l_col.content-l_col-3-8.content-l_col__before-divider:before {
-  content: &quot;&quot;;
-  display: block;
-  height: 1px;
-  margin-bottom: 1.875em;
-  background-color: #babbbd;
-  position: static;
-  width: 100%;
-  margin-left: auto !important;
-}
-.content-l__sidebar.content-l__large-gutters .content-l_col.content-l_col-3-8.content-l_col__before-divider {
-  border-left-width: 30px;
-}
-.content-l__sidebar .content-l_col.content-l_col-3-8 + .content-l_col.content-l_col-3-8 {
-  margin-top: 1.875em;
-}
-.content-l__sidebar .content-l_col.content-l_col-5-8 {
-  width: 100%;
-}
-.content-l__sidebar .content-l_col.content-l_col-5-8.content-l_col__before-divider {
-  margin-top: 3.75em;
-  border-left-width: 15px;
-}
-.content-l__sidebar .content-l_col.content-l_col-5-8.content-l_col__before-divider:before {
-  content: &quot;&quot;;
-  display: block;
-  height: 1px;
-  margin-bottom: 1.875em;
-  background-color: #babbbd;
-  position: static;
-  width: 100%;
-  margin-left: auto !important;
-}
-.content-l__sidebar.content-l__large-gutters .content-l_col.content-l_col-5-8.content-l_col__before-divider {
-  border-left-width: 30px;
-}
-.content-l__sidebar .content-l_col.content-l_col-5-8 + .content-l_col.content-l_col-5-8 {
-  margin-top: 1.875em;
-}
-.content-l__sidebar .content-l_col.content-l_col-3-8 + .content-l_col.content-l_col-5-8,
-.content-l__sidebar .content-l_col.content-l_col-5-8 + .content-l_col.content-l_col-3-8 {
-  margin-top: 1.875em;
-}
-@media only all and (min-width: 50.0625em) {
-  .content-l__sidebar .content-l_col.content-l_col-1-2 {
-    width: 100%;
-  }
-  .content-l__sidebar .content-l_col.content-l_col-1-2.content-l_col__before-divider {
-    margin-top: 3.75em;
-    border-left-width: 15px;
-  }
-  .content-l__sidebar .content-l_col.content-l_col-1-2.content-l_col__before-divider:before {
-    content: &quot;&quot;;
-    display: block;
-    height: 1px;
-    margin-bottom: 1.875em;
-    background-color: #babbbd;
-    position: static;
-    width: 100%;
-    margin-left: auto !important;
-  }
-  .content-l__sidebar.content-l__large-gutters .content-l_col.content-l_col-1-2.content-l_col__before-divider {
-    border-left-width: 30px;
-  }
-  .content-l__sidebar .content-l_col.content-l_col-1-2 + .content-l_col.content-l_col-1-2 {
-    margin-top: 1.875em;
-  }
-}
-@media only all and (min-width: 37.5em) {
-  .content-l__large-gutters {
-    margin-left: -30px;
-    margin-right: -30px;
-  }
-  .content-l__large-gutters .content-l_col {
-    border-left-width: 30px;
-    border-right-width: 30px;
-  }
-}
-.content-l_col + .content-l_col {
-  margin-top: 1.875em;
-}
-@media only all and (min-width: 37.5em) {
-  .content-l_col.content-l_col-1-2 + .content-l_col.content-l_col-1-2,
-  .content-l_col.content-l_col-1-3 + .content-l_col.content-l_col-1-3,
-  .content-l_col.content-l_col-3-8 + .content-l_col.content-l_col-3-8,
-  .content-l_col.content-l_col-3-8 + .content-l_col.content-l_col-5-8,
-  .content-l_col.content-l_col-5-8 + .content-l_col.content-l_col-3-8 {
-    margin-top: 0;
-  }
-}
-@media only all and (min-width: 37.5em) {
-  .content-l_col-1 {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: solid transparent;
-    border-width: 0 15px;
-    margin-right: -0.25em;
-    vertical-align: top;
-    width: 100%;
-  }
-  .lt-ie8 .content-l_col-1 {
-    display: inline;
-    margin-right: 0;
-    zoom: 1;
-    behavior: url('/cf-grid/custom-demo/static/css/boxsizing.htc');
-  }
-}
-@media only all and (min-width: 37.5em) {
-  .content-l_col-1-2 {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: solid transparent;
-    border-width: 0 15px;
-    margin-right: -0.25em;
-    vertical-align: top;
-    width: 50%;
-  }
-  .lt-ie8 .content-l_col-1-2 {
-    display: inline;
-    margin-right: 0;
-    zoom: 1;
-    behavior: url('/cf-grid/custom-demo/static/css/boxsizing.htc');
-  }
-}
-@media only all and (min-width: 37.5em) {
-  .content-l_col-1-3 {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: solid transparent;
-    border-width: 0 15px;
-    margin-right: -0.25em;
-    vertical-align: top;
-    width: 33.33333333%;
-  }
-  .lt-ie8 .content-l_col-1-3 {
-    display: inline;
-    margin-right: 0;
-    zoom: 1;
-    behavior: url('/cf-grid/custom-demo/static/css/boxsizing.htc');
-  }
-}
-@media only all and (min-width: 37.5em) {
-  .content-l_col-2-3 {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: solid transparent;
-    border-width: 0 15px;
-    margin-right: -0.25em;
-    vertical-align: top;
-    width: 66.66666667%;
-  }
-  .lt-ie8 .content-l_col-2-3 {
-    display: inline;
-    margin-right: 0;
-    zoom: 1;
-    behavior: url('/cf-grid/custom-demo/static/css/boxsizing.htc');
-  }
-}
-@media only all and (min-width: 37.5em) {
-  .content-l_col-3-8 {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: solid transparent;
-    border-width: 0 15px;
-    margin-right: -0.25em;
-    vertical-align: top;
-    width: 37.5%;
-  }
-  .lt-ie8 .content-l_col-3-8 {
-    display: inline;
-    margin-right: 0;
-    zoom: 1;
-    behavior: url('/cf-grid/custom-demo/static/css/boxsizing.htc');
-  }
-}
-@media only all and (min-width: 37.5em) {
-  .content-l_col-5-8 {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: solid transparent;
-    border-width: 0 15px;
-    margin-right: -0.25em;
-    vertical-align: top;
-    width: 62.5%;
-  }
-  .lt-ie8 .content-l_col-5-8 {
-    display: inline;
-    margin-right: 0;
-    zoom: 1;
-    behavior: url('/cf-grid/custom-demo/static/css/boxsizing.htc');
-  }
-}</code></pre>
-          </div>
         </div>
         <div id="content-layout-column-dividers" class="docs-component">
           <h2 class="docs-component_header"><span>Content layout column dividers</span></h2>
@@ -1223,12 +883,12 @@
               <section class="docs-pattern_pattern">
 <div class="content-l content-l__large-gutters">
     <div class="content-l_col content-l_col-1-2">
-        <img src="http://placekitten.com/600/320">
+        <img src="http://placekitten.com/600/320" alt="Placeholder image">
         <br>
         Half-width column (spans 6/12 columns)
     </div>
     <div class="content-l_col content-l_col-1-2 content-l_col__before-divider">
-        <img src="http://placekitten.com/600/320">
+        <img src="http://placekitten.com/600/320" alt="Placeholder image">
         <br>
         Half-width column (spans 6/12 columns)
     </div>
@@ -1253,12 +913,12 @@
               <footer class="docs-pattern_footer">
                 <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;content-l content-l__large-gutters&quot;&gt;
     &lt;div class=&quot;content-l_col content-l_col-1-2&quot;&gt;
-        &lt;img src=&quot;http://placekitten.com/600/320&quot;&gt;
+        &lt;img src=&quot;http://placekitten.com/600/320&quot; alt=&quot;Placeholder image&quot;&gt;
         &lt;br&gt;
         Half-width column (spans 6/12 columns)
     &lt;/div&gt;
     &lt;div class=&quot;content-l_col content-l_col-1-2 content-l_col__before-divider&quot;&gt;
-        &lt;img src=&quot;http://placekitten.com/600/320&quot;&gt;
+        &lt;img src=&quot;http://placekitten.com/600/320&quot; alt=&quot;Placeholder image&quot;&gt;
         &lt;br&gt;
         Half-width column (spans 6/12 columns)
     &lt;/div&gt;
@@ -1279,7 +939,7 @@
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;content-l content-l__large-gutters\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-2\&amp;quot;&gt;\n        &lt;img src=\&amp;quot;http://placekitten.com/600/320\&amp;quot;&gt;\n        &lt;br&gt;\n        Half-width column (spans 6/12 columns)\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-2 content-l_col__before-divider\&amp;quot;&gt;\n        &lt;img src=\&amp;quot;http://placekitten.com/600/320\&amp;quot;&gt;\n        &lt;br&gt;\n        Half-width column (spans 6/12 columns)\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;br&gt;\n&lt;!-- Starting a new .content-l so that the dividers from\n     .content-l_col.content-l_col-1-2.content-l_col__before-divider\n     won&amp;apos;t overlap the .content-l_col-1-3 columns. --&gt;\n&lt;div class=\&amp;quot;content-l content-l__large-gutters\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        Third-width column (spans 4/12 columns)\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3 content-l_col__before-divider\&amp;quot;&gt;\n        Third-width column (spans 4/12 columns)\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3 content-l_col__before-divider\&amp;quot;&gt;\n        Third-width column (spans 4/12 columns)\n    &lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;content-l content-l__large-gutters\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-2\&amp;quot;&gt;\n        &lt;img src=\&amp;quot;http://placekitten.com/600/320\&amp;quot; alt=\&amp;quot;Placeholder image\&amp;quot;&gt;\n        &lt;br&gt;\n        Half-width column (spans 6/12 columns)\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-2 content-l_col__before-divider\&amp;quot;&gt;\n        &lt;img src=\&amp;quot;http://placekitten.com/600/320\&amp;quot; alt=\&amp;quot;Placeholder image\&amp;quot;&gt;\n        &lt;br&gt;\n        Half-width column (spans 6/12 columns)\n    &lt;/div&gt;\n&lt;/div&gt;\n&lt;br&gt;\n&lt;!-- Starting a new .content-l so that the dividers from\n     .content-l_col.content-l_col-1-2.content-l_col__before-divider\n     won&amp;apos;t overlap the .content-l_col-1-3 columns. --&gt;\n&lt;div class=\&amp;quot;content-l content-l__large-gutters\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3\&amp;quot;&gt;\n        Third-width column (spans 4/12 columns)\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3 content-l_col__before-divider\&amp;quot;&gt;\n        Third-width column (spans 4/12 columns)\n    &lt;/div&gt;\n    &lt;div class=\&amp;quot;content-l_col content-l_col-1-3 content-l_col__before-divider\&amp;quot;&gt;\n        Third-width column (spans 4/12 columns)\n    &lt;/div&gt;\n&lt;/div&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
@@ -1289,70 +949,6 @@
                 </ul>
               </footer>
             </div>
-          </div>
-          <div class="docs-css">
-            <pre class="docs-code"><code data-language="css">@media only all and (max-width: 37.4375em) {
-  .content-l_col__before-divider.content-l_col-1-2 {
-    margin-top: 3.75em;
-    border-left-width: 15px;
-  }
-  .content-l_col__before-divider.content-l_col-1-2:before {
-    content: &quot;&quot;;
-    display: block;
-    height: 1px;
-    margin-bottom: 1.875em;
-    background-color: #babbbd;
-    position: static;
-    width: 100%;
-    margin-left: auto !important;
-  }
-}
-@media only all and (min-width: 37.5em) {
-  .content-l_col__before-divider.content-l_col-1-2 {
-    border-left-width: 30px;
-  }
-  .content-l_col__before-divider.content-l_col-1-2:before {
-    content: &quot;&quot;;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    display: block;
-    background-color: #babbbd;
-    margin-left: -30px;
-  }
-}
-@media only all and (max-width: 37.4375em) {
-  .content-l_col__before-divider.content-l_col-1-3 {
-    margin-top: 3.75em;
-    border-left-width: 15px;
-  }
-  .content-l_col__before-divider.content-l_col-1-3:before {
-    content: &quot;&quot;;
-    display: block;
-    height: 1px;
-    margin-bottom: 1.875em;
-    background-color: #babbbd;
-    position: static;
-    width: 100%;
-    margin-left: auto !important;
-  }
-}
-@media only all and (min-width: 37.5em) {
-  .content-l_col__before-divider.content-l_col-1-3 {
-    border-left-width: 30px;
-  }
-  .content-l_col__before-divider.content-l_col-1-3:before {
-    content: &quot;&quot;;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    display: block;
-    background-color: #babbbd;
-    margin-left: -30px;
-  }
-}</code></pre>
           </div>
         </div>
         <div id="content-bar" class="docs-component">
@@ -1377,12 +973,6 @@
               </footer>
             </div>
           </div>
-          <div class="docs-css">
-            <pre class="docs-code"><code data-language="css">.content_bar {
-  height: 10px;
-  background: #2cb34a;
-}</code></pre>
-          </div>
         </div>
         <div id="content-line" class="docs-component">
           <h2 class="docs-component_header"><span>Content line</span></h2>
@@ -1402,12 +992,6 @@
               </footer>
             </div>
           </div>
-          <div class="docs-css">
-            <pre class="docs-code"><code data-language="css">.content_line {
-  height: 1px;
-  background: #babbbd;
-}</code></pre>
-          </div>
         </div>
         <div id="main-content-and-sidebar" class="docs-component">
           <h2 class="docs-component_header"><span>Main content and sidebar</span></h2>
@@ -1415,7 +999,7 @@
             <div class="docs-pattern">
               <h3 class="docs-pattern_header">Standard layout for the main content area and sidebar</h3>
               <section class="docs-pattern_pattern">
-<main class="content" id="main" role="main">
+<main class="content" role="main">
     <section class="content_hero" style="background: #E3E4E5">
         Content hero
     </section>
@@ -1432,7 +1016,7 @@
 
               </section>
               <footer class="docs-pattern_footer">
-                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content&quot; role=&quot;main&quot;&gt;
     &lt;section class=&quot;content_hero&quot; style=&quot;background: #E3E4E5&quot;&gt;
         Content hero
     &lt;/section&gt;
@@ -1447,7 +1031,7 @@
     &lt;/div&gt;
 &lt;/main&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;section class=\&amp;quot;content_hero\&amp;quot; style=\&amp;quot;background: #E3E4E5\&amp;quot;&gt;\n        Content hero\n    &lt;/section&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content area\n        &lt;/section&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot; style=\&amp;quot;background: #F1F2F2\&amp;quot;&gt;\n            Sidebar\n        &lt;/aside&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;section class=\&amp;quot;content_hero\&amp;quot; style=\&amp;quot;background: #E3E4E5\&amp;quot;&gt;\n        Content hero\n    &lt;/section&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content area\n        &lt;/section&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot; style=\&amp;quot;background: #F1F2F2\&amp;quot;&gt;\n            Sidebar\n        &lt;/aside&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
@@ -1472,7 +1056,7 @@ main.content
             <div class="docs-pattern">
               <h3 class="docs-pattern_header">Left-hand navigation layout</h3>
               <section class="docs-pattern_pattern">
-<main class="content content__1-3" id="main" role="main">
+<main class="content content__1-3" role="main">
     <div class="content_bar"></div>
     <div class="content_wrapper">
         <aside class="content_sidebar">
@@ -1497,7 +1081,7 @@ main.content
 
               </section>
               <footer class="docs-pattern_footer">
-                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__1-3&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__1-3&quot; role=&quot;main&quot;&gt;
     &lt;div class=&quot;content_bar&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;content_wrapper&quot;&gt;
         &lt;aside class=&quot;content_sidebar&quot;&gt;
@@ -1520,7 +1104,7 @@ main.content
     &lt;/div&gt;
 &lt;/footer&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot;&gt;\n            Section navigation\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            &lt;h2&gt;Main content area&lt;/h2&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                Cum corrupti tempora nam nihil qui mollitia consectetur\n                corporis nemo culpa dolorum! Laborum at eos deleniti\n                consequatur itaque officiis debitis quisquam! Provident!\n            &lt;/p&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot;&gt;\n            Section navigation\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            &lt;h2&gt;Main content area&lt;/h2&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                Cum corrupti tempora nam nihil qui mollitia consectetur\n                corporis nemo culpa dolorum! Laborum at eos deleniti\n                consequatur itaque officiis debitis quisquam! Provident!\n            &lt;/p&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
@@ -1536,7 +1120,7 @@ main.content
             <div class="docs-pattern">
               <h3 class="docs-pattern_header">Right-hand sidebar layout</h3>
               <section class="docs-pattern_pattern">
-<main class="content content__2-1" id="main" role="main">
+<main class="content content__2-1" role="main">
     <div class="content_bar"></div>
     <div class="content_wrapper">
         <section class="content_main">
@@ -1561,7 +1145,7 @@ main.content
 
               </section>
               <footer class="docs-pattern_footer">
-                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__2-1&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__2-1&quot; role=&quot;main&quot;&gt;
     &lt;div class=&quot;content_bar&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;content_wrapper&quot;&gt;
         &lt;section class=&quot;content_main&quot;&gt;
@@ -1584,7 +1168,7 @@ main.content
     &lt;/div&gt;
 &lt;/footer&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__2-1\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            &lt;h2&gt;Main content area&lt;/h2&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                Cum corrupti tempora nam nihil qui mollitia consectetur\n                corporis nemo culpa dolorum! Laborum at eos deleniti\n                consequatur itaque officiis debitis quisquam! Provident!\n            &lt;/p&gt;\n        &lt;/section&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot; style=\&amp;quot;background: #F1F2F2\&amp;quot;&gt;\n            Sidebar\n        &lt;/aside&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__2-1\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            &lt;h2&gt;Main content area&lt;/h2&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                Cum corrupti tempora nam nihil qui mollitia consectetur\n                corporis nemo culpa dolorum! Laborum at eos deleniti\n                consequatur itaque officiis debitis quisquam! Provident!\n            &lt;/p&gt;\n        &lt;/section&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot; style=\&amp;quot;background: #F1F2F2\&amp;quot;&gt;\n            Sidebar\n        &lt;/aside&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
@@ -1601,7 +1185,7 @@ main.content
             <div class="docs-pattern">
               <h3 class="docs-pattern_header">Narrow content column option</h3>
               <section class="docs-pattern_pattern">
-<main class="content content__2-1" id="main" role="main">
+<main class="content content__2-1" role="main">
     <div class="content_bar"></div>
     <div class="content_wrapper">
         <section class="content_main content_main__narrow">
@@ -1626,7 +1210,7 @@ main.content
 
               </section>
               <footer class="docs-pattern_footer">
-                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__2-1&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__2-1&quot; role=&quot;main&quot;&gt;
     &lt;div class=&quot;content_bar&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;content_wrapper&quot;&gt;
         &lt;section class=&quot;content_main content_main__narrow&quot;&gt;
@@ -1649,7 +1233,7 @@ main.content
     &lt;/div&gt;
 &lt;/footer&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__2-1\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main content_main__narrow\&amp;quot;&gt;\n            &lt;h2&gt;Main content area&lt;/h2&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                Cum corrupti tempora nam nihil qui mollitia consectetur\n                corporis nemo culpa dolorum! Laborum at eos deleniti\n                consequatur itaque officiis debitis quisquam! Provident!\n            &lt;/p&gt;\n        &lt;/section&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot; style=\&amp;quot;background: #F1F2F2\&amp;quot;&gt;\n            Sidebar\n        &lt;/aside&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__2-1\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main content_main__narrow\&amp;quot;&gt;\n            &lt;h2&gt;Main content area&lt;/h2&gt;\n            &lt;p&gt;\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n                Cum corrupti tempora nam nihil qui mollitia consectetur\n                corporis nemo culpa dolorum! Laborum at eos deleniti\n                consequatur itaque officiis debitis quisquam! Provident!\n            &lt;/p&gt;\n        &lt;/section&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot; style=\&amp;quot;background: #F1F2F2\&amp;quot;&gt;\n            Sidebar\n        &lt;/aside&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
@@ -1666,7 +1250,7 @@ main.content
             <div class="docs-pattern">
               <h3 class="docs-pattern_header">Flush bottom modifier</h3>
               <section class="docs-pattern_pattern">
-<main class="content content__1-3" id="main" role="main">
+<main class="content content__1-3" role="main">
     <div class="content_bar"></div>
     <div class="content_wrapper">
         <aside class="content_sidebar content__flush-bottom">
@@ -1693,7 +1277,7 @@ main.content
 
               </section>
               <footer class="docs-pattern_footer">
-                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__1-3&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__1-3&quot; role=&quot;main&quot;&gt;
     &lt;div class=&quot;content_bar&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;content_wrapper&quot;&gt;
         &lt;aside class=&quot;content_sidebar content__flush-bottom&quot;&gt;
@@ -1718,7 +1302,7 @@ main.content
     &lt;/div&gt;
 &lt;/footer&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar content__flush-bottom\&amp;quot;&gt;\n            Side with no bottom padding...\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main content__flush-bottom\&amp;quot;&gt;\n            Main content with no bottom padding...\n            &lt;div class=\&amp;quot;block\n                        block__flush-bottom\n                        block__flush-sides\n                        block__bg\&amp;quot;&gt;\n                .content__flush-bottom is very useful when you have a\n                content block inside of .content_main with a background\n                and flush sides.\n            &lt;/div&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar content__flush-bottom\&amp;quot;&gt;\n            Side with no bottom padding...\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main content__flush-bottom\&amp;quot;&gt;\n            Main content with no bottom padding...\n            &lt;div class=\&amp;quot;block\n                        block__flush-bottom\n                        block__flush-sides\n                        block__bg\&amp;quot;&gt;\n                .content__flush-bottom is very useful when you have a\n                content block inside of .content_main with a background\n                and flush sides.\n            &lt;/div&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
@@ -1734,7 +1318,7 @@ main.content
             <div class="docs-pattern">
               <h3 class="docs-pattern_header">Flush top modifier (only on small screens)</h3>
               <section class="docs-pattern_pattern">
-<main class="content content__1-3" id="main" role="main">
+<main class="content content__1-3" role="main">
     <div class="content_bar"></div>
     <div class="content_wrapper">
         <aside class="content_sidebar content__flush-top-on-small">
@@ -1753,7 +1337,7 @@ main.content
 
               </section>
               <footer class="docs-pattern_footer">
-                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__1-3&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__1-3&quot; role=&quot;main&quot;&gt;
     &lt;div class=&quot;content_bar&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;content_wrapper&quot;&gt;
         &lt;aside class=&quot;content_sidebar content__flush-top-on-small&quot;&gt;
@@ -1770,7 +1354,7 @@ main.content
     &lt;/div&gt;
 &lt;/footer&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar content__flush-top-on-small\&amp;quot;&gt;\n            Side with no top padding on small screens...\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar content__flush-top-on-small\&amp;quot;&gt;\n            Side with no top padding on small screens...\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
@@ -1786,7 +1370,7 @@ main.content
             <div class="docs-pattern">
               <h3 class="docs-pattern_header">Flush all modifier (only on small screens)</h3>
               <section class="docs-pattern_pattern">
-<main class="content content__1-3" id="main" role="main">
+<main class="content content__1-3" role="main">
     <div class="content_bar"></div>
     <div class="content_wrapper">
         <aside class="content_sidebar content__flush-all-on-small">
@@ -1805,7 +1389,7 @@ main.content
 
               </section>
               <footer class="docs-pattern_footer">
-                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__1-3&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__1-3&quot; role=&quot;main&quot;&gt;
     &lt;div class=&quot;content_bar&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;content_wrapper&quot;&gt;
         &lt;aside class=&quot;content_sidebar content__flush-all-on-small&quot;&gt;
@@ -1822,7 +1406,7 @@ main.content
     &lt;/div&gt;
 &lt;/footer&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar content__flush-all-on-small\&amp;quot;&gt;\n            Side with no padding or border-based gutters on small screens...\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar content__flush-all-on-small\&amp;quot;&gt;\n            Side with no padding or border-based gutters on small screens...\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&lt;footer class=\&amp;quot;footer\&amp;quot; role=\&amp;quot;contentinfo\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;wrapper\&amp;quot;&gt;\n        Footer\n    &lt;/div&gt;\n&lt;/footer&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
@@ -1835,184 +1419,6 @@ main.content
                 </ul>
               </footer>
             </div>
-          </div>
-          <div class="docs-css">
-            <pre class="docs-code"><code data-language="css">.content_intro,
-.content_main,
-.content_sidebar {
-  padding: 1.875em 0.9375em;
-}
-@media only all and (min-width: 37.5em) {
-  .content_intro,
-  .content_main,
-  .content_sidebar {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: solid transparent;
-    border-width: 0 15px;
-    margin-right: -0.25em;
-    vertical-align: top;
-    width: 100%;
-    padding: 3.75em 0.9375em;
-  }
-  .lt-ie8 .content_intro,
-  .lt-ie8 .content_main,
-  .lt-ie8 .content_sidebar {
-    display: inline;
-    margin-right: 0;
-    zoom: 1;
-    behavior: url('/cf-grid/custom-demo/static/css/boxsizing.htc');
-  }
-}
-@media only all and (min-width: 50.0625em) {
-  .content_intro,
-  .content_main,
-  .content_sidebar {
-    padding: 3.75em 0;
-  }
-}
-@media only all and (min-width: 50.0625em) {
-  .content_intro {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: solid transparent;
-    border-width: 0 15px;
-    margin-right: -0.25em;
-    vertical-align: top;
-    width: 100%;
-  }
-  .lt-ie8 .content_intro {
-    display: inline;
-    margin-right: 0;
-    zoom: 1;
-    behavior: url('/cf-grid/custom-demo/static/css/boxsizing.htc');
-  }
-}
-@media only all and (min-width: 50.0625em) {
-  .content__1-3 .content_sidebar {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: solid transparent;
-    border-width: 0 15px;
-    margin-right: -0.25em;
-    vertical-align: top;
-    width: 25%;
-    padding-right: 1.875em;
-  }
-  .lt-ie8 .content__1-3 .content_sidebar {
-    display: inline;
-    margin-right: 0;
-    zoom: 1;
-    behavior: url('/cf-grid/custom-demo/static/css/boxsizing.htc');
-  }
-  .content__1-3 .content_main {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: solid transparent;
-    border-width: 0 15px;
-    margin-right: -0.25em;
-    vertical-align: top;
-    width: 75%;
-    position: relative;
-  }
-  .lt-ie8 .content__1-3 .content_main {
-    display: inline;
-    margin-right: 0;
-    zoom: 1;
-    behavior: url('/cf-grid/custom-demo/static/css/boxsizing.htc');
-  }
-  .content__1-3 .content_main:after {
-    content: '';
-    border-left: 1px solid #babbbd;
-    position: absolute;
-    top: 3.75em;
-    bottom: 0;
-    left: -1.875em;
-  }
-  .content__2-1 .content_main {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: solid transparent;
-    border-width: 0 15px;
-    margin-right: -0.25em;
-    vertical-align: top;
-    width: 66.66666667%;
-  }
-  .lt-ie8 .content__2-1 .content_main {
-    display: inline;
-    margin-right: 0;
-    zoom: 1;
-    behavior: url('/cf-grid/custom-demo/static/css/boxsizing.htc');
-  }
-  .content__2-1 .content_main:after {
-    right: -1.875em;
-  }
-  .content__2-1 .content_sidebar {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: solid transparent;
-    border-width: 0 15px;
-    margin-right: -0.25em;
-    vertical-align: top;
-    width: 33.33333333%;
-    padding-left: 1.875em;
-  }
-  .lt-ie8 .content__2-1 .content_sidebar {
-    display: inline;
-    margin-right: 0;
-    zoom: 1;
-    behavior: url('/cf-grid/custom-demo/static/css/boxsizing.htc');
-  }
-}
-@media only all and (min-width: 64em) {
-  .content__2-1 .content_main__narrow {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: solid transparent;
-    border-width: 0 15px;
-    margin-right: -0.25em;
-    vertical-align: top;
-    width: 66.66666667%;
-    padding-right: 8.33333333%;
-  }
-  .lt-ie8 .content__2-1 .content_main__narrow {
-    display: inline;
-    margin-right: 0;
-    zoom: 1;
-    behavior: url('/cf-grid/custom-demo/static/css/boxsizing.htc');
-  }
-  .lt-ie8 .content__2-1 .content_main__narrow {
-    padding-right: 0;
-  }
-}
-.content__flush-bottom {
-  padding-bottom: 0;
-}
-@media only all and (max-width: 50em) {
-  .content__flush-top-on-small {
-    padding-top: 0;
-  }
-}
-@media only all and (max-width: 50em) {
-  .content__flush-all-on-small {
-    padding: 0;
-    border-width: 0;
-  }
-}</code></pre>
           </div>
         </div>
         <div id="block" class="docs-component">
@@ -2060,6 +1466,146 @@ Main content...
                 </ul>
                 <ul class="docs-notes">
                   <li>The standard .block class by itself simply adds a margin of twice the gutter width to the top and bottom.</li>
+                </ul>
+              </footer>
+            </div>
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">Border-top modifier</h3>
+              <section class="docs-pattern_pattern">
+Main content...
+<div class="block block__border-top">
+    Content block with top border.
+</div>
+
+              </section>
+              <footer class="docs-pattern_footer">
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">Main content...
+&lt;div class=&quot;block block__border-top&quot;&gt;
+    Content block with top border.
+&lt;/div&gt;</code></pre>
+                <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\nMain content...\n&lt;div class=\&amp;quot;block block__border-top\&amp;quot;&gt;\n    Content block with top border.\n&lt;/div&gt;\n&amp;quot;}">
+                  <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+                </form>
+                <ul class="docs-codenotes">
+                  <li>
+                    <pre class="docs-code"><code>.block.block__border-top</code></pre>
+                  </li>
+                </ul>
+                <ul class="docs-notes">
+                  <li>Adds top border to .block.</li>
+                </ul>
+              </footer>
+            </div>
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">Border-right modifier</h3>
+              <section class="docs-pattern_pattern">
+Main content...
+<div class="block block__border-right">
+    Content block with right border.
+</div>
+
+              </section>
+              <footer class="docs-pattern_footer">
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">Main content...
+&lt;div class=&quot;block block__border-right&quot;&gt;
+    Content block with right border.
+&lt;/div&gt;</code></pre>
+                <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\nMain content...\n&lt;div class=\&amp;quot;block block__border-right\&amp;quot;&gt;\n    Content block with right border.\n&lt;/div&gt;\n&amp;quot;}">
+                  <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+                </form>
+                <ul class="docs-codenotes">
+                  <li>
+                    <pre class="docs-code"><code>.block.block__border-right</code></pre>
+                  </li>
+                </ul>
+                <ul class="docs-notes">
+                  <li>Adds right border to .block.</li>
+                </ul>
+              </footer>
+            </div>
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">Border-bottom modifier</h3>
+              <section class="docs-pattern_pattern">
+Main content...
+<div class="block block__border-bottom">
+    Content block with bottom border.
+</div>
+
+              </section>
+              <footer class="docs-pattern_footer">
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">Main content...
+&lt;div class=&quot;block block__border-bottom&quot;&gt;
+    Content block with bottom border.
+&lt;/div&gt;</code></pre>
+                <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\nMain content...\n&lt;div class=\&amp;quot;block block__border-bottom\&amp;quot;&gt;\n    Content block with bottom border.\n&lt;/div&gt;\n&amp;quot;}">
+                  <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+                </form>
+                <ul class="docs-codenotes">
+                  <li>
+                    <pre class="docs-code"><code>.block.block__border-bottom</code></pre>
+                  </li>
+                </ul>
+                <ul class="docs-notes">
+                  <li>Adds bottom border to .block.</li>
+                </ul>
+              </footer>
+            </div>
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">Border-left modifier</h3>
+              <section class="docs-pattern_pattern">
+Main content...
+<div class="block block__border-left">
+    Content block with left border.
+</div>
+
+              </section>
+              <footer class="docs-pattern_footer">
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">Main content...
+&lt;div class=&quot;block block__border-left&quot;&gt;
+    Content block with left border.
+&lt;/div&gt;</code></pre>
+                <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\nMain content...\n&lt;div class=\&amp;quot;block block__border-left\&amp;quot;&gt;\n    Content block with left border.\n&lt;/div&gt;\n&amp;quot;}">
+                  <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+                </form>
+                <ul class="docs-codenotes">
+                  <li>
+                    <pre class="docs-code"><code>.block.block__border-left</code></pre>
+                  </li>
+                </ul>
+                <ul class="docs-notes">
+                  <li>Adds left border to .block.</li>
+                </ul>
+              </footer>
+            </div>
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">Border modifier</h3>
+              <section class="docs-pattern_pattern">
+Main content...
+<div class="block block__border">
+    Content block with borders on all sides.
+</div>
+
+              </section>
+              <footer class="docs-pattern_footer">
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">Main content...
+&lt;div class=&quot;block block__border&quot;&gt;
+    Content block with borders on all sides.
+&lt;/div&gt;</code></pre>
+                <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\nMain content...\n&lt;div class=\&amp;quot;block block__border\&amp;quot;&gt;\n    Content block with borders on all sides.\n&lt;/div&gt;\n&amp;quot;}">
+                  <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+                </form>
+                <ul class="docs-codenotes">
+                  <li>
+                    <pre class="docs-code"><code>.block.block__border</code></pre>
+                  </li>
+                </ul>
+                <ul class="docs-notes">
+                  <li>Adds border on all sides to .block.</li>
                 </ul>
               </footer>
             </div>
@@ -2134,7 +1680,7 @@ Main content...
             <div class="docs-pattern">
               <h3 class="docs-pattern_header">Flush-sides modifier</h3>
               <section class="docs-pattern_pattern">
-<main class="content content__1-3" id="main" role="main">
+<main class="content content__1-3" role="main">
     <div class="content_wrapper">
         <aside class="content_sidebar">
             Section navigation
@@ -2150,7 +1696,7 @@ Main content...
 
               </section>
               <footer class="docs-pattern_footer">
-                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__1-3&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__1-3&quot; role=&quot;main&quot;&gt;
     &lt;div class=&quot;content_wrapper&quot;&gt;
         &lt;aside class=&quot;content_sidebar&quot;&gt;
             Section navigation
@@ -2164,7 +1710,7 @@ Main content...
     &lt;/div&gt;
 &lt;/main&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot;&gt;\n            Section navigation\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content...\n            &lt;aside class=\&amp;quot;block block__flush-sides\&amp;quot;&gt;\n                Content block with no side margins.\n            &lt;/aside&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot;&gt;\n            Section navigation\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content...\n            &lt;aside class=\&amp;quot;block block__flush-sides\&amp;quot;&gt;\n                Content block with no side margins.\n            &lt;/aside&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
@@ -2179,58 +1725,123 @@ Main content...
               </footer>
             </div>
             <div class="docs-pattern">
-              <h3 class="docs-pattern_header">Border-top modifier</h3>
+              <h3 class="docs-pattern_header">Flush modifier</h3>
               <section class="docs-pattern_pattern">
-Main content...
-<div class="block block__border-top">
-    Content block with top border.
-</div>
+<main class="content content__1-3" role="main">
+    <div class="content_wrapper">
+        <aside class="content_sidebar">
+            Section navigation
+        </aside>
+        <section class="content_main">
+            Main content...
+            <aside class="block block__flush">
+                Content block with no margins.
+            </aside>
+        </section>
+    </div>
+</main>
 
               </section>
               <footer class="docs-pattern_footer">
-                <pre class="docs-code docs-pattern_markup"><code data-language="html">Main content...
-&lt;div class=&quot;block block__border-top&quot;&gt;
-    Content block with top border.
-&lt;/div&gt;</code></pre>
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__1-3&quot; role=&quot;main&quot;&gt;
+    &lt;div class=&quot;content_wrapper&quot;&gt;
+        &lt;aside class=&quot;content_sidebar&quot;&gt;
+            Section navigation
+        &lt;/aside&gt;
+        &lt;section class=&quot;content_main&quot;&gt;
+            Main content...
+            &lt;aside class=&quot;block block__flush&quot;&gt;
+                Content block with no margins.
+            &lt;/aside&gt;
+        &lt;/section&gt;
+    &lt;/div&gt;
+&lt;/main&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\nMain content...\n&lt;div class=\&amp;quot;block block__border-top\&amp;quot;&gt;\n    Content block with top border.\n&lt;/div&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot;&gt;\n            Section navigation\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content...\n            &lt;aside class=\&amp;quot;block block__flush\&amp;quot;&gt;\n                Content block with no margins.\n            &lt;/aside&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
                   <li>
-                    <pre class="docs-code"><code>.block.block__border-top</code></pre>
+                    <pre class="docs-code"><code>.block.block__flush</code></pre>
                   </li>
                 </ul>
                 <ul class="docs-notes">
-                  <li>Adds top border to .block.</li>
+                  <li>Removes the side, top, and bottom margin from .block.</li>
                 </ul>
               </footer>
             </div>
             <div class="docs-pattern">
-              <h3 class="docs-pattern_header">Border-bottom modifier</h3>
+              <h3 class="docs-pattern_header">Background modifier</h3>
               <section class="docs-pattern_pattern">
 Main content...
-<div class="block block__border-bottom">
-    Content block with bottom border.
+<div class="block block__bg">
+    Content block with a background
 </div>
 
               </section>
               <footer class="docs-pattern_footer">
                 <pre class="docs-code docs-pattern_markup"><code data-language="html">Main content...
-&lt;div class=&quot;block block__border-bottom&quot;&gt;
-    Content block with bottom border.
+&lt;div class=&quot;block block__bg&quot;&gt;
+    Content block with a background
 &lt;/div&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\nMain content...\n&lt;div class=\&amp;quot;block block__border-bottom\&amp;quot;&gt;\n    Content block with bottom border.\n&lt;/div&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\nMain content...\n&lt;div class=\&amp;quot;block block__bg\&amp;quot;&gt;\n    Content block with a background\n&lt;/div&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
                   <li>
-                    <pre class="docs-code"><code>.block.block__border-bottom</code></pre>
+                    <pre class="docs-code"><code>.block.block__bg</code></pre>
                   </li>
                 </ul>
                 <ul class="docs-notes">
-                  <li>Adds bottom border to .block.</li>
+                  <li>Adds a background color and padding to .block.</li>
+                  <li>Setup for (ems-equivalent) 30px padding on top and 60px on bottom.</li>
+                </ul>
+              </footer>
+            </div>
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">Background and flush-sides modifier combo example</h3>
+              <section class="docs-pattern_pattern">
+<main class="content content__1-3" role="main">
+    <div class="content_wrapper">
+        <aside class="content_sidebar">
+            Section navigation
+        </aside>
+        <section class="content_main content__flush-bottom">
+            Main content...
+            <div class="block block__flush-sides block__bg">
+                Content block with a background and flush sides
+            </div>
+        </section>
+    </div>
+</main>
+
+              </section>
+              <footer class="docs-pattern_footer">
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__1-3&quot; role=&quot;main&quot;&gt;
+    &lt;div class=&quot;content_wrapper&quot;&gt;
+        &lt;aside class=&quot;content_sidebar&quot;&gt;
+            Section navigation
+        &lt;/aside&gt;
+        &lt;section class=&quot;content_main content__flush-bottom&quot;&gt;
+            Main content...
+            &lt;div class=&quot;block block__flush-sides block__bg&quot;&gt;
+                Content block with a background and flush sides
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/div&gt;
+&lt;/main&gt;</code></pre>
+                <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot;&gt;\n            Section navigation\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main content__flush-bottom\&amp;quot;&gt;\n            Main content...\n            &lt;div class=\&amp;quot;block block__flush-sides block__bg\&amp;quot;&gt;\n                Content block with a background and flush sides\n            &lt;/div&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
+                  <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+                </form>
+                <ul class="docs-codenotes">
+                  <li>
+                    <pre class="docs-code"><code>.block.block__flush-sides.block__bg</code></pre>
+                  </li>
+                </ul>
+                <ul class="docs-notes">
+                  <li>This is an example of combining modifiers to get a flush padded bg with a .block.</li>
                 </ul>
               </footer>
             </div>
@@ -2291,80 +1902,6 @@ Content...</code></pre>
                 </ul>
                 <ul class="docs-notes">
                   <li>Breaks bottom margin into margin &amp; padding. Useful in combination with block__border-bottom to add padding between block contents &amp; border.</li>
-                </ul>
-              </footer>
-            </div>
-            <div class="docs-pattern">
-              <h3 class="docs-pattern_header">Background modifier</h3>
-              <section class="docs-pattern_pattern">
-Main content...
-<div class="block block__bg">
-    Content block with a background
-</div>
-
-              </section>
-              <footer class="docs-pattern_footer">
-                <pre class="docs-code docs-pattern_markup"><code data-language="html">Main content...
-&lt;div class=&quot;block block__bg&quot;&gt;
-    Content block with a background
-&lt;/div&gt;</code></pre>
-                <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\nMain content...\n&lt;div class=\&amp;quot;block block__bg\&amp;quot;&gt;\n    Content block with a background\n&lt;/div&gt;\n&amp;quot;}">
-                  <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
-                </form>
-                <ul class="docs-codenotes">
-                  <li>
-                    <pre class="docs-code"><code>.block.block__bg</code></pre>
-                  </li>
-                </ul>
-                <ul class="docs-notes">
-                  <li>Adds a background color and padding to .block.</li>
-                </ul>
-              </footer>
-            </div>
-            <div class="docs-pattern">
-              <h3 class="docs-pattern_header">Background and flush-sides modifier combo example</h3>
-              <section class="docs-pattern_pattern">
-<main class="content content__1-3" id="main" role="main">
-    <div class="content_wrapper">
-        <aside class="content_sidebar">
-            Section navigation
-        </aside>
-        <section class="content_main content__flush-bottom">
-            Main content...
-            <div class="block block__flush-sides block__bg">
-                Content block with a background and flush sides
-            </div>
-        </section>
-    </div>
-</main>
-
-              </section>
-              <footer class="docs-pattern_footer">
-                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__1-3&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
-    &lt;div class=&quot;content_wrapper&quot;&gt;
-        &lt;aside class=&quot;content_sidebar&quot;&gt;
-            Section navigation
-        &lt;/aside&gt;
-        &lt;section class=&quot;content_main content__flush-bottom&quot;&gt;
-            Main content...
-            &lt;div class=&quot;block block__flush-sides block__bg&quot;&gt;
-                Content block with a background and flush sides
-            &lt;/div&gt;
-        &lt;/section&gt;
-    &lt;/div&gt;
-&lt;/main&gt;</code></pre>
-                <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__1-3\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot;&gt;\n            Section navigation\n        &lt;/aside&gt;\n        &lt;section class=\&amp;quot;content_main content__flush-bottom\&amp;quot;&gt;\n            Main content...\n            &lt;div class=\&amp;quot;block block__flush-sides block__bg\&amp;quot;&gt;\n                Content block with a background and flush sides\n            &lt;/div&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
-                  <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
-                </form>
-                <ul class="docs-codenotes">
-                  <li>
-                    <pre class="docs-code"><code>.block.block__flush-sides.block__bg</code></pre>
-                  </li>
-                </ul>
-                <ul class="docs-notes">
-                  <li>This is an example of combining modifiers to get a flush padded bg with a .block.</li>
                 </ul>
               </footer>
             </div>
@@ -2473,61 +2010,6 @@ Main content...
               </footer>
             </div>
           </div>
-          <div class="docs-css">
-            <pre class="docs-code"><code data-language="css">.block {
-  margin-top: 3.75em;
-  margin-bottom: 3.75em;
-}
-.block__border-top {
-  border-top: 1px solid #babbbd;
-}
-.block__border-bottom {
-  border-bottom: 1px solid #babbbd;
-}
-.block__flush-top {
-  margin-top: 0 !important;
-}
-.block__flush-bottom {
-  margin-bottom: 0 !important;
-}
-.block__flush-sides {
-  margin-right: -15px;
-  margin-left: -15px;
-}
-@media only all and (min-width: 37.5em) {
-  .block__flush-sides {
-    margin-right: -30px;
-    margin-left: -30px;
-  }
-}
-.block__bg {
-  padding: 1.875em 0.9375em;
-  background: #f1f2f2;
-}
-@media only all and (min-width: 37.5em) {
-  .block__bg {
-    padding: 2.8125em 1.875em;
-  }
-}
-.block__padded-top {
-  padding-top: 1.875em;
-  margin-top: 1.875em;
-}
-.block__padded-bottom {
-  padding-bottom: 1.875em;
-  margin-bottom: 1.875em;
-}
-.block__sub {
-  margin-top: 1.875em;
-  margin-bottom: 1.875em;
-}
-@media only all and (min-width: 37.5em) {
-  .content-l_col.block,
-  .content-l_col.block__sub {
-    margin-top: 0;
-  }
-}</code></pre>
-          </div>
         </div>
         <div id="bleedbar-sidebar-styling" class="docs-component">
           <h2 class="docs-component_header"><span>Bleedbar sidebar styling</span></h2>
@@ -2535,7 +2017,7 @@ Main content...
             <div class="docs-pattern">
               <h3 class="docs-pattern_header">Give the sidebar a background color that bleeds off the edge of the screen</h3>
               <section class="docs-pattern_pattern">
-<main class="content content__2-1 content__bleedbar" id="main" role="main">
+<main class="content content__2-1 content__bleedbar" role="main">
     <section class="content_hero" style="background: #E3E4E5">
         Content hero
     </section>
@@ -2552,7 +2034,7 @@ Main content...
 
               </section>
               <footer class="docs-pattern_footer">
-                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__2-1 content__bleedbar&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;main class=&quot;content content__2-1 content__bleedbar&quot; role=&quot;main&quot;&gt;
     &lt;section class=&quot;content_hero&quot; style=&quot;background: #E3E4E5&quot;&gt;
         Content hero
     &lt;/section&gt;
@@ -2567,7 +2049,7 @@ Main content...
     &lt;/div&gt;
 &lt;/main&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__2-1 content__bleedbar\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;section class=\&amp;quot;content_hero\&amp;quot; style=\&amp;quot;background: #E3E4E5\&amp;quot;&gt;\n        Content hero\n    &lt;/section&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content area\n        &lt;/section&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot;&gt;\n            Bleeding sidebar\n        &lt;/aside&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;main class=\&amp;quot;content content__2-1 content__bleedbar\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;section class=\&amp;quot;content_hero\&amp;quot; style=\&amp;quot;background: #E3E4E5\&amp;quot;&gt;\n        Content hero\n    &lt;/section&gt;\n    &lt;div class=\&amp;quot;content_bar\&amp;quot;&gt;&lt;/div&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            Main content area\n        &lt;/section&gt;\n        &lt;aside class=\&amp;quot;content_sidebar\&amp;quot;&gt;\n            Bleeding sidebar\n        &lt;/aside&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-codenotes">
@@ -2582,49 +2064,6 @@ Main content...
                 </ul>
               </footer>
             </div>
-          </div>
-          <div class="docs-css">
-            <pre class="docs-code"><code data-language="css">.content__bleedbar .content_main:after {
-  content: none;
-}
-.content__bleedbar .content_sidebar {
-  padding: 1.875em 0.9375em;
-  background: #f1f2f2;
-}
-@media only all and (min-width: 50.0625em) {
-  .content__bleedbar {
-    overflow: hidden;
-  }
-  .content__bleedbar .content_sidebar {
-    padding: 3.75em 0 0.9375em 1.875em;
-    margin-left: 0;
-    position: relative;
-    z-index: 1;
-    background: transparent;
-  }
-  .lt-ie8 .content__bleedbar .content_sidebar {
-    padding-right: 30px;
-    background: #f1f2f2;
-  }
-  .content__bleedbar .content_wrapper:after {
-    content: '';
-    display: block;
-    width: 9999px;
-    border-left: 1px solid #babbbd;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    z-index: 0;
-    margin-left: 10px;
-    background: #f1f2f2;
-  }
-  .content__bleedbar.content__2-1 .content_wrapper:after {
-    left: 66.666666667%;
-  }
-  .content__bleedbar.content__3-1 .content_wrapper:after {
-    left: 75%;
-  }
-}</code></pre>
           </div>
         </div>
         <div id="cf-grid-helpers" class="docs-component">
@@ -2657,14 +2096,14 @@ Main content...
               <section class="docs-pattern_pattern">
 <div class="wrapper wrapper__match-content">
     <code>.wrapper.wrapper__match-content</code>
-    <img src="http://placekitten.com/800/40">
+    <img src="http://placekitten.com/800/40" alt="Placeholder image">
 </div>
 <br>
-<main class="content" id="main" role="main">
+<main class="content" role="main">
     <div class="content_wrapper">
         <section class="content_main">
             <code>.content_wrapper .content_main</code>
-            <img src="http://placekitten.com/800/40">
+            <img src="http://placekitten.com/800/40" alt="Placeholder image">
         </section>
     </div>
 </main>
@@ -2673,19 +2112,19 @@ Main content...
               <footer class="docs-pattern_footer">
                 <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;div class=&quot;wrapper wrapper__match-content&quot;&gt;
     &lt;code&gt;.wrapper.wrapper__match-content&lt;/code&gt;
-    &lt;img src=&quot;http://placekitten.com/800/40&quot;&gt;
+    &lt;img src=&quot;http://placekitten.com/800/40&quot; alt=&quot;Placeholder image&quot;&gt;
 &lt;/div&gt;
 &lt;br&gt;
-&lt;main class=&quot;content&quot; id=&quot;main&quot; role=&quot;main&quot;&gt;
+&lt;main class=&quot;content&quot; role=&quot;main&quot;&gt;
     &lt;div class=&quot;content_wrapper&quot;&gt;
         &lt;section class=&quot;content_main&quot;&gt;
             &lt;code&gt;.content_wrapper .content_main&lt;/code&gt;
-            &lt;img src=&quot;http://placekitten.com/800/40&quot;&gt;
+            &lt;img src=&quot;http://placekitten.com/800/40&quot; alt=&quot;Placeholder image&quot;&gt;
         &lt;/section&gt;
     &lt;/div&gt;
 &lt;/main&gt;</code></pre>
                 <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
-                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;wrapper wrapper__match-content\&amp;quot;&gt;\n    &lt;code&gt;.wrapper.wrapper__match-content&lt;/code&gt;\n    &lt;img src=\&amp;quot;http://placekitten.com/800/40\&amp;quot;&gt;\n&lt;/div&gt;\n&lt;br&gt;\n&lt;main class=\&amp;quot;content\&amp;quot; id=\&amp;quot;main\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            &lt;code&gt;.content_wrapper .content_main&lt;/code&gt;\n            &lt;img src=\&amp;quot;http://placekitten.com/800/40\&amp;quot;&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;div class=\&amp;quot;wrapper wrapper__match-content\&amp;quot;&gt;\n    &lt;code&gt;.wrapper.wrapper__match-content&lt;/code&gt;\n    &lt;img src=\&amp;quot;http://placekitten.com/800/40\&amp;quot; alt=\&amp;quot;Placeholder image\&amp;quot;&gt;\n&lt;/div&gt;\n&lt;br&gt;\n&lt;main class=\&amp;quot;content\&amp;quot; role=\&amp;quot;main\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;content_wrapper\&amp;quot;&gt;\n        &lt;section class=\&amp;quot;content_main\&amp;quot;&gt;\n            &lt;code&gt;.content_wrapper .content_main&lt;/code&gt;\n            &lt;img src=\&amp;quot;http://placekitten.com/800/40\&amp;quot; alt=\&amp;quot;Placeholder image\&amp;quot;&gt;\n        &lt;/section&gt;\n    &lt;/div&gt;\n&lt;/main&gt;\n&amp;quot;}">
                   <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
                 </form>
                 <ul class="docs-notes">
@@ -2727,65 +2166,6 @@ Main content...
                 </ul>
               </footer>
             </div>
-          </div>
-          <div class="docs-css">
-            <pre class="docs-code"><code data-language="css">@media only all and (min-width: 50.0625em) {
-  .wrapper,
-  .content_wrapper {
-    max-width: 1170px;
-    padding: 0 15px;
-    margin: 0 auto;
-    position: relative;
-    clear: both;
-  }
-}
-.wrapper__match-content,
-.content_wrapper__match-content {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media only all and (min-width: 37.5em) {
-  .wrapper__match-content,
-  .content_wrapper__match-content {
-    padding-left: 30px;
-    padding-right: 30px;
-    max-width: 1140px;
-  }
-}
-.lt-ie9 .wrapper,
-.lt-ie9 .content_wrapper {
-  max-width: 960px;
-}
-.lt-ie9 body {
-  min-width: 800px;
-}
-.grid_column__top-divider {
-  margin-top: 3.75em;
-  border-left-width: 15px;
-}
-.grid_column__top-divider:before {
-  content: &quot;&quot;;
-  display: block;
-  height: 1px;
-  margin-bottom: 1.875em;
-  background-color: #babbbd;
-  position: static;
-  width: 100%;
-  margin-left: auto !important;
-}
-.grid_column__left-divider {
-  border-left-width: 30px;
-}
-.grid_column__left-divider:before {
-  content: &quot;&quot;;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  display: block;
-  background-color: #babbbd;
-  margin-left: -30px;
-}</code></pre>
           </div>
         </div>
         <div id="featured-content-module" class="docs-component">
@@ -2871,273 +2251,62 @@ Main content...
               </footer>
             </div>
           </div>
-          <div class="docs-css">
-            <pre class="docs-code"><code data-language="css">.featured-content-module {
-  background-color: #f8f8f8;
-  border-top: 1px solid #babbbd;
-  border-bottom: 1px solid #babbbd;
-  position: relative;
-}
-@media only all and (max-width: 37.4375em) {
-  .featured-content-module {
-    margin-right: -0.9375em;
-    margin-left: -0.9375em;
-  }
-}
-@media only all and (min-width: 37.5em) {
-  .featured-content-module {
-    margin-right: -1.875em;
-    margin-left: -1.875em;
-  }
-}
-@media only all and (min-width: 50em) {
-  .featured-content-module {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    min-height: 270px;
-    margin-right: 0;
-    border-right: 1px solid #babbbd;
-    padding-left: 1.875em;
-  }
-}
-@media only all and (min-width: 50em) {
-  .featured-content-module__left {
-    margin-right: -1.875em;
-    margin-left: 0;
-    padding-left: 0;
-    border-right-width: 0;
-  }
-  .featured-content-module__left:before {
-    left: -200%;
-    background-color: #f8f8f8;
-    content: '';
-    display: block;
-    position: absolute;
-    width: 200%;
-    border-top: 1px solid #babbbd;
-    border-bottom: 1px solid #babbbd;
-    top: -1px;
-    bottom: -1px;
-  }
-}
-.featured-content-module_text {
-  padding-top: 1.5625em;
-  padding-bottom: 1.875em;
-}
-@media only all and (max-width: 37.4375em) {
-  .featured-content-module_text {
-    padding-right: 0.9375em;
-    padding-left: 0.9375em;
-  }
-}
-@media only all and (min-width: 37.5em) and (max-width: 49.9375em) {
-  .featured-content-module_text {
-    padding-left: 1.875em;
-  }
-}
-@media only all and (min-width: 37.5em) {
-  .featured-content-module_text {
-    margin-right: 0.9375em;
-    width: 303px;
-    float: left;
-    border-width: 0;
-  }
-}
-@media only all and (min-width: 50em) {
-  .featured-content-module_text {
-    width: 270px;
-  }
-}
-.featured-content-module_tag {
-  margin-top: 0;
-  margin-bottom: 1.16666667em;
-  font-size: 1.125em;
-  font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.22222222;
-  margin-bottom: 1.125em;
-}
-.lt-ie9 .featured-content-module_tag {
-  font-weight: normal !important;
-}
-@media only all and (max-width: 37.4375em) {
-  .featured-content-module_icon {
-    display: none;
-  }
-}
-.featured-content-module_headline {
-  font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  margin-top: 0;
-  margin-bottom: 0.73076923em;
-  font-size: 1.625em;
-  line-height: 1.26923077;
-}
-.featured-content-module_headline em,
-.featured-content-module_headline i {
-  font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
-  font-style: italic;
-  font-weight: normal;
-}
-.lt-ie9 .featured-content-module_headline em,
-.lt-ie9 .featured-content-module_headline i {
-  font-style: normal !important;
-}
-.featured-content-module_headline strong,
-.featured-content-module_headline b {
-  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-}
-.lt-ie9 .featured-content-module_headline strong,
-.lt-ie9 .featured-content-module_headline b {
-  font-weight: normal !important;
-}
-@media only all and (max-width: 37.4375em) {
-  .featured-content-module_headline {
-    font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    margin-top: 0;
-    margin-bottom: 0.95454545em;
-    font-size: 1.375em;
-    line-height: 1.27272727;
-  }
-  .featured-content-module_headline em,
-  .featured-content-module_headline i {
-    font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
-    font-style: italic;
-    font-weight: normal;
-  }
-  .lt-ie9 .featured-content-module_headline em,
-  .lt-ie9 .featured-content-module_headline i {
-    font-style: normal !important;
-  }
-  .featured-content-module_headline strong,
-  .featured-content-module_headline b {
-    font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-  }
-  .lt-ie9 .featured-content-module_headline strong,
-  .lt-ie9 .featured-content-module_headline b {
-    font-weight: normal !important;
-  }
-}
-@media only all and (max-width: 37.4375em) and only all and (max-width: 37.4375em) {
-  .featured-content-module_headline {
-    margin-top: 0;
-    margin-bottom: 1.16666667em;
-    font-size: 1.125em;
-    font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.22222222;
-  }
-  .lt-ie9 .featured-content-module_headline {
-    font-weight: normal !important;
-  }
-}
-.featured-content-module_body {
-  margin-bottom: 1.25em;
-  font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-}
-.featured-content-module_body em,
-.featured-content-module_body i {
-  font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
-  font-style: italic;
-  font-weight: normal;
-}
-.lt-ie9 .featured-content-module_body em,
-.lt-ie9 .featured-content-module_body i {
-  font-style: normal !important;
-}
-.featured-content-module_body strong,
-.featured-content-module_body b {
-  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-}
-.lt-ie9 .featured-content-module_body strong,
-.lt-ie9 .featured-content-module_body b {
-  font-weight: normal !important;
-}
-@media only all and (max-width: 37.4375em) {
-  .featured-content-module_body {
-    margin-top: 0;
-    margin-bottom: 1.16666667em;
-    font-size: 1.125em;
-    font-family: &quot;AvenirNextLTW01-Medium&quot;, Arial, sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.22222222;
-  }
-  .lt-ie9 .featured-content-module_body {
-    font-weight: normal !important;
-  }
-}
-.featured-content-module_cta {
-  font-family: &quot;AvenirNextLTW01-Regular&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-}
-.featured-content-module_cta em,
-.featured-content-module_cta i {
-  font-family: &quot;AvenirNextLTW01-Italic&quot;, Arial, sans-serif;
-  font-style: italic;
-  font-weight: normal;
-}
-.lt-ie9 .featured-content-module_cta em,
-.lt-ie9 .featured-content-module_cta i {
-  font-style: normal !important;
-}
-.featured-content-module_cta strong,
-.featured-content-module_cta b {
-  font-family: &quot;AvenirNextLTW01-Demi&quot;, Arial, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-}
-.lt-ie9 .featured-content-module_cta strong,
-.lt-ie9 .featured-content-module_cta b {
-  font-weight: normal !important;
-}
-a.featured-content-module_cta {
-  border-bottom-width: 1px;
-  cursor: pointer;
-}
-.featured-content-module_visual {
-  width: 100%;
-  line-height: 0;
-}
-.featured-content-module_wrapper {
-  text-align: center;
-  overflow: hidden;
-}
-@media only all and (min-width: 37.5em) {
-  .featured-content-module_img {
-    position: relative;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-    max-width: 540px;
-    width: 540px;
-  }
-}
-.lt-ie9 .featured-content-module {
-  border-left: 1px solid #babbbd;
-}
-@media only all and (min-width: 37.5em) {
-  .lt-ie9 .featured-content-module_wrapper img {
-    left: 100%;
-    margin-left: -200%;
-  }
-}</code></pre>
+        </div>
+        <div id="hero" class="docs-component">
+          <h2 class="docs-component_header"><span>Hero</span></h2>
+          <div class="docs-patterns">
+            <div class="docs-pattern">
+              <h3 class="docs-pattern_header">.hero</h3>
+              <section class="docs-pattern_pattern">
+<section class="content_hero hero">
+    <div class="hero_wrapper wrapper">
+        <div class="hero_text">
+            <h1 class="hero_heading">Hero title</h1>
+            <p class="hero_subhead">
+                Hero text goes here
+            </p>
+            <p class="hero_cta">
+                <a>Call to action</a>
+            </p>
+        </div>
+        <div class="hero_image" style="background-image: url('http://placekitten.com/g/400/195')"></div>
+    </div>
+</section>
+
+              </section>
+              <footer class="docs-pattern_footer">
+                <pre class="docs-code docs-pattern_markup"><code data-language="html">&lt;section class=&quot;content_hero hero&quot;&gt;
+    &lt;div class=&quot;hero_wrapper wrapper&quot;&gt;
+        &lt;div class=&quot;hero_text&quot;&gt;
+            &lt;h1 class=&quot;hero_heading&quot;&gt;Hero title&lt;/h1&gt;
+            &lt;p class=&quot;hero_subhead&quot;&gt;
+                Hero text goes here
+            &lt;/p&gt;
+            &lt;p class=&quot;hero_cta&quot;&gt;
+                &lt;a&gt;Call to action&lt;/a&gt;
+            &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;hero_image&quot; style=&quot;background-image: url('http://placekitten.com/g/400/195')&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                <form action="http://codepen.io/pen/define" method="POST" target="_blank" class="docs-pattern_footer-edit">
+                  <input type="hidden" name="data" value="{&amp;quot;css&amp;quot;:&amp;quot;body { padding: 1em; }&amp;quot;,&amp;quot;css_external&amp;quot;:&amp;quot;http://cfpb.github.io/cf-layout/docs/static/css/main.css&amp;quot;,&amp;quot;html&amp;quot;:&amp;quot;\n&lt;section class=\&amp;quot;content_hero hero\&amp;quot;&gt;\n    &lt;div class=\&amp;quot;hero_wrapper wrapper\&amp;quot;&gt;\n        &lt;div class=\&amp;quot;hero_text\&amp;quot;&gt;\n            &lt;h1 class=\&amp;quot;hero_heading\&amp;quot;&gt;Hero title&lt;/h1&gt;\n            &lt;p class=\&amp;quot;hero_subhead\&amp;quot;&gt;\n                Hero text goes here\n            &lt;/p&gt;\n            &lt;p class=\&amp;quot;hero_cta\&amp;quot;&gt;\n                &lt;a&gt;Call to action&lt;/a&gt;\n            &lt;/p&gt;\n        &lt;/div&gt;\n        &lt;div class=\&amp;quot;hero_image\&amp;quot; style=\&amp;quot;background-image: url(&amp;apos;http://placekitten.com/g/400/195&amp;apos;)\&amp;quot;&gt;&lt;/div&gt;\n    &lt;/div&gt;\n&lt;/section&gt;\n&amp;quot;}">
+                  <input type="submit" value="edit on codepen.io" class="docs-pattern_footer-edit-btn">
+                </form>
+                <ul class="docs-codenotes">
+                  <li>
+                    <pre class="docs-code"><code>.hero</code></pre>
+                  </li>
+                </ul>
+                <ul class="docs-notes">
+                  <li>Hero consists of a headline, a small amount of additional text, an optional call to action, and an illustration. Its background color is flush with the sides of the screen, and the content is centered with wrapper classes.</li>
+                  <li>The illustration can be customized by setting the background-image property on the .hero_image element.</li>
+                  <li>On small screens (or where media queries are not supported), the text spans the full width of the .hero_wrapper and the illustration is displayed underneath.</li>
+                  <li>For larger screen sizes, media queries are used to position the illustration to the right of the text.</li>
+                  <li>On desktop, the hero should not exceed 285px in height. The image should be 195px in height to conform to this standard.</li>
+                </ul>
+              </footer>
+            </div>
           </div>
         </div>
       </div>

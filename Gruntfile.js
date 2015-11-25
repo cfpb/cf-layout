@@ -15,8 +15,7 @@ module.exports = function(grunt) {
 
   // Loads all Grunt tasks in the node_modules directory within the new CWD.
   require('jit-grunt')(grunt, {
-    // Static mapping
-    // Needed when task name does not match package name
+    // Below line needed because task name does not match package name
     bower: 'grunt-bower-task'
   })({
     // Options
@@ -101,7 +100,7 @@ module.exports = function(grunt) {
   /**
    * Create custom task aliases for our component build workflow.
    */
-  grunt.registerTask('vendor', ['bower', 'copy:component_assets', 'copy:docs_assets', 'concat:main']);
-  grunt.registerTask('default', ['concat:main', 'less', 'autoprefixer', 'copy:docs', 'topdoc']);
+  grunt.registerTask('vendor', ['copy:component_assets', 'copy:docs_assets']);
+  grunt.registerTask('default', ['less', 'autoprefixer', 'copy:docs', 'topdoc']);
 
 };
