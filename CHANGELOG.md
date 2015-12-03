@@ -1,6 +1,12 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 2.1.0 - 2015-12-03
+
+## Added
+- Added Featured Content Module pattern
+
+
 ## 2.0.0 - 2015-11-02
 - Updated to use breakpoint variables in cf-core v1.2.0
 
@@ -20,6 +26,7 @@ This change _could_ break your existing projects if you have breakpoint values t
   - `@wall-min` or `.respond-to-min` with a value around 1230px - `@bp-xl-max`
 
   There's an additional breakpoint at 1020px that you may find useful (`@bp-med-max` and `@bp-lg-min`)
+
 
 ## 1.3.0 - 2015-10-19
 
